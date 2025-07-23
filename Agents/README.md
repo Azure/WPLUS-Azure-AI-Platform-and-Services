@@ -1,3 +1,5 @@
-Please find the link to AI Agent Hands-on-Labs below:
+Module: 
+
+Leverage the instructions in the repository below to complete the labs in azure AI Agents
 
 https://github.com/Azure/azure-ai-agents-labs
