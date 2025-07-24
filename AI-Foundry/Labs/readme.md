@@ -6,7 +6,7 @@ This repository contains a comprehensive series of hands-on laboratories designe
 
 This comprehensive workshop offers a complete journey through the latest capabilities of Azure AI Foundry, from fundamental concepts to advanced AI implementations. Each laboratory is carefully designed to build knowledge progressively, enabling you to master essential tools and techniques for modern AI development.
 
-The workshop covers 5 progressive laboratories that explore everything from basic Azure OpenAI connections to complex multi-agent systems and RAG implementations. Each lab includes practical exercises, real examples, and hands-on activities to consolidate learning.
+The workshop covers 6 progressive laboratories that explore everything from basic Azure OpenAI connections to complex multi-agent systems, RAG implementations, and advanced observability patterns. Each lab includes practical exercises, real examples, and hands-on activities to consolidate learning.
 
 ## Laboratory Structure
 
@@ -182,6 +182,57 @@ Master Azure AI Content Understanding service for extracting structured data fro
 - Extract actionable insights from multimodal content
 - Apply Azure development best practices for AI services
 
+### [Lab 7: Observability and Evaluations](lab7-observability-and-evaluations/)
+**AI Model Monitoring and Quality Assessment**
+
+Master observability and evaluation techniques for AI applications using Azure AI Foundry's comprehensive monitoring and assessment capabilities.
+
+**Core Components:**
+- **1-Observability.ipynb**: Comprehensive tracing and monitoring setup with health & fitness themed examples
+- **2-evaluation.ipynb**: AI model quality and safety evaluations with practical datasets
+- **Sample Data**: Health and fitness evaluation datasets (evaluate_test_data.jsonl, health_fitness_eval_data.jsonl)
+
+**Observability Features:**
+- **OpenTelemetry Integration**: Complete tracing setup for AI applications using azure-ai-projects and azure-ai-inference
+- **Azure Monitor Connection**: Send traces to Application Insights for visualization in Azure AI Foundry
+- **Multi-Agent Tracing**: Monitor complex multi-agent system interactions and workflows
+- **Real-time Monitoring**: Track performance, token usage, response times, and API calls
+- **Debug Capabilities**: Trace message flows, identify bottlenecks, and troubleshoot issues
+
+**Evaluation Capabilities:**
+- **AI Quality Metrics**: Groundedness, relevance, coherence, fluency, GPT similarity assessments
+- **NLP Metrics**: F1 score, ROUGE, BLEU, GLEU, METEOR scores for comprehensive text analysis
+- **Risk and Safety**: Violence, sexual content, self-harm, hate/unfairness, protected material detection
+- **Local vs Cloud**: Run evaluations locally or submit jobs to Azure AI Foundry for scalable processing
+- **Batch Processing**: Scale evaluations across large datasets with cloud infrastructure
+
+**Technical Implementation:**
+- Tracing setup with fallback mechanisms and error handling
+- Robust authentication patterns (DefaultAzureCredential, InteractiveBrowserCredential)
+- Comprehensive error handling, retry logic, and graceful degradation
+- Integration with Azure AI Foundry portal for trace visualization and analysis
+- Support for custom evaluators, metrics, and evaluation workflows
+
+**Practical Applications:**
+- Monitor AI agent performance and behavior in production environments
+- Evaluate model quality, safety, and compliance before deployment
+- Assess risk and safety requirements for enterprise AI applications
+- Debug complex multi-agent workflows and conversation flows
+- Optimize AI system performance, costs, and resource utilization
+
+**Health & Fitness Theme:**
+- Educational examples using health and fitness scenarios for engaging learning
+- Sample conversations and data related to wellness, nutrition, and fitness advice
+- Demonstrates real-world AI applications while maintaining educational focus
+- Includes proper disclaimers for health-related AI content
+
+**Expected Outcomes:**
+- Implement comprehensive AI observability solutions for production systems
+- Build quality assessment pipelines for AI applications and models
+- Monitor and optimize AI system performance, costs, and reliability
+- Ensure safety, compliance, and responsible AI practices in deployments
+- Debug and troubleshoot complex AI workflows and multi-agent systems
+
 ## Prerequisites
 
 ### Required
@@ -218,7 +269,7 @@ python check_environment.py
 - Azure AI Vision (Lab 2)
 - Azure AI Content Safety (Lab 2)
 - Azure AI Search (Lab 5)
-- Azure AI Foundry Resource (Lab 6)
+- Azure AI Foundry Project (Lab 7 - Observability and Evaluations)
 
 ### 3. Environment Variables Configuration
 Complete template available in `.env.example`. Key variables:
@@ -236,6 +287,7 @@ AZURE_VISION_ENDPOINT=...
 AZURE_SEARCH_ENDPOINT=...
 AZURE_AI_ENDPOINT=...  # Lab 6: Content Understanding
 AZURE_AI_KEY=...       # Lab 6: Content Understanding
+PROJECT_CONNECTION_STRING=...  # Lab 7: Azure AI Foundry Project for observability and evaluations
 ```
 
 ## Recommended Progression
@@ -243,7 +295,8 @@ AZURE_AI_KEY=...       # Lab 6: Content Understanding
 1. **Beginners**: Start with Lab 1 to understand fundamentals, then proceed sequentially
 2. **Intermediate**: Labs 1-3 provide a solid foundation in generative AI and prompt engineering
 3. **Advanced**: Labs 4-5 address complex architectures, frameworks, and RAG patterns
-4. **Specialization**: Focus on specific laboratories based on your project needs
+4. **Enterprise**: Labs 6-7 focus on production deployment, monitoring, and quality assurance
+5. **Specialization**: Focus on specific laboratories based on your project needs
 
 **Estimated Time:**
 - Lab 1: 2-3 hours (foundations)
@@ -252,6 +305,7 @@ AZURE_AI_KEY=...       # Lab 6: Content Understanding
 - Lab 4: 2-3 hours (frameworks)
 - Lab 5: 2-3 hours (RAG implementation)
 - Lab 6: 2-3 hours (content understanding)
+- Lab 7: 2-3 hours (observability and evaluations)
 
 ## Learning Outcomes
 
@@ -264,8 +318,9 @@ Upon completing this workshop, you will be able to:
 ✅ **Use Specialized Frameworks**: Choose and implement Semantic Kernel, AutoGen based on requirements
 ✅ **Integrate Multiple AI Services**: Combine speech, vision, language, and content safety services
 ✅ **Process Multimodal Content**: Extract insights from documents, images, audio, and video files
+✅ **Monitor and Evaluate AI Systems**: Implement comprehensive observability and quality assessment
 ✅ **Follow Best Practices**: Implement proper security, governance, and optimization patterns
-✅ **Handle Real-World Scenarios**: Process multimodal content, build conversational agents, moderate content
+✅ **Handle Real-World Scenarios**: Build production-ready AI solutions with monitoring and evaluation
 
 ## Additional Resources
 
@@ -318,7 +373,8 @@ Upon completing this workshop, you will be able to:
     │   ├── lab3/            # Prompt Engineering
     │   ├── lab4/            # Semantic Kernel & AutoGen
     │   ├── lab5/            # RAG Implementation
-    │   └── lab6/            # Content Understanding
+    │   ├── lab6/            # Content Understanding
+    │   └── lab7-observability-and-evaluations/  # AI Observability and Evaluations
     └── portuguese/          # Portuguese version
 ```
 
