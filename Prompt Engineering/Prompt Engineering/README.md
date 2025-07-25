@@ -1,4 +1,4 @@
-# Lab 3: Prompt Engineering Mastery
+# Prompt Engineering Mastery
 
 ## Overview
 
