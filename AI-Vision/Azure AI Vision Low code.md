@@ -1,5 +1,5 @@
 
-# Azure AI Vision Lab Instructions – Low Code Labs
+# Azure AI Vision Lab Instructions – Low Code Lab
 
 Azure AI Vision is a cloud-based service from Microsoft that uses advanced algorithms to analyze images and extract valuable information. It includes capabilities like Optical Character Recognition (OCR), face detection, image analysis, and video indexing. This lab guides you through low-code exercises.
 

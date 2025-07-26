@@ -1,5 +1,5 @@
 
-# 🔍 Overview
+# 🔍 Fine Tuning Lab
 
 In this lab, you’ll explore the fine-tuning process for **GPT models** using the **Azure AI Foundry Dashboard**.  
 
