@@ -17,14 +17,14 @@ Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your
 - In the top search bar, type **"Azure AI Foundry"**
 - Select **Azure AI Foundry** from the search results
 
-![Search Azure AI Foundry](images/Screenshot%202025-07-26%20010150.png)
+![Search Azure AI Foundry](images/search_ai_foundry.png)
 
 ### 3. Select "AI Hubs"
 
 - In the left side menu, expand **"Use with AI Foundry"**
 - Select **AI Hubs**
 
-![Search Azure AI Foundry](images/search_ai_foundry.png)
+![Search Azure AI Foundry](images/select_ai_hubs.png)
 
 ### 4. Create a New Hub
 
