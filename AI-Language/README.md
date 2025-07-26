@@ -121,9 +121,10 @@ Under Parameters, search for the Documents heading. Select **+ Add new item**.
     body('Detect_Personal_Information_(V3.1)')['documents'][0]['redactedText']
     ```
 ![Alt text](./Images/fx.png)
-![Alt text](./Images/)
+![Alt text](./Images/PasteExpression.png)
 25. Save your Logic App.
 26. Select the arrow next to Run, then **Run with payload**.
+![Alt text](./Images/RunwithPayload.png)
 27. In the Body of the Run with payload pane, paste:
     ```json
     {
@@ -131,7 +132,7 @@ Under Parameters, search for the Documents heading. Select **+ Add new item**.
     }
     ```
 28. Confirm that the output displays the redacted phone number.
-
+![Alt text](./Images/RunwithPayloadoutput.png)
 ---
 
 ## Create a Translation Logic App
@@ -139,10 +140,12 @@ Under Parameters, search for the Documents heading. Select **+ Add new item**.
 This Logic App receives text, detects the language, and outputs the text in English.
 
 1. In https://portal.azure.com/, search for _Logic Apps_ and select the option.
+![Alt text](./Images/LogicApp.png)
 2. Click **+ Add** to add a new Logic App and choose Multi-tenant under Consumption, then click **Select**.
 3. Ensure you are selecting the same region and resource group as your Foundry project. Name your Logic App `EnglishTranslation`.
 4. Review and create the Logic App, then select **Go to resource** once provisioned.
 5. Under development tools, select **Logic app designer** and then **Add a trigger**.
+![Alt text](./Images/AddaTrigger2.png)
 6. Search triggers for “When a HTTP request is received” and select it.
 7. Under Request Body JSON Schema, add:
     ```json
@@ -162,10 +165,15 @@ This Logic App receives text, detects the language, and outputs the text in Engl
     ```
 8. In the description field, add:  
    _Receives an HTTP request in the description field of some text. Then translates that text to English._
+![Alt text](./Images/DescFieldRequestRecieved2.png)
 9. Select **Save**.
 10. Click the plus sign to add an action, then **select Add an action**.
+![Alt text](./Images/AddAnAction.png)
 11. Search for _Parse JSON_ and select the option under Data operations.
+![Alt text](./Images/ParseJSON.png)
 12. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+![Alt text](./Images/DynamicContentLightningBolt.png)
+![Alt text](./Images/SelectBody.png)
 13. Under the Schema box, paste in:
     ```json
     {
@@ -177,31 +185,47 @@ This Logic App receives text, detects the language, and outputs the text in Engl
       }
     }
     ```
-14. _**Image Placeholder:**_  
-    #
+14. 14.	The final screen should look like the screenshot below:
+![Alt text](./Images/FinalScreenshot2.png)
 15. Select **Save** on the canvas.
 16. Click the plus sign to add an action, then **select Add an action**.
+![Alt text](./Images/AddAnAction.png)
 17. Search for _Azure Language_ and then click **See more**.
 18. Search for _Microsoft Translator V3_ and then click **See more**.
 19. Select **Translate Text**. Create the connection using the same API Key and Resource name (not the full Endpoint) from Foundry.
+![Alt text](./Images/TranslateText.png)
 20. Under Parameters, set:
     - **Source Language:** Auto-detect
     - **Target Language:** English
     - **Body Text-1:** Choose expression (fx)  
+![Alt text](./Images/TranslateTextfx.png)
       In the expression field, paste:  
       ```
       body('Parse_JSON')['description']
       ```
+Then click **Add**
+![Alt text](./Images/TranslateTextfx1.png)
+![Alt text](./Images/TranslateTextfx2.png)
 21. Click **Save**.
 22. Click the plus sign to add the final action, then **select Add an action**.
+
+![Alt text](./Images/AddanAction.png)
+
 23. Search for _Response_ and select the option under Request.
+
+![Alt text](./Images/RequestResponse.png)
+
 24. Fill in the parameters for the Response, leaving Status Code as 200.
 25. In the Body, select the expression using the fx icon and paste:
+![Alt text](./Images/fx.png)
     ```
     body('Translate_text')[0]['TranslatedText']
     ```
+![Alt text](./Images/TranslateTextfx3.png)
+![Alt text](./Images/Response.png)
 26. Save your Logic App.
 27. Select the arrow next to Run, then **Run with payload**.
+![Alt text](./Images/run.png)
 28. In the Body of the Run with payload pane, paste:
     ```json
     {
@@ -215,6 +239,7 @@ This Logic App receives text, detects the language, and outputs the text in Engl
     }
     ```
 29. Confirm the output displays the translated text.
+![Alt text](./Images/RunwithPayload2.png)
 
 ---
 
