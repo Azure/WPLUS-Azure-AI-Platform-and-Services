@@ -254,32 +254,42 @@ You will create **2 agents** using Azure AI Foundry:
 ### Deploy an Azure OpenAI Resource for Your Project
 
 1. In your Azure AI Foundry (https://ai.azure.com/) project, click on **Agents**.
+![Alt text](./Images/Agents.png)
 2. If the Deploy a Model doesn’t pop up, select **Deploy model**.
 3. Ensure you select a model that supports agents in your region:  
    https://learn.microsoft.com/en-us/azure/ai-services/agents/concepts/model-region-support
 4. Search for **gpt-4.1** and select **Confirm**.
+![Alt text](./Images/confirmgpt4.1.png)
 5. The Agent screen should open with your first agent automatically created.
+![Alt text](./Images/createdagent.png)
 
 ---
 
 ### Create a Translation Agent
 
 1. Select the Agent checkbox and rename the Agent to **EnglishTranslationAgent**.
+![Alt text](./Images/TranslationAgent.png)
 2. In the Instructions, paste:
     > Translate all incoming messages into English. First, detect the language of each entry. If the detected language is not English, perform an accurate translation into English while preserving the original meaning and tone. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
 3. In the Description, paste:
     > This agent uses the AI Language Services to translate incoming information to English for downstream analytics.
 4. Next to Actions, select **+ Add**.
+
 5. In the pop-up modal window, select **Azure Logic Apps Your Actions**.
+
+![Alt text](./Images/AddAction.png)
+
 6. Your Logic Apps from part one should appear. Select **English Translation**.  
    _Note: If your Logic App does not appear, ensure it is in the same subscription and resource group as Foundry, the Logic App HTTP request description is in place, and the workflow contains a Request Trigger and ends with a Response Action._
+![Alt text](./Images/EnglishTranslation.png)
 7. On the Resource screen, click **Next**, then on the Schema screen, click **Create**.
 8. On the Agent Setup screen, select **Try in playground**.
 9. Try a sentence in English, then in Spanish:  
    - `Hello, how are you today?`  
    - `Hola ¿cómo estás hoy?`
-10. _**Image Placeholder:**_  
-    #
+![Alt text](./Images/Translationconv.png)
+![Alt text](./Images/Translationconv2.png)
+10. **NOTE:** If you see a gateway error you may need to try again as services complete deployment 
 
 ---
 
@@ -292,8 +302,10 @@ You will create **2 agents** using Azure AI Foundry:
       > Scan all incoming text for personally identifiable information (PII), including names, phone numbers, email addresses, physical addresses, and identification numbers. Redact or replace any detected PII with appropriate placeholders (e.g., [REDACTED]) while preserving the overall structure and readability of the text. Ensure no sensitive data remains in the output.
     - **Agent Description:**  
       > This agent redacts PII and sensitive information from text.
+ ![Alt text](./Images/RedactionAgent.png)
 3. Next to Actions, click **+ Add** then **Azure Logic Apps**.
 4. Select call external HTTP or HTTPS endpoints.
+![Alt text](./Images/calltohttp.png)
 5. On the basic information screen, add:
     - **Action Name:** PIIRedactionAgent
     - **Action Description:**  
@@ -305,8 +317,8 @@ You will create **2 agents** using Azure AI Foundry:
     ```
     Hello, my name is Mateo Gomez. I lost my Credit card on August 17th, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation: Profession: Accountant Social Security number is 123-45-6788 Date of birth: 9-9-1989 Phone number: 949-555-0110 Personal address: 1234 Hollywood Boulevard Los Angeles CA Linked email account: mateo@contosorestaurant.com Swift code: CHASUS33XXX
     ```
+
 9. The output should look similar to the below:  
-   _**Image Placeholder:**_  
-   #
+ ![Alt text](./Images/Reactionagentconv.png)
 
 
