@@ -1,8 +1,8 @@
-# Lab 1: Connection and First Steps with Azure OpenAI
+# Connection and First Steps with Azure OpenAI
 
 ## Overview
 
-In this laboratory, you will take the first steps with Azure OpenAI Service, learning from initial configuration to advanced practical tasks. The lab covers API calls, detailed response analysis, embedding generation, image processing with multimodal models, and exploration of other LLM models available in Azure AI Foundry.
+In this lab, you will take the first steps with Azure OpenAI Service, learning from initial configuration to advanced practical tasks. The lab covers API calls, detailed response analysis, embedding generation, image processing with multimodal models, and exploration of other LLM models available in Azure AI Foundry.
 
 ## Objectives
 
