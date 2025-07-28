@@ -3,8 +3,8 @@ create extension azure_ai
 
 
 
-select azure_ai.set_setting('azure_openai.endpoint', 'https://foundryhubmain.openai.azure.com/'); 
-select azure_ai.set_setting('azure_openai.subscription_key', '');
+select azure_ai.set_setting('azure_openai.endpoint', '<your-endpoint-url>'); 
+select azure_ai.set_setting('azure_openai.subscription_key', '<your-subscription-key>');
 
 WITH params AS (
   SELECT
