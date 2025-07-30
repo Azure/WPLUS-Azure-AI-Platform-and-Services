@@ -1,3 +1,27 @@
+# Title of the lab
+
+## Introduction 
+
+This lab shows <provide intro>.
+
+## Objectives 
+ List the objectives
+In this lab we will:
+-	
+
+
+## Estimated Time 
+
+30 minutes 
+
+## Scenario
+
+
+## Pre-requisites
+
+## Tasks
+
+
 # 🧪 Lab Prerequisite: Creating a Hub in Azure AI Foundry via Azure Portal
 
 This guide walks you through the steps to create a **Hub** in **Azure AI Foundry** using the **Azure Portal**. This is a required setup step before proceeding with lab exercises involving AI Foundry capabilities.

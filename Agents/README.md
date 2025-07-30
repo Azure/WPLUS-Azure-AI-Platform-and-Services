@@ -1,3 +1,31 @@
+# Title of the lab
+
+## Introduction 
+
+This lab shows <provide intro>.
+
+## Objectives 
+ List the objectives
+In this lab we will:
+-	
+
+
+## Estimated Time 
+
+30 minutes 
+
+## Scenario
+
+
+## Pre-requisites
+
+## Tasks
+
+
+
+
+
+
 # Azure AI Agents Tutorial Collection 🤖
 
 This repository contains a comprehensive collection of Azure AI Agent tutorials that demonstrate various capabilities and integration patterns using Azure AI Foundry SDKs.
