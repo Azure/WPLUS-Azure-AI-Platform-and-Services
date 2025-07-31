@@ -1,4 +1,4 @@
-# Create connections to Bing and AI Search services at Azure AI Foundry resource level
+# Create connections to Bing Resources at Azure AI Foundry resource level
 
 ## Introduction 
 
@@ -20,6 +20,17 @@ In this lab we will:
 ## Pre-requisites
 
 ## 🛠️ Tasks
+
+### 1. Sign in to Azure Portal
+
+Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your Azure credentials.
+
+### 2. Search for "Azure AI Foundry"
+
+- In the top search bar, type **"Azure AI Foundry"**
+- Select **Azure AI Foundry** from the search results
+
+![Search Azure AI Foundry](images/search_ai_foundry.png)
 
 ### 1. Sign in to Azure AI Foundry portal
 
