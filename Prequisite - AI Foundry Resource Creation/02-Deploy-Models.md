@@ -58,7 +58,7 @@ In this lab we will:
 
 ### 5. Deploy embedding model
 
-- Similar steps above. Search **embedding**
+- Similar steps above. Search **text-embedding-3-large**
 
 ## ✅ Completed. Verify models deployment
 
