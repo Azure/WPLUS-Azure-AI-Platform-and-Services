@@ -62,19 +62,27 @@ Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your
 ![Deploy](images/deployaifoundryresource.png)
 
 
-### 5. Verify Deployment
-
-Once deployment is complete:
+### 5. Verify Deployment, and Go to Azure AI Foundry portal
 
 - Click **Go to resource**
-- You should see the **Overview** details for the hub you just created.
 
-![Go to resource](images/ai_foundry_create.png)
+![Go to resource](images/aifoundrydeployed.png)
+  
+- Review the **Overview** details for the Azure AI Foundry resource you just created.
+- Click **Go to Azure AI Foundry Portal**
+
+![Go to resource](images/aifoundryportal.png)
+
 
 ## ✅ Completed
 
-Once your Hub is created, you can access the hub many ways:
-- Option 1: Azure Portal -> Azure AI Foundry -> AI Hubs -> Choose Your Hub
-- Option 2: Go to [https://ai.azure.com](https://ai.azure.com) -> **Azure AI Foundry** at the top left -> "View all resources" -> Choose Your Hub
+Now that your Azure AI Foundry resource is created, you can access it many ways:
+- Option 1: Azure Portal -> Azure AI Foundry -> AI Foundry -> Choose Your AI Foundry
+
+![Go to resource](images/aifoundryfromazureportal.png)
+
+- Option 2: Go to [https://ai.azure.com](https://ai.azure.com) -> Click **Azure AI Foundry** at the top left -> Choose Your AI Foundry
+
+![Go to resource](images/aifoundryfromaifoundryportal.png)
 
 
