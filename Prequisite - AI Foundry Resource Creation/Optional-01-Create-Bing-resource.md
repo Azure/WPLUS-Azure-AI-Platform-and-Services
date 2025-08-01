@@ -1,11 +1,8 @@
-# Create Azure AI Foundry Project
+# Optional - Create Grounding with Bing Search resource in Azure Portal
 
 ## Introduction 
 
-This lab walks you through the steps to create a **Azure AI Foundry** resource using the **Azure Portal**. This is a required setup step before proceeding with lab exercises involving AI Foundry capabilities.
-
-### 💡 What is Azure AI Foundry
-Azure AI Foundry is a unified platform for building, deploying, and managing enterprise-grade AI applications and agents—combining powerful tools, models, and infrastructure with built-in governance and scalability.
+This lab walks you through the steps to create a Grounding with Bing Search resource in Azure Portal. This is an optional step for this lab as this Grounding with Bing Search resource should have been provisioned at the launch of this lab.
 
 ## Objectives 
  List the objectives
@@ -15,7 +12,7 @@ In this lab we will:
 
 ## Estimated Time 
 
-30 minutes 
+15 minutes 
 
 ## Scenario
 
