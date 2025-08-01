@@ -22,7 +22,6 @@ In this lab we will:
 ## 🛠️ Tasks
 
 ### 1. Sign in to Azure AI Foundry portal
-
 - Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
 - Click **Azure AI Foundry** at the top left
 - Click Your AI Foundry (eg ai-foundry-53439517)
@@ -50,6 +49,7 @@ In this lab we will:
 - (Optional) Modify additional details in Customize section if needed
 - Click **Deploy** button 
 ![Deploy gpt-4o](images/deploygpt4o.png)
+- After deployment completes, close the browser tab.
 
 ### 4. Deploy gpt-4o-mini model
 
