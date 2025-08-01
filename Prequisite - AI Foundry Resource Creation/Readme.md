@@ -11,7 +11,7 @@ List of resources to be created and pre-requisites config to be done.
     - (DONE)Chat/Completion	gpt-4o, gpt-4o-mini	Primary reasoning & conversation
     - (DONE)Embeddings	text-embedding-3-large	Vector search & RAG
 - (DONE)Bing Grounding
-    - For Agents Lab 
+    - (DONE) For Agents Lab 
         - (DONE) Connection to AI Foundry, Bing Grounding
-        - Connection to AI Foundry, search service
+        - (DONE) Connection to AI Foundry, search service
 
