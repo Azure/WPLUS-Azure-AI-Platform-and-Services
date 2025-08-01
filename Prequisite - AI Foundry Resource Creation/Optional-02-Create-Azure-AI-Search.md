@@ -30,11 +30,13 @@ Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your
 - In the top search bar, type **ai search**
 - Select **AI Search** from the search results
 
-![Search Azure AI Foundry](images/search_for_bing.png)
+![Search Azure AI Foundry](images/search_aisearch.png)
 
 ### 3. Create AI Search
 
 - Click **+ Create**
+
+  
 ![Create Azure AI Foundry](images/createaisearch.png)
 
 ### 4. Fill in the details and deploy
