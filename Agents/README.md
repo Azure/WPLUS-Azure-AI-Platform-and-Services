@@ -1,5 +1,4 @@
 # Azure AI Agents Tutorial Collection 🤖
-
 This repository contains a comprehensive collection of Azure AI Agent tutorials that demonstrate various capabilities and integration patterns using Azure AI Foundry SDKs.
 
 ## 📋 Prerequisites

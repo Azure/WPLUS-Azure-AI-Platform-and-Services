@@ -1,0 +1,10 @@
+{"chat_input":"What is the cost of the Northwind Health Plus plan?","truth_value":"Northwind Health Plus plan cost is based on services and usage (source: document)."}
+{"chat_input":"Does the Northwind Standard plan cover mental health services?","truth_value":"No, it does not cover mental health services (source: document)."}
+{"chat_input":"What types of activities does PerksPlus cover?","truth_value":"PerksPlus covers gym memberships, yoga, fitness equipment, and adventure activities (source: document)."}
+{"chat_input":"What is the deductible for Northwind Standard?","truth_value":"The deductible is $2,000 per person per year (source: document)."}
+{"chat_input":"Can employees get reimbursement for food through PerksPlus?","truth_value":"No, food is not covered under PerksPlus (source: document)."}
+{"chat_input":"Does Northwind Health Plus provide coverage for emergency services?","truth_value":"Yes, emergency services are covered in-network and out-of-network (source: document)."}
+{"chat_input":"What are the company\u2019s core values?","truth_value":"Quality, integrity, innovation, teamwork, respect, excellence, accountability, and community (source: document)."}
+{"chat_input":"Is balance billing protection available for out-of-network providers under Northwind plans?","truth_value":"No, balance billing protection does not apply to out-of-network providers (source: document)."}
+{"chat_input":"What is the role of the Chief Executive Officer at Contoso Electronics?","truth_value":"To provide strategic direction and oversee company success and profitability (source: document)."}
+{"chat_input":"What are the key benefits of continuity of care in Northwind plans?","truth_value":"It ensures better diagnoses and cost savings through consistent care (source: document)."}

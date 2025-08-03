@@ -1,4 +1,349 @@
+# Title of the lab
 
-## Azure AI Language Services Resources
+## Introduction 
 
-This directory contains the VBD delivery resources for Azure AI Language Services. 
+This lab shows <provide intro>.
+
+## Objectives 
+ List the objectives
+In this lab we will:
+-	
+
+
+## Estimated Time 
+
+30 minutes 
+
+## Scenario
+
+
+## Pre-requisites
+
+## Tasks
+
+
+
+
+# AI Language Service Lab
+> **Note:** This Low Code lab requires access to:
+> - The AI Language Service in Azure AI Foundry
+> - Access to provision Logic Apps and resources in Azure
+> - Azure OpenAI _(bonus/advanced only for Agent creation)_
+
+---
+
+## Overview
+
+In this lab, you will interact with the Azure AI language cognitive service API using the Logic App low code workflow designer.  
+You will create **2 low code Logic Apps**:
+1. **PII removal**
+2. **Language detection and translation**
+
+For advanced/bonus content, you can use these Logic Apps to create AI agents.
+
+---
+
+## Create an Azure AI Foundry Project (if you did not create one in the pre-requisites lab) and Access Language API Key
+
+1. Login to Azure AI Foundry: https://ai.azure.com/. 
+2. Click **+Create new** and then Azure AI Foundry resource  
+   _Note: See “Prequisite - AI Foundry Resource Creation” folder to ensure Foundry Hub is correctly set up._. If it has been set up and the project is created, please skip to - **Create a PII Redaction Logic App** step in this lab.
+   
+   ![Alt text](./Images/CreateProject.png)
+3. Name your project (e.g., `<<Name>>-AI-Lang-Project`). 
+![Alt text](./Images/NameProject.png)
+4. Once the project is created and opens, on the Overview page, note the Azure AI Services endpoint and API Key.
+![Alt text](./Images/SaveEndpointAPIKey.png)
+5. Store these values:  
+   - **APIKey**
+   - **Target (Endpoint)**
+6. You will use these details to connect to the Language Service.
+
+---
+
+## Create a PII Redaction Logic App
+
+This Logic App receives text input and outputs the text with PII redacted. It creates an endpoint callable from other applications.
+
+1. In https://portal.azure.com/, navigate to **+ Create a resource** and search for _Logic App_, then click **Create**. 
+2. Under plan, choose **Multi-tenant** under Consumption, then click **Select**.
+3. Select the same Resource Group as your AI Foundry project and follow the prompts to create a Logic App resource. ![Alt text](./Images/CreateLogicApp.png)
+4. Once provisioned, select **Go to Resource** in the Azure Portal to open the new Logic App.
+5. Expand Development tools and open **Logic App Designer**. Select **Add a trigger**. ![Alt text](./Images/AddTrigger.png)
+6. Search triggers for “When a HTTP request is received” and select it.
+7. Under Request Body JSON Schema, add:
+    ```json
+    {
+      "type": "object",
+      "properties": {
+        "HTTP_URI": {
+          "description": "URI for HTTP Request",
+          "type": "string"
+        },
+        "HTTP_request_content": {
+          "description": "Content or Body of the HTTP Request",
+          "type": "string"
+        }
+      }
+    }
+    ```
+8. In the description field, add:  
+   _When a request is received, review the message for PII data and redact it with ******._
+   ![Alt text](./Images/DescFieldRequestRecieved.png)
+9. Click the plus sign to add an action, then **select Add an action**. 
+![Alt text](./Images/AddAnAction.png)
+10. Search for _Parse JSON_ and select the option under Data operations. 
+![Alt text](./Images/ParseJSON.png)
+11. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+![Alt text](./Images/DynamicContentLightningBolt.png)
+![Alt text](./Images/SelectBody.png)
+12. Under the Schema box, paste in:
+    ```json
+    {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+    ```
+13. 11.	The final screen should look like the screenshot below:
+![Alt text](./Images/FinalScreenshot.png)  
+    #
+14. Select **Save** on the canvas.
+15. Click the plus sign to add an action, then **select Add an action**.
+![Alt text](./Images/AddAnAction2.png)
+16. Search for _Azure Language_ and then click **See more**.
+![Alt text](./Images/Seemore.png)
+17. Select **Detect Personal Information (V3.1)**.
+![Alt text](./Images/DetectPersonalInformation.png)
+18. Select Authentication Type as **Api Key** and add the API Key and Endpoint (Target) you saved earlier.
+![Alt text](./Images/AfterDetectPersonalInformation.png)
+19. Select the Detect Personal Information action. 
+Under Parameters, search for the Documents heading. Select **+ Add new item**.  
+![Alt text](./Images/AddaNewItem.png)
+    Insert:
+    - Id-1 = 1
+    - Text-1 = Insert expression (fx)
+![Alt text](./Images/InsertExpression.png)
+
+20. In the pop-up expression window, paste:  
+    ```
+    body('Parse_JSON')['description']
+    ```
+![Alt text](./Images/BodyParseJSONDesc.png)
+
+21. Click the plus sign to add the final action, then **select Add an action**.
+![Alt text](./Images/AddAnAction.png)
+
+22. Search for _Response_ and select the option under Request.
+![Alt text](./Images/RequestResponse.png)
+
+23. Fill in the parameters for the Response, leaving Status Code as 200.
+24. In the Body, select the expression using the fx icon and paste:
+    ```
+    body('Detect_Personal_Information_(V3.1)')['documents'][0]['redactedText']
+    ```
+![Alt text](./Images/fx.png)
+![Alt text](./Images/PasteExpression.png)
+25. Save your Logic App.
+26. Select the arrow next to Run, then **Run with payload**.
+![Alt text](./Images/RunwithPayload.png)
+27. In the Body of the Run with payload pane, paste:
+    ```json
+    {
+      "description": "My phone number is (04) 12 345 678"
+    }
+    ```
+28. Confirm that the output displays the redacted phone number.
+![Alt text](./Images/RunwithPayloadoutput.png)
+---
+
+## Create a Translation Logic App
+
+This Logic App receives text, detects the language, and outputs the text in English.
+
+1. In https://portal.azure.com/, search for _Logic Apps_ and select the option.
+![Alt text](./Images/LogicApp.png)
+2. Click **+ Add** to add a new Logic App and choose Multi-tenant under Consumption, then click **Select**.
+3. Ensure you are selecting the same region and resource group as your Foundry project. Name your Logic App `EnglishTranslation`.
+4. Review and create the Logic App, then select **Go to resource** once provisioned.
+5. Under development tools, select **Logic app designer** and then **Add a trigger**.
+![Alt text](./Images/AddaTrigger2.png)
+6. Search triggers for “When a HTTP request is received” and select it.
+7. Under Request Body JSON Schema, add:
+    ```json
+    {
+      "type": "object",
+      "properties": {
+        "HTTP_URI": {
+          "description": "URI for HTTP Request",
+          "type": "string"
+        },
+        "HTTP_request_content": {
+          "description": "Content or Body of the HTTP Request",
+          "type": "string"
+        }
+      }
+    }
+    ```
+8. In the description field, add:  
+   _Receives an HTTP request in the description field of some text. Then translates that text to English._
+![Alt text](./Images/DescFieldRequestRecieved2.png)
+9. Select **Save**.
+10. Click the plus sign to add an action, then **select Add an action**.
+![Alt text](./Images/AddAnAction.png)
+11. Search for _Parse JSON_ and select the option under Data operations.
+![Alt text](./Images/ParseJSON.png)
+12. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+![Alt text](./Images/DynamicContentLightningBolt.png)
+![Alt text](./Images/SelectBody.png)
+13. Under the Schema box, paste in:
+    ```json
+    {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+    ```
+14. 14.	The final screen should look like the screenshot below:
+![Alt text](./Images/FinalScreenshot2.png)
+15. Select **Save** on the canvas.
+16. Click the plus sign to add an action, then **select Add an action**.
+![Alt text](./Images/AddAnAction.png)
+17. Search for _Azure Language_ and then click **See more**.
+18. Search for _Microsoft Translator V3_ and then click **See more**.
+19. Select **Translate Text**. Create the connection using the same API Key and Resource name (not the full Endpoint) from Foundry.
+![Alt text](./Images/TranslateText.png)
+20. Under Parameters, set:
+    - **Source Language:** Auto-detect
+    - **Target Language:** English
+    - **Body Text-1:** Choose expression (fx)  
+![Alt text](./Images/TranslateTextfx.png)
+      In the expression field, paste:  
+      ```
+      body('Parse_JSON')['description']
+      ```
+Then click **Add**
+![Alt text](./Images/TranslateTextfx1.png)
+![Alt text](./Images/TranslateTextfx2.png)
+21. Click **Save**.
+22. Click the plus sign to add the final action, then **select Add an action**.
+
+![Alt text](./Images/AddanAction.png)
+
+23. Search for _Response_ and select the option under Request.
+
+![Alt text](./Images/RequestResponse.png)
+
+24. Fill in the parameters for the Response, leaving Status Code as 200.
+25. In the Body, select the expression using the fx icon and paste:
+![Alt text](./Images/fx.png)
+    ```
+    body('Translate_text')[0]['TranslatedText']
+    ```
+![Alt text](./Images/TranslateTextfx3.png)
+![Alt text](./Images/Response.png)
+26. Save your Logic App.
+27. Select the arrow next to Run, then **Run with payload**.
+![Alt text](./Images/run.png)
+28. In the Body of the Run with payload pane, paste:
+    ```json
+    {
+      "description": "Mi número de teléfono es (04) 12 345 678"
+    }
+    ```
+    or
+    ```json
+    {
+      "HTTP_request_content": "Mi número de teléfono es (04) 12 345 678"
+    }
+    ```
+29. Confirm the output displays the translated text.
+![Alt text](./Images/RunwithPayload2.png)
+
+---
+
+## Advanced / Bonus Content
+
+You work for Contoso, a multinational e-commerce company that receives thousands of customer feedback messages daily in various languages. These messages often contain sensitive PII. Your company wants to ensure all messages have the language detected, PII removed, and are translated to English for centralized analytics.
+
+You will create **2 agents** using Azure AI Foundry:
+1. **Translation Agent**
+2. **PII Redaction Agent**
+
+### Deploy an Azure OpenAI Resource for Your Project
+
+1. In your Azure AI Foundry (https://ai.azure.com/) project, click on **Agents**.
+![Alt text](./Images/Agents.png)
+2. If the Deploy a Model doesn’t pop up, select **Deploy model**.
+3. Ensure you select a model that supports agents in your region:  
+   https://learn.microsoft.com/en-us/azure/ai-services/agents/concepts/model-region-support
+4. Search for **gpt-4.1** and select **Confirm**.
+![Alt text](./Images/confirmgpt4.1.png)
+5. The Agent screen should open with your first agent automatically created.
+![Alt text](./Images/createdagent.png)
+
+---
+
+### Create a Translation Agent
+
+1. Select the Agent checkbox and rename the Agent to **EnglishTranslationAgent**.
+![Alt text](./Images/TranslationAgent.png)
+2. In the Instructions, paste:
+    > Translate all incoming messages into English. First, detect the language of each entry. If the detected language is not English, perform an accurate translation into English while preserving the original meaning and tone. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
+3. In the Description, paste:
+    > This agent uses the AI Language Services to translate incoming information to English for downstream analytics.
+4. Next to Actions, select **+ Add**.
+
+5. In the pop-up modal window, select **Azure Logic Apps Your Actions**.
+
+![Alt text](./Images/AddAction.png)
+
+6. Your Logic Apps from part one should appear. Select **English Translation**.  
+   _Note: If your Logic App does not appear, ensure it is in the same subscription and resource group as Foundry, the Logic App HTTP request description is in place, and the workflow contains a Request Trigger and ends with a Response Action._
+![Alt text](./Images/EnglishTranslation.png)
+7. On the Resource screen, click **Next**, then on the Schema screen, click **Create**.
+8. On the Agent Setup screen, select **Try in playground**.
+9. Try a sentence in English, then in Spanish:  
+   - `Hello, how are you today?`  
+   - `Hola ¿cómo estás hoy?`
+![Alt text](./Images/Translationconv.png)
+![Alt text](./Images/Translationconv2.png)
+10. **NOTE:** If you see a gateway error you may need to try again as services complete deployment 
+
+---
+
+### Create a PII Redaction Agent
+
+1. Select Agents from the left menu and then **+ New Agent**.
+2. In the setup screen, input:
+    - **Agent Name:** PIIRedactionAgent
+    - **Instructions:**  
+      > Scan all incoming text for personally identifiable information (PII), including names, phone numbers, email addresses, physical addresses, and identification numbers. Redact or replace any detected PII with appropriate placeholders (e.g., [REDACTED]) while preserving the overall structure and readability of the text. Ensure no sensitive data remains in the output.
+    - **Agent Description:**  
+      > This agent redacts PII and sensitive information from text.
+ ![Alt text](./Images/RedactionAgent.png)
+3. Next to Actions, click **+ Add** then **Azure Logic Apps**.
+4. Select call external HTTP or HTTPS endpoints.
+![Alt text](./Images/calltohttp.png)
+5. On the basic information screen, add:
+    - **Action Name:** PIIRedactionAgent
+    - **Action Description:**  
+      > For any text provided, replace any sensitive or personal identifying information (PII) with *********
+6. Select **POST** as the Endpoint Method and acknowledge the LogicApps service charge.
+7. On the Schema screen, under "describe how to invoke this tool," paste:
+    > All text should come to this tool and have any PII or sensitive information detected and redacted.
+8. On the setup screen, select **Try in playground** and paste in:
+    ```
+    Hello, my name is Mateo Gomez. I lost my Credit card on August 17th, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation: Profession: Accountant Social Security number is 123-45-6788 Date of birth: 9-9-1989 Phone number: 949-555-0110 Personal address: 1234 Hollywood Boulevard Los Angeles CA Linked email account: mateo@contosorestaurant.com Swift code: CHASUS33XXX
+    ```
+
+9. The output should look similar to the below:  
+ ![Alt text](./Images/Reactionagentconv.png)
+
+
