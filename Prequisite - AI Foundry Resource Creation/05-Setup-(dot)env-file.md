@@ -60,7 +60,7 @@ In this lab we will:
 - Copy corresponding string from the URI and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and MODEL_API_VERSION
 ![Go to project](images/modelapikey3.png)
 
-### 5. Set value for AZURE_OPENAI_EMBEDDING_ENDPOINT
+### 5. Set value for AZURE_OPENAI_EMBEDDING_ENDPOINT and more
 
 - Similar steps as above 
 - Click on embeddding model name to get details
@@ -72,6 +72,16 @@ In this lab we will:
 - Copy corresponding string from the URI and paste into .env file as the value for EMBEDDING_MODEL_DEPLOYMENT_NAME and EMBEDDING_MODEL_API_VERSION
 
 
+### ?. Set value for TENANT_ID
+
+- Go to [https://portal.azure.com](https://portal.azure.com) and sign into the Azure portal with your Azure credentials.
+- In the top search bar, type **entra id**
+- Select **Microsoft Entra ID** from the search results
+![Go to project](images/tenantid1.png)
+
+- In the Overview section, find **Tenant ID** as shown in the screenshot
+- Copy Tenant ID and paste into .env file as the value for TENANT_ID
+![Go to project](images/tenantid2.png)
 
 
 
