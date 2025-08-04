@@ -46,7 +46,6 @@ In this lab we will:
 
 ### 4. Set value for AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_KEY and more
 
-
 - Scroll to the bottom on the left side menu
 - Click **Models + endpoints** in the My assets section 
 - You can view list of Model deployments on the right side
@@ -60,6 +59,19 @@ In this lab we will:
 - The Endpoint Target URI is in the form of https://<AI-FOUNDRY-NAME>.cognitiveservices.azure.com/openai/deployments/<MODEL-DEPLOYMENT-NAME>/chat/completions?api-version=<MODEL-API-VERSION>
 - Copy corresponding string from the URI and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and MODEL_API_VERSION
 ![Go to project](images/modelapikey3.png)
+
+### 5. Set value for AZURE_OPENAI_EMBEDDING_ENDPOINT
+
+- Similar steps as above 
+- Click on embeddding model name to get details
+- As shown in the screenshot Copy Endpoint Target URI and paste into .env file as the value for AZURE_OPENAI_ENDPOINT
+- Copy Key and paste into .env file as the value for AZURE_OPENAI_EMBEDDING_API_KEY
+![Go to project](images/modelapikey2e.png)
+
+- The Endpoint Target URI is in the form of https://<AI-FOUNDRY-NAME>.cognitiveservices.azure.com/openai/deployments/<MODEL-DEPLOYMENT-NAME>/chat/completions?api-version=<MODEL-API-VERSION>
+- Copy corresponding string from the URI and paste into .env file as the value for EMBEDDING_MODEL_DEPLOYMENT_NAME and EMBEDDING_MODEL_API_VERSION
+
+
 
 
 
