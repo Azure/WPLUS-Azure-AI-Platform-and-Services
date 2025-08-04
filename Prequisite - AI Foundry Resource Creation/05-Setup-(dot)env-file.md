@@ -72,6 +72,19 @@ In this lab we will:
 - Copy corresponding string from the URI and paste into .env file as the value for EMBEDDING_MODEL_DEPLOYMENT_NAME and EMBEDDING_MODEL_API_VERSION
 
 
+### 6. Set value for GROUNDING_WITH_BING_CONNECTION_NAME
+
+- At the top left, Click **Azure AI Foundry**
+- Click Your AI Foundry (eg ai-foundry-53439517)
+![Go to resource](images/aifoundryfromaifoundryportal.png)
+- Left side, in the **Management center**, in the Resource section, Click **Connected resources**
+- You can see list of connected resources
+![List models deployed](images/gwbingconnectedinlist.png)
+- Copy the "Name" of the "Grounding with Bing Search" connection (Corresponding Target columns is https://api.bing.microsoft.com/) and paste into .env file as the value for GROUNDING_WITH_BING_CONNECTION_NAME
+
+
+
+
 ### ?. Set value for TENANT_ID
 
 - Go to [https://portal.azure.com](https://portal.azure.com) and sign into the Azure portal with your Azure credentials.
