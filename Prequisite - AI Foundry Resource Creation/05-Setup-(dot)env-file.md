@@ -37,11 +37,11 @@ In this lab we will:
 ![Go to resource](images/aifoundryfromaifoundryportal.png)
 
 
-### 3. Set value for PROJECT_ENDPOINT
+### 3. Set value for AZURE_AI_FOUNDRY_PROJECT_ENDPOINT
 
 - At  the center of the **Overview** section, you can find the Azure AI Foundry project endpoint as shown below
-- Copy and paste into .env file as the value for PROJECT_ENDPOINT
-![Go to project](images/PROJECT_ENDPOINT.png)
+- Copy and paste into .env file as the value for AZURE_AI_FOUNDRY_PROJECT_ENDPOINT
+![Go to project](images/AZURE_AI_FOUNDRY_PROJECT_ENDPOINT.png)
 
 
 
