@@ -82,10 +82,7 @@ In this lab we will:
 ![List models deployed](images/gwbingconnectedinlist.png)
 - Copy the "Name" of the "Grounding with Bing Search" connection (Corresponding Target columns is https://api.bing.microsoft.com/) and paste into .env file as the value for GROUNDING_WITH_BING_CONNECTION_NAME
 
-
-
-
-### ?. Set value for TENANT_ID
+### 7. Set value for TENANT_ID
 
 - Go to [https://portal.azure.com](https://portal.azure.com) and sign into the Azure portal with your Azure credentials.
 - In the top search bar, type **entra id**
@@ -95,6 +92,22 @@ In this lab we will:
 - In the Overview section, find **Tenant ID** as shown in the screenshot
 - Copy Tenant ID and paste into .env file as the value for TENANT_ID
 ![Go to project](images/tenantid2.png)
+
+
+### 8. Set value for AZURE_AI_SEARCH_ENDPOINT & AZURE_AI_SEARCH_API_KEY
+
+- In the top search bar, type **ai search**
+- Select **AI Search** from the search results
+- You will see the AI Search service that you have created (eg ai-search-53439517)
+- Click on the name
+- Next screen, In the Overview section, find the **Url** as shown in below shortcut
+- Copy and paste into .env file as the value for AZURE_AI_SEARCH_ENDPOINT
+![Go to project](images/aisearchurl.png)
+- On the left side Menu, expand **Settings**
+- Click **Keys**
+- Copy the key as shown in the screenshot for this Lab, and paste into .env file as the value for AZURE_AI_SEARCH_API_KEY
+![Go to project](images/aisearchapikey.png)
+
 
 
 
