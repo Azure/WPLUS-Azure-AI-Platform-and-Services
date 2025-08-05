@@ -134,7 +134,7 @@ In this lab we will:
 
 
 
-## ✅ Completed. 
 
-- WIP
+## ✅ Completed. 
+- You should have the .env setup complete.
 
