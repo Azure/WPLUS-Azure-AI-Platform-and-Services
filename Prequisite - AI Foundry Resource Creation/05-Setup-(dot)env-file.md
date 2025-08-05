@@ -100,13 +100,36 @@ In this lab we will:
 - Select **AI Search** from the search results
 - You will see the AI Search service that you have created (eg ai-search-53439517)
 - Click on the name
-- Next screen, In the Overview section, find the **Url** as shown in below shortcut
+- Next screen, In the Overview section, find the **Url** as shown in below screenshot
 - Copy and paste into .env file as the value for AZURE_AI_SEARCH_ENDPOINT
 ![Go to project](images/aisearchurl.png)
 - On the left side Menu, expand **Settings**
 - Click **Keys**
 - Copy the key as shown in the screenshot for this Lab, and paste into .env file as the value for AZURE_AI_SEARCH_API_KEY
 ![Go to project](images/aisearchapikey.png)
+
+
+### 9. Set value for COSMOS_ENDPOINT & COSMOS_KEY
+
+- In the top search bar, type **cosmos**
+- Select **Azure Cosmos DB** from the search results
+- You will see the Azure Cosmos DB that you have created (eg cosmos-53439517)
+- Click on the name
+- Next screen, at the left side, expand **Settings**, Click **Keys**
+- Copy **URI** and paste into .env file as the value for COSMOS_ENDPOINT
+- Toggle the eye icon at the far right of **PRIMARY KEY**, Copy the key and paste into .env file as the value for COSMOS_KEY
+![Go to project](images/cosmos_ep_key.png)
+
+
+### 10. Set value for SQL_SERVER
+
+- In the top search bar, type **sql**
+- Select **SQL Servers** from the search results
+- You will see the SQL Server that you have created (eg sqlserver-53439517)
+- Click on the name
+- Next screen, in the **Overview** section, Copy **Server Name** and paste into .env file as the value for SQL_SERVER
+![Go to project](images/sqlserver.png)
+
 
 
 
