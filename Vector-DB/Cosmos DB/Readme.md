@@ -17,4 +17,4 @@ You are building a retail application that needs to support flexible search acro
 None. The database has been pre-created for you.
  
 ## Tasks
-Open [Jupyter notebook](https://github.com/Azure/WPLUS-Azure-AI-Platform-and-Services/blob/AugRelease/Vector-DB/Cosmos%20DB/Python-Samples.ipynb) and follow the steps to ingest data and run search queries.
+Open **Python-Samples.ipynb** and follow the steps to ingest data and run search queries.
