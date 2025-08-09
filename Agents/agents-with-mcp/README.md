@@ -1,4 +1,3 @@
-git clone <repository-url>
 # MCP Inventory Management Agent Lab
 
 ## Introduction
