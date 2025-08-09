@@ -1,15 +1,43 @@
-# MCP Inventory Management Agent
+git clone <repository-url>
+# MCP Inventory Management Agent Lab
 
-This project demonstrates how to connect AI agents to tools using the **Model Context Protocol (MCP)**. The implementation creates an intelligent inventory management agent for a cosmetics retailer that can automatically discover and use tools to analyze inventory levels and provide actionable recommendations.
+## Introduction
+This lab demonstrates how to connect Azure AI Agents to external tools via the **Model Context Protocol (MCP)**. You will build an intelligent inventory management assistant for a cosmetics retailer that automatically discovers and invokes MCP-provided tools to analyze stock levels and produce actionable recommendations.
 
-## 🎯 What You'll Build
+## Objectives
+In this lab you will:
+- Understand the MCP architecture (client/server, stdio transport)
+- Launch an MCP server that exposes inventory & sales tools
+- Run an Azure AI Agent that auto-discovers and calls those tools
+- Interactively query inventory health and receive recommendations
+- Extend & troubleshoot the integration
 
-- **MCP Client** (`client.py`): An Azure AI agent that connects to MCP servers and automatically uses discovered tools
-- **MCP Server** (`server.py`): A local server providing inventory management tools via MCP protocol
-- **Interactive Chat**: A conversational interface where the agent analyzes inventory and provides smart recommendations
+## Estimated Time
+30–40 minutes
 
-## 🏗️ Architecture Overview
+## Scenario
+A cosmetics retailer needs proactive visibility into inventory velocity and stock risks. Instead of manually exporting reports, an AI Agent should dynamically call tool endpoints (inventory & weekly sales) and synthesize restock, clearance, and insight recommendations in natural language.
 
+## Pre-requisites
+- Azure AI Foundry project with a deployed model (e.g. `gpt-4o`)
+- Root `.env` in repository configured with:
+  - `PROJECT_CONNECTION_STRING`
+  - `MODEL_DEPLOYMENT_NAME`
+  - `TENANT_ID`
+- Python 3.10+
+- (Optional) Azure CLI authenticated: `az login`
+
+## Tasks (High-Level)
+1. Environment setup
+2. Configure authentication
+3. Run MCP client (auto-starts server)
+4. Interact with the agent
+5. Explore architecture & code
+6. Troubleshoot & extend
+
+---
+
+## Architecture Overview
 ```
 ┌─────────────────┐    MCP Protocol    ┌─────────────────┐
 │   Azure AI      │ ◄─────────────────► │   MCP Server    │
@@ -22,113 +50,78 @@ This project demonstrates how to connect AI agents to tools using the **Model Co
          └───────────────────────────────────────│ • get_weekly_sales
 ```
 
-### Step 1: Clone and Setup Environment
+---
+## Exercise 1: Environment Setup
+1. Clone repository & create virtual environment:
+   ```bash
+   git clone <repository-url>
+   cd WPLUS-Azure-AI-Platform-and-Services/Agents/agents-with-mcp
+   python -m venv .venv
+   # Windows
+   .venv\\Scripts\\activate
+   # macOS/Linux
+   source .venv/bin/activate
+   pip install -r ../requirements.txt
+   ```
+2. Confirm `.env` exists two levels up (root). Do not duplicate local secrets.
 
-```bash
-# Clone the repository
-git clone <repository-url>
-
-# Create and activate virtual environment
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-
-# macOS/Linux
-source .venv/bin/activate
-
-# Install all dependencies from requirements file under Agents folder
-pip install -r requirements.txt
-```
-
-### Step 2: Configure Azure Authentication
-
-The project uses the existing `.env` configuration under Agents Folder. Authenticate using one of these methods:
-
-**Option A: Azure CLI (Recommended)**
+---
+## Exercise 2: Configure Authentication
+Use tenant-scoped interactive browser auth (recommended):
 ```bash
 az login
 ```
+The client uses environment variables from the root `.env`. No extra per-script config required.
 
-**Option B: Environment Variables**
-The `.env` file already contains your Azure project configuration.
-
-### Step 3: Verify Your Configuration
-
-The project will automatically use these values from the root `.env` file:
-- `PROJECT_CONNECTION_STRING`: Your Azure AI project endpoint
-- `MODEL_DEPLOYMENT_NAME`: Your deployed model (currently: `gpt-4o`)
-- `TENANT_ID`: Your Azure tenant ID
-
-### Step 4: Run the MCP Demo
-
-The client automatically starts the MCP server, so you only need one command:
-
+---
+## Exercise 3: Run the MCP Demo
+Run the client (it launches the server automatically):
 ```bash
-cd agents-with-mcp
 python client.py
 ```
-
-You should see output like:
+Expected initial output:
 ```
-Project Endpoint: https://your-project.services.ai.azure.com/api/projects/your-project
+Project Endpoint: https://<project>.services.ai.azure.com/api/projects/<name>
 Model Deployment: gpt-4o
 Connected to server with tools: ['get_inventory_levels', 'get_weekly_sales']
 Enter a prompt for the inventory agent. Use 'quit' to exit.
-USER: 
 ```
 
-**Note**: The client.py automatically:
-1. Starts the MCP server (`server.py`) internally
-2. Establishes the MCP protocol connection 
-3. Discovers available tools
-4. Creates the Azure AI agent with tool access
-5. Provides the interactive chat interface
-
-### Step 5: Test the Agent
-
-Try these example prompts:
-
+---
+## Exercise 4: Interact with the Agent
+Try queries:
 ```
 Please analyze our current inventory and provide recommendations
-
 What items need restocking urgently?
-
 Which products should we put on clearance sale?
-
 Show me all inventory levels and sales data
-
 What's our overall inventory health?
 ```
+Type `quit` to exit.
 
-Type `quit` to exit the application.
+---
+## Exercise 5: How It Works
+### Server (`server.py`)
+- FastMCP-based stdio server
+- Tools: `get_inventory_levels`, `get_weekly_sales`
+- Returns structured JSON-like payloads consumed by agent
 
-## 🔧 How It Works
-
-### MCP Server (`server.py`)
-- **FastMCP Framework**: Lightweight server implementation
-- **Inventory Tools**: Provides realistic cosmetics inventory data
-- **Sales Tools**: Returns weekly sales figures for analysis
-- **stdio Transport**: Communicates with client via standard input/output
-
-### MCP Client (`client.py`)  
-- **Automatic Server Launch**: Starts `server.py` as a subprocess using stdio transport
-- **Tool Discovery**: Automatically detects available MCP tools from the launched server
-- **Dynamic Integration**: Wraps MCP tools as callable Python functions
-- **Azure AI Agent**: Creates intelligent agent with access to tools
-- **Auto Function Calling**: Agent decides when and how to use tools
-- **Conversation Management**: Handles multi-turn conversations with tool usage
+### Client (`client.py`)
+- Spawns server subprocess (stdio transport)
+- Discovers tools dynamically (no hardcoded schema)
+- Wraps tools as callable Python functions
+- Creates Azure AI Agent with automatic tool invocation
+- Maintains conversation & aggregates responses
 
 ### Key Features
+1. Automatic tool discovery
+2. Intelligent recommendation synthesis
+3. Real-time aggregation of sales + inventory
+4. Structured, rationale-driven output
+5. Resilient error handling
 
-1. **Automatic Tool Discovery**: Client discovers server tools without hardcoding
-2. **Intelligent Recommendations**: Agent provides business insights based on data
-3. **Real-time Analysis**: Tools are called dynamically based on user queries  
-4. **Professional Output**: Structured recommendations with reasoning
-5. **Error Handling**: Robust error handling and graceful degradation
-
-## 💡 Example Interaction
-
+---
+## Exercise 6: Sample Interaction
 ```
 USER: Please analyze our current inventory and provide recommendations
 
@@ -137,112 +130,65 @@ USER: Please analyze our current inventory and provide recommendations
 📊 Calling tool: get_weekly_sales
 
 AGENT:
-Based on the current inventory levels and weekly sales data, here are my recommendations:
-
-**URGENT RESTOCK NEEDED:**
-- Moisturizer: Only 6 units left but sold 22 last week - HIGH DEMAND
-- Shampoo: Only 8 units left but sold 18 last week - RESTOCK IMMEDIATELY
-- Skin Serum: Only 9 units left but sold 19 last week - LOW STOCK ALERT
-
-**CLEARANCE RECOMMENDATIONS:**
-- Body Spray: 28 units in stock but only 3 sold - EXCESS INVENTORY
-- Cleanser: 30 units in stock but only 4 sold - CONSIDER PROMOTION
-- Dry Shampoo: 45 units in stock, selling moderately - MONITOR
-
-**BUSINESS INSIGHTS:**
-- Top performers: Moisturizer, Shampoo, and Skin Serum show strong demand
-- Slow movers: Body care products need marketing attention
-- Inventory turnover: Focus on high-velocity skincare items
+<Restock / clearance / insight recommendations>
 ```
 
-## 🛠️ Troubleshooting
+---
+## Exercise 7: Troubleshooting
+| Issue | Resolution |
+|-------|------------|
+| ModuleNotFoundError: mcp | Activate venv & install deps: `pip install -r ../requirements.txt` |
+| Authentication failed | Ensure `az login` and correct `.env` values |
+| Server connection failed | Confirm `server.py` present; run from directory; venv active |
+| Agent creation failed | Verify model deployment, permissions, and env vars |
 
-### Common Issues
-
-**"ModuleNotFoundError: No module named 'mcp'"**
-```bash
-# Make sure virtual environment is activated
-.venv\Scripts\activate  # Windows
-source .venv/bin/activate  # macOS/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-**"DefaultAzureCredential failed"**
-```bash
-# Authenticate with Azure
-az login
-
-```
-
-**"Server connection failed"**
-- The client automatically starts the server, so this error indicates:
-  - `server.py` file is missing or corrupted
-  - Python environment issues preventing server startup
-  - File permissions preventing execution
-- Ensure you're in the `agents-with-mcp` directory when running `python client.py`
-- Check that virtual environment is activated
-
-**"Agent creation failed"**  
-- Verify your `.env` file has correct Azure project details
-- Check that your deployed model name matches `MODEL_DEPLOYMENT_NAME`
-- Ensure you have proper permissions in Azure AI Foundry
-
-### Debug Mode
-
-Add logging to troubleshoot issues:
-
+Enable debug logging:
 ```python
-# Add to top of client.py
 import logging
 logging.basicConfig(level=logging.DEBUG)
 ```
 
-## 🎓 Learning Objectives
+---
+## Exercise 8: Extend the Lab
+Enhancements:
+- Add supplier lead-time tool
+- Add purchase order projection tool
+- Persist historical runs
+- Integrate cost / margin analytics
+- Deploy server to Azure Container Apps
 
-After completing this demo, you'll understand:
+---
+## Learning Objectives Recap
+You now understand:
+- MCP protocol & stdio transport pattern
+- Dynamic tool discovery & invocation
+- Azure AI Agent integration flow
+- Designing data-driven recommendations
+- Strategies for extension & production hardening
 
-1. **MCP Protocol**: How AI agents discover and use external tools
-2. **stdio Transport**: Communication between MCP clients and servers  
-3. **Azure AI Integration**: Connecting MCP tools to Azure AI agents
-4. **Dynamic Function Calling**: How agents decide when to use tools
-5. **Business Intelligence**: Converting raw data into actionable insights
+---
+## Next Steps
+| Path | Description |
+|------|-------------|
+| Add Tools | Introduce forecasting, anomaly detection |
+| Production Hardening | Observability, retries, auth, rate limiting |
+| Multi-Agent Expansion | Add pricing or marketing agent tools |
+| Visualization | Feed results into dashboard / BI system |
 
-## 🔄 Next Steps
-
-**Extend the Demo:**
-- Add more inventory tools (purchase orders, supplier data)
-- Connect to real inventory databases
-- Implement different recommendation algorithms
-- Add visualization tools
-
-**Deploy to Production:**  
-- Host MCP server in Azure Container Apps
-- Use Azure AI Foundry for agent deployment
-- Implement authentication and rate limiting
-- Add comprehensive error handling and logging
-
-**Explore Other MCP Servers:**
-- Try the [Azure MCP Server](https://github.com/Azure/azure-mcp) 
-- Build custom MCP servers for your business needs
-- Integrate with external APIs and services
-
-## 📚 Resources
-
-- [Model Context Protocol Documentation](https://modelcontextprotocol.io/)
+---
+## Resources
+- [Model Context Protocol](https://modelcontextprotocol.io/)
 - [Azure AI Foundry](https://ai.azure.com/)
 - [Azure AI Agents SDK](https://learn.microsoft.com/en-us/python/api/azure-ai-agents/)
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
 - [FastMCP Framework](https://github.com/jlowin/fastmcp)
 
-## 🐛 Support
-
-For issues:
-- **Azure AI Services**: [Azure Support](https://azure.microsoft.com/support/)
-- **MCP Protocol**: [MCP Community](https://modelcontextprotocol.io/community/)  
-- **This Demo**: Create an issue in the repository
+## Support
+| Area | Link |
+|------|------|
+| Azure AI Services | https://azure.microsoft.com/support/ |
+| MCP Community | https://modelcontextprotocol.io/community/ |
+| Repository Issues | Open an issue in this repo |
 
 ---
-
-**🎉 Happy Building!** This demo shows the power of MCP for creating intelligent, tool-aware AI agents that can adapt to different business scenarios.
+**🎉 Happy Building!** Leverage MCP + Azure AI Agents to operationalize intelligent, tool-aware assistants.
