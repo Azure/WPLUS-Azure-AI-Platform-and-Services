@@ -254,14 +254,11 @@ Then click **Add**
 28. In the Body of the Run with payload pane, paste:
     ```json
     {
-      "description": "Mi número de teléfono es (04) 12 345 678"
-    }
-    ```
-    or
-    ```json
-    {
-      "HTTP_request_content": "Mi número de teléfono es (04) 12 345 678"
-    }
+  "description" : "Mi número de teléfono es (04) 12 345 678"
+}
+{
+  "HTTP_request_content" : "Mi número de teléfono es (04) 12 345 678"
+}
     ```
 29. Confirm the output displays the translated text.
 ![Alt text](./Images/RunwithPayload2.png)
