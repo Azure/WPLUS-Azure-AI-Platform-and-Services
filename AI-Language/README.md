@@ -2,22 +2,35 @@
 
 ## Introduction 
 
-This lab shows <provide intro>.
+In this lab you will interact with the Azure AI language cognitive service API using the Logic App low code workflow designer. 
+You will create 2 low code Logic Apps
+(1) for PII removal
+(2) for Language detection and translation
+
+For advanced/bonus content you will use these Logic Apps to create AI agents that work together to prepare data. 
+
 
 ## Objectives 
  List the objectives
 In this lab we will:
--	
+-	Learn how to call the Azure AI langugage cognitive service API for different tasks 
+- Process data via the API as part of a business workflow
 
 
 ## Estimated Time 
 
-30 minutes 
+60 minutes 
 
 ## Scenario
-
+You work for Contoso, a multinational e-commerce company that receives thousands of customer feedback messages daily in various languages. These messages often contain sensitive personal identifying information (PII) and your company wants to ensure all messages have the language detected, PII removed to ensure privacy compliance, translation to English for centralized analytics. 
 
 ## Pre-requisites
+
+Note: This Low Code lab requires access to:
+-	the AI Language Service in Azure AI Foundry
+-	Access to provision Logic Apps and resources in Azure
+-	Azure OpenAI (bonus/advanced only for Agent creation)
+
 
 ## Tasks
 
@@ -28,7 +41,7 @@ In this lab we will:
 > **Note:** This Low Code lab requires access to:
 > - The AI Language Service in Azure AI Foundry
 > - Access to provision Logic Apps and resources in Azure
-> - Azure OpenAI _(bonus/advanced only for Agent creation)_
+> - Azure OpenAI _(bonus/advanced only for Agent creation)
 
 ---
 
