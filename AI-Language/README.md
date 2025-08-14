@@ -1,4 +1,4 @@
-# Title of the lab
+# AI Language Service Lab
 
 ## Introduction 
 
@@ -33,11 +33,6 @@ Note: This Low Code lab requires access to:
 
 
 ## Tasks
-
-
-
-
-# AI Language Service Lab
 > **Note:** This Low Code lab requires access to:
 > - The AI Language Service in Azure AI Foundry
 > - Access to provision Logic Apps and resources in Azure
@@ -163,16 +158,22 @@ Under Parameters, search for the Documents heading. Select **+ Add new item**.
     body('Detect_Personal_Information_(V3.1)')['documents'][0]['redactedText']
     ```
 ![Alt text](./Images/fx.png)
+
 ![Alt text](./Images/PasteExpression.png)
+
 25. Save your Logic App.
+
 26. Select the arrow next to Run, then **Run with payload**.
 ![Alt text](./Images/RunwithPayload.png)
+
+
 27. In the Body of the Run with payload pane, paste:
     ```json
     {
       "description": "My phone number is (04) 12 345 678"
     }
     ```
+
 28. Confirm that the output displays the redacted phone number.
 ![Alt text](./Images/RunwithPayloadoutput.png)
 ---
