@@ -63,10 +63,14 @@ For advanced/bonus content, you can use these Logic Apps to create AI agents.
    _Note: See “Prequisite - AI Foundry Resource Creation” folder to ensure Foundry Hub is correctly set up._. If it has been set up and the project is created, please skip to - **Create a PII Redaction Logic App** step in this lab.
    
    ![Alt text](./Images/CreateProject.png)
+
 3. Name your project (e.g., `<<Name>>-AI-Lang-Project`). 
+
 ![Alt text](./Images/NameProject.png)
+
 4. Once the project is created and opens, on the Overview page, note the Azure AI Services endpoint and API Key.
 ![Alt text](./Images/SaveEndpointAPIKey.png)
+
 5. Store these values:  
    - **APIKey**
    - **Target (Endpoint)**
