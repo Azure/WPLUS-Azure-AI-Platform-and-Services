@@ -120,7 +120,7 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
       }
     }
     ```
-13. 11.	The final screen should look like the screenshot below:
+13. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot.png)  
 
