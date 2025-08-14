@@ -124,22 +124,28 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 
 ![Alt text](./Images/FinalScreenshot.png)  
 
-    #
 14. Select **Save** on the canvas.
 15. Click the plus sign to add an action, then **select Add an action**.
+
 ![Alt text](./Images/AddAnAction2.png)
 16. Search for _Azure Language_ and then click **See more**.
+
 ![Alt text](./Images/Seemore.png)
 17. Select **Detect Personal Information (V3.1)**.
+
 ![Alt text](./Images/DetectPersonalInformation.png)
 18. Select Authentication Type as **Api Key** and add the API Key and Endpoint (Target) you saved earlier.
 ![Alt text](./Images/AfterDetectPersonalInformation.png)
 19. Select the Detect Personal Information action. 
 Under Parameters, search for the Documents heading. Select **+ Add new item**.  
+
 ![Alt text](./Images/AddaNewItem.png)
+
     Insert:
     - Id-1 = 1
     - Text-1 = Insert expression (fx)
+
+
 ![Alt text](./Images/InsertExpression.png)
 
 20. In the pop-up expression window, paste:  
@@ -189,13 +195,16 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 1. In https://portal.azure.com/, search for _Logic Apps_ and select the option.
 
 ![Alt text](./Images/LogicApp.png)
+
 2. Click **+ Add** to add a new Logic App and choose Multi-tenant under Consumption, then click **Select**.
 3. Ensure you are selecting the same region and resource group as your Foundry project. Name your Logic App `EnglishTranslation`.
 4. Review and create the Logic App, then select **Go to resource** once provisioned.
 5. Under development tools, select **Logic app designer** and then **Add a trigger**.
+
 ![Alt text](./Images/AddaTrigger2.png)
 6. Search triggers for “When a HTTP request is received” and select it.
 7. Under Request Body JSON Schema, add:
+
     ```json
     {
       "type": "object",
@@ -211,9 +220,12 @@ This Logic App receives text, detects the language, and outputs the text in Engl
       }
     }
     ```
+
 8. In the description field, add:  
    _Receives an HTTP request in the description field of some text. Then translates that text to English._
+
 ![Alt text](./Images/DescFieldRequestRecieved2.png)
+
 9. Select **Save**.
 10. Click the plus sign to add an action, then **select Add an action**.
 
@@ -259,14 +271,20 @@ Note that the Translator Resource Name must be the part highlighted in the scree
     - **Source Language:** Auto-detect
     - **Target Language:** English
     - **Body Text-1:** Choose expression (fx)  
+
 ![Alt text](./Images/TranslateTextfx.png)
+
       In the expression field, paste:  
       ```
       body('Parse_JSON')['description']
       ```
 Then click **Add**
+
 ![Alt text](./Images/TranslateTextfx1.png)
+
 ![Alt text](./Images/TranslateTextfx2.png)
+
+
 21. Click **Save**.
 22. Click the plus sign to add the final action, then **select Add an action**.
 
