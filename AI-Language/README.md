@@ -251,8 +251,10 @@ Then click **Add**
 26. Save your Logic App.
 27. Select the arrow next to Run, then **Run with payload**.
 ![Alt text](./Images/run.png)
+
+
 28. In the Body of the Run with payload pane, paste:
-    ```json
+    ```
     {
   "description" : "Mi número de teléfono es (04) 12 345 678"
 }
@@ -260,6 +262,8 @@ Then click **Add**
   "HTTP_request_content" : "Mi número de teléfono es (04) 12 345 678"
 }
     ```
+
+
 29. Confirm the output displays the translated text.
 ![Alt text](./Images/RunwithPayload2.png)
 
