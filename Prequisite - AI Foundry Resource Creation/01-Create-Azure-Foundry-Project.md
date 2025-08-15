@@ -49,7 +49,7 @@ Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your
 ### 4. Fill in the details and deploy
 
 - Choose the Subscription if not filled in automatically
-- Choose the Resource Group if not filled in automatically (eg rg-53439517). Use the precreated resource group that is provided as part of this lab machine instance.
+- Use the precreated resource group that is provided as part of this lab machine instance - **azureaiworkshoprg**
 ![Fill in Details](images/airg.png) 
 - Give a name for the Azure AI Foundry resource (eg ai-foundry-53439517).
 - Choose a Region (eg East US 2)
