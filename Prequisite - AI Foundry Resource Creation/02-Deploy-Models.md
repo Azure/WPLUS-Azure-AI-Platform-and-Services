@@ -5,9 +5,10 @@
 This lab walks you through the steps to deploy various models into the **Azure AI Foundry** project.
 
 ## Objectives 
- List the objectives
-In this lab we will:
--	
+In this lab we will deploy the following models
+- text-embedding-3-large
+- GPT 4-o
+- GPT 4-o mini	
 
 
 ## Estimated Time 
@@ -15,9 +16,10 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+You are deploying models that will be utilized later in the labs for several modules in this workshop.
 
 ## Pre-requisites
+No pre-requisites
 
 ## 🛠️ Tasks
 
