@@ -26,7 +26,10 @@ In this lab we will:
 
 ### 1. Sign in to Azure Portal
 
-Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your Azure credentials.
+Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your Azure credentials. These credentials are present on the right hand side under resources tab for Azure AI Foundry resource.
+![Azure Credentials](images/azurecredentials.png)
+
+
 
 ### 2. Search for "Azure AI Foundry"
 
