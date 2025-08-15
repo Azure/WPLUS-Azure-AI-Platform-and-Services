@@ -206,6 +206,11 @@ Insert:
 28. Confirm that the output displays the redacted phone number.
 
 ![Alt text](./Images/RunwithPayloadoutput.png)
+
+29. The final completed flow should look like the image below:
+
+![Alt text](./Images/PIIRedactionFlow.png)
+
 ---
 
 ## Create a Translation Logic App
@@ -345,7 +350,13 @@ Then click **Add**
 ```
 
 29. Confirm the output displays the translated text.
+
+
 ![Alt text](./Images/RunwithPayload2.png)
+
+30. The final completed flow should look like the image below:
+
+![Alt text](./Images/EnglishTranslationFlow.png)
 
 ---
 
@@ -357,10 +368,28 @@ You will create **2 agents** using Azure AI Foundry:
 1. **Translation Agent**
 2. **PII Redaction Agent**
 
+### Provide your Foundry Project access to your Logic Apps
+1. For each Logic App provide access to Foundry navigate to Access Control (IAM) and under **+ Add**, select **Add Role Assignment**
+
+![Alt text](./Images/IAMrole.png)
+
+2. Select **Logic App Contributor**, then choose **Next**  
+
+![Alt text](./Images/IAMLogicAppContributor.png)
+
+3. On the Members tab under Assign access to, select **Managed Identity**, then choose **+ Select Members**. Under the Managed Identity dropdown, select Azure AI Foundry project and select the project name you have been working on.  Click the Select button at the bottom of the pane then click **Review and Assign** twice.
+
+![Alt text](./Images/IAMSelectFoundryProject.png)
+
+4. Ensure you repeat this process for both LogicApps created
+
+
 ### Deploy an Azure OpenAI Resource for Your Project
 
 1. In your Azure AI Foundry (https://ai.azure.com/) project, click on **Agents**.
+
 ![Alt text](./Images/Agents.png)
+
 2. If the Deploy a Model doesn’t pop up, select **Deploy model**.
 3. Ensure you select a model that supports agents in your region:  
    https://learn.microsoft.com/en-us/azure/ai-services/agents/concepts/model-region-support
