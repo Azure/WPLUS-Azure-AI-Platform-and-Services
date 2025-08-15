@@ -5,9 +5,9 @@
 This lab walks you through the steps to connect the Grounding with Bing Search resource to the Azure AI Foundry resource.
 
 ## Objectives 
- List the objectives
+
 In this lab we will:
--	
+- Connect the Grounding with Bing Search resource to the Azure AI Foundry resource.	
 
 
 ## Estimated Time 
@@ -15,9 +15,10 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+Connect the Grounding with Bing Search resource to the Azure AI Foundry resource.	
 
 ## Pre-requisites
+No pre-requisites
 
 ## 🛠️ Tasks
 
