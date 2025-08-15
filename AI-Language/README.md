@@ -265,14 +265,14 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 13. Under the Schema box, paste in:
 
 ```json
-    {
-      "type": "object",
-      "properties": {
+{
+    "type": "object",
+    "properties": {
         "description": {
           "type": "string"
         }
-      }
     }
+}
 ```
 
 14. The final screen should look like the screenshot below:
