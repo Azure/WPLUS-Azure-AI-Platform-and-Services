@@ -89,7 +89,7 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 6. Search triggers for “When a HTTP request is received” and select it.
 7. Under Request Body JSON Schema, add:
    
-    ```json
+ ```json
     {
       "type": "object",
       "properties": {
@@ -103,7 +103,7 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
         }
       }
     }
-    ```
+  ```
     
 9. In the description field, add:  
    _When a request is received, review the message for PII data and redact it with ******._
@@ -159,9 +159,9 @@ Under Parameters, search for the Documents heading. Select **+ Add new item**.
 
 ![Alt text](./Images/AddaNewItem.png)
 
-    Insert:
-    - Id-1 = 1
-    - Text-1 = Insert expression (fx)
+Insert:
+- Id-1 = 1
+- Text-1 = Insert expression (fx)
 
 
 ![Alt text](./Images/InsertExpression.png)
@@ -173,9 +173,11 @@ Under Parameters, search for the Documents heading. Select **+ Add new item**.
 ![Alt text](./Images/BodyParseJSONDesc.png)
 
 21. Click the plus sign to add the final action, then **select Add an action**.
+
 ![Alt text](./Images/AddAnAction.png)
 
 22. Search for _Response_ and select the option under Request.
+
 ![Alt text](./Images/RequestResponse.png)
 
 23. Fill in the parameters for the Response, leaving Status Code as 200.
@@ -220,10 +222,11 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 5. Under development tools, select **Logic app designer** and then **Add a trigger**.
 
 ![Alt text](./Images/AddaTrigger2.png)
+
 6. Search triggers for “When a HTTP request is received” and select it.
 7. Under Request Body JSON Schema, add:
 
-    ```json
+```json
     {
       "type": "object",
       "properties": {
@@ -237,7 +240,7 @@ This Logic App receives text, detects the language, and outputs the text in Engl
         }
       }
     }
-    ```
+```
 
 8. In the description field, add:  
    _Receives an HTTP request in the description field of some text. Then translates that text to English._
@@ -248,17 +251,20 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 10. Click the plus sign to add an action, then **select Add an action**.
 
 ![Alt text](./Images/AddAnAction.png)
+
 11. Search for _Parse JSON_ and select the option under Data operations.
 
 ![Alt text](./Images/ParseJSON.png)
+
 12. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
 
 ![Alt text](./Images/DynamicContentLightningBolt.png)
 
 ![Alt text](./Images/SelectBody.png)
+
 13. Under the Schema box, paste in:
 
-    ```json
+```json
     {
       "type": "object",
       "properties": {
@@ -267,7 +273,7 @@ This Logic App receives text, detects the language, and outputs the text in Engl
         }
       }
     }
-    ```
+```
 
 14. The final screen should look like the screenshot below:
 
@@ -324,20 +330,21 @@ Then click **Add**
     ```
 ![Alt text](./Images/TranslateTextfx3.png)
 ![Alt text](./Images/Response.png)
+
 26. Save your Logic App.
 27. Select the arrow next to Run, then **Run with payload**.
 ![Alt text](./Images/run.png)
 
 
 28. In the Body of the Run with payload pane, paste:
-    ```json
+```json
     {
        "description" : "Mi número de teléfono es (04) 12 345 678"
     }
     {
        "HTTP_request_content" : "Mi número de teléfono es (04) 12 345 678"
     }
-    ```
+```
 
 29. Confirm the output displays the translated text.
 ![Alt text](./Images/RunwithPayload2.png)
