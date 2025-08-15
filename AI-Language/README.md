@@ -368,7 +368,11 @@ You will create **2 agents** using Azure AI Foundry:
 1. **Translation Agent**
 2. **PII Redaction Agent**
 
+---
+
 ### Provide your Foundry Project access to your Logic Apps
+By selecting the same resource group for each Logic App as your Foundry Project, Foundry should be able to see your Logic Apps without additional access. If you are having trouble please follow the steps below. It may take a few minutes for the LogicApps to appear in the Foundry Agent playground.
+
 1. For each Logic App provide access to Foundry navigate to Access Control (IAM) and under **+ Add**, select **Add Role Assignment**
 
 ![Alt text](./Images/IAMrole.png)
@@ -383,6 +387,7 @@ You will create **2 agents** using Azure AI Foundry:
 
 4. Ensure you repeat this process for both LogicApps created
 
+---
 
 ### Deploy an Azure OpenAI Resource for Your Project
 
