@@ -5,9 +5,8 @@
 This lab walks you through the steps to connect the Azure AI Search to the AI Foundry resource.
 
 ## Objectives 
- List the objectives
 In this lab we will:
--	
+-	Connect the Azure AI Search to the AI Foundry resource.
 
 
 ## Estimated Time 
@@ -15,9 +14,10 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+Connect the Azure AI Search to the AI Foundry resource.
 
 ## Pre-requisites
+No Pre-requisites
 
 ## 🛠️ Tasks
 
