@@ -227,19 +227,19 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 7. Under Request Body JSON Schema, add:
 
 ```json
-    {
-      "type": "object",
-      "properties": {
-        "HTTP_URI": {
-          "description": "URI for HTTP Request",
-          "type": "string"
-        },
-        "HTTP_request_content": {
-          "description": "Content or Body of the HTTP Request",
-          "type": "string"
-        }
+{
+    "type": "object",
+    "properties": {
+      "HTTP_URI": {
+        "description": "URI for HTTP Request",
+        "type": "string"
+      },
+      "HTTP_request_content": {
+        "description": "Content or Body of the HTTP Request",
+        "type": "string"
       }
     }
+}
 ```
 
 8. In the description field, add:  
