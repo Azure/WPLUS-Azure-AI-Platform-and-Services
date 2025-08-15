@@ -121,10 +121,10 @@ def create_embedding_procedure():
     cursor.close()
     conn.close()
 
-    def main():
-        create_SQLMasterKey()
-        create_database_credential()
-        create_embedding_procedure()
+def main():
+    create_SQLMasterKey()
+    create_database_credential()
+    create_embedding_procedure()
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
