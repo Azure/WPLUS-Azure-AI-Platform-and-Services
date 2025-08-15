@@ -37,6 +37,8 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
    AZURE_SUBSCRIPTION_ID="<your-subscription-id>"
    AZURE_RESOURCE_GROUP_NAME="<your-resource-group>"
    AZURE_PROJECT_NAME="<your-project-name>"
+   # Azure AI Project
+   AZURE_PROJECT_ENDPOINT="https://your-aifoundry-endpoint-name.services.ai.azure.com/api/projects/yourproject-name"
    ```
 
 3. Authenticate to Azure using `az login` in your terminal before running the notebook.
@@ -72,7 +74,9 @@ The notebook provides two main examples:
 
 1. **Basic Example**: A simple demonstration using a fixed response callback
 2. **Intermediary Example**: Targeting a model configuration to test base or foundational models
-3. **Advanced Example**: Using an actual Azure OpenAI model to evaluate against multiple attack strategies
+3. **Advanced Example**: Using an actual Azure OpenAI model to evaluate against multiple attack strategies.
+   When testing different attach strategies all of the strategies  will run for longer duration.
+   To shorten the time please comment out and just run with one or two attack stragies for example Leetspeak or CharSwap
 
 ### Analysis Features
 
