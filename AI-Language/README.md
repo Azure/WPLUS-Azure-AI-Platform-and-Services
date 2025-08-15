@@ -302,15 +302,13 @@ Note that the Translator Resource Name must be the part highlighted in the scree
 
 In the expression field, paste:  
 
-```json
+```
 body('Parse_JSON')['description']
 ```
 
 Then click **Add**
 
 ![Alt text](./Images/TranslateTextfx1.png)
-
-![Alt text](./Images/TranslateTextfx2.png)
 
 
 21. Click **Save**.
