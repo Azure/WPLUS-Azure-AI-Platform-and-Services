@@ -1,4 +1,4 @@
-# AI Language Service Lab
+# AI Language Service with Agents Lab
 
 ## Introduction 
 
@@ -85,8 +85,10 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 
  ![Alt text](./Images/AddTrigger.png)
 
+
 6. Search triggers for “When a HTTP request is received” and select it.
 7. Under Request Body JSON Schema, add:
+   
     ```json
     {
       "type": "object",
@@ -102,17 +104,26 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
       }
     }
     ```
-8. In the description field, add:  
+    
+9. In the description field, add:  
    _When a request is received, review the message for PII data and redact it with ******._
    ![Alt text](./Images/DescFieldRequestRecieved.png)
-9. Click the plus sign to add an action, then **select Add an action**. 
+10. Click the plus sign to add an action, then **select Add an action**. 
+
 ![Alt text](./Images/AddAnAction.png)
-10. Search for _Parse JSON_ and select the option under Data operations. 
+
+11. Search for _Parse JSON_ and select the option under Data operations. 
+
 ![Alt text](./Images/ParseJSON.png)
-11. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+
+12. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+
 ![Alt text](./Images/DynamicContentLightningBolt.png)
 ![Alt text](./Images/SelectBody.png)
-12. Under the Schema box, paste in:
+
+
+13. Under the Schema box, paste in:
+
     ```json
     {
       "type": "object",
@@ -123,7 +134,11 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
       }
     }
     ```
-13. The final screen should look like the screenshot below:
+    
+
+
+
+14. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot.png)  
 
@@ -242,6 +257,7 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 
 ![Alt text](./Images/SelectBody.png)
 13. Under the Schema box, paste in:
+
     ```json
     {
       "type": "object",
@@ -252,6 +268,7 @@ This Logic App receives text, detects the language, and outputs the text in Engl
       }
     }
     ```
+
 14. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot2.png)
@@ -278,9 +295,11 @@ Note that the Translator Resource Name must be the part highlighted in the scree
 ![Alt text](./Images/TranslateTextfx.png)
 
       In the expression field, paste:  
-      ```
-      body('Parse_JSON')['description']
-      ```
+
+    ```json
+    body('Parse_JSON')['description']
+    ```
+
 Then click **Add**
 
 ![Alt text](./Images/TranslateTextfx1.png)
