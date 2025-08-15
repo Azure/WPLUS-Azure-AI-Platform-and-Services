@@ -33,12 +33,11 @@ Note: This Low Code lab requires access to:
 
 
 ## Tasks
-> **Note:** This Low Code lab requires access to:
-> - The AI Language Service in Azure AI Foundry
-> - Access to provision Logic Apps and resources in Azure
-> - Azure OpenAI _(bonus/advanced only for Agent creation)
+**Note:** This Low Code lab requires access to:
+- The AI Language Service in Azure AI Foundry
+- Access to provision Logic Apps and resources in Azure
+- Azure OpenAI (bonus/advanced only for Agent creation)
 
----
 
 ## Overview
 
@@ -49,17 +48,18 @@ You will create **2 low code Logic Apps**:
 
 For advanced/bonus content, you can use these Logic Apps to create AI agents.
 
----
+
 
 ## Create an Azure AI Foundry Project (if you did not create one in the pre-requisites lab) and Access Language API Key
 
 1. Login to Azure AI Foundry: https://ai.azure.com/. 
 2. Click **+Create new** and then Azure AI Foundry resource  
-   _Note: See “Prequisite - AI Foundry Resource Creation” folder to ensure Foundry Hub is correctly set up._. If it has been set up and the project is created, please skip to - **Create a PII Redaction Logic App** step in this lab.
+   _Note: See “Prequisite - AI Foundry Resource Creation” folder to ensure Foundry Hub is correctly set up._
+   If it has been set up and the project is created, please skip to - **Create a PII Redaction Logic App** step in this lab.
    
    ![Alt text](./Images/CreateProject.png)
 
-3. Name your project (e.g., `<<Name>>-AI-Lang-Project`). 
+4. Name your project (e.g., `<<Name>>-AI-Lang-Project`). 
 
 ![Alt text](./Images/NameProject.png)
 
@@ -81,7 +81,10 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 2. Under plan, choose **Multi-tenant** under Consumption, then click **Select**.
 3. Select the same Resource Group as your AI Foundry project and follow the prompts to create a Logic App resource. ![Alt text](./Images/CreateLogicApp.png)
 4. Once provisioned, select **Go to Resource** in the Azure Portal to open the new Logic App.
-5. Expand Development tools and open **Logic App Designer**. Select **Add a trigger**. ![Alt text](./Images/AddTrigger.png)
+5. Expand Development tools and open **Logic App Designer**. Select **Add a trigger**.
+
+ ![Alt text](./Images/AddTrigger.png)
+
 6. Search triggers for “When a HTTP request is received” and select it.
 7. Under Request Body JSON Schema, add:
     ```json
