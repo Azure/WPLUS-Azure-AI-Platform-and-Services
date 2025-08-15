@@ -8,9 +8,8 @@ This lab walks you through the steps to create a **Azure AI Foundry** resource u
 Azure AI Foundry is a unified platform for building, deploying, and managing enterprise-grade AI applications and agents—combining powerful tools, models, and infrastructure with built-in governance and scalability.
 
 ## Objectives 
- List the objectives
 In this lab we will:
--	
+- Create Azure AI Foundry Resource and project	
 
 
 ## Estimated Time 
@@ -18,9 +17,10 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+You are creating Azure AI Foundry project that will be utilized later in the labs for several modules in this workshop.
 
 ## Pre-requisites
+No pre-requisites
 
 ## 🛠️ Tasks
 
