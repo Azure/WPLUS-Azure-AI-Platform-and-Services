@@ -5,19 +5,23 @@
 This lab walks you through the steps to setup the .env file as a mandatory step for getting ready for executing the LAB exercises. Note that while this .env file can be setup in a code-first approach using REST API or SDKS, this LAB wants you to do the setup in an interactive way for a learning experiece. 
 
 ## Objectives 
- List the objectives
 In this lab we will:
--	
+-	Setup the .env file that will be leveraged to execute the lab exercises
 
 
 ## Estimated Time 
 
-30 minutes 
+15 minutes 
 
 ## Scenario
-
+Setup the .env file that will be leveraged to execute the lab exercises as an interactive way for a learning experience
 
 ## Pre-requisites
+Completed the pre-reuisites labs
+- Create Azure AI Foundry Project
+- Deploy models into the Azure AI Foundry Project
+- Create connections to Bing Resources at Azure AI Foundry resource level
+- Create connections to Azure AI Search at AI Foundry resource level
 
 ## 🛠️ Tasks
 
