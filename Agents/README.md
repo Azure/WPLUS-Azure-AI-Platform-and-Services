@@ -139,24 +139,7 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 
 ---
 
-## Exercise 7: Multi-Agent Solution with Tracing
-**Advanced multi-agent systems with comprehensive observability using [7-multi-agent-solution-with-tracing.ipynb](./7-multi-agent-solution-with-tracing.ipynb)**
-
-1. Implement the same multi-agent ticket triage system with full tracing
-2. Configure OpenTelemetry instrumentation for multi-agent workflows
-3. Monitor agent interactions and communication patterns
-4. Track performance metrics and troubleshoot agent behaviors
-5. Visualize multi-agent execution flows in Azure Monitor
-
-**Key Learning Outcomes:**
-- Advanced observability for multi-agent systems
-- OpenTelemetry configuration for complex workflows
-- Performance monitoring and optimization
-- Troubleshooting multi-agent interactions
-
----
-
-## � Quick Setup
+## Quick Setup
 
 ### 1. Create Virtual Environment
 
