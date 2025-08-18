@@ -170,7 +170,14 @@ AutoTest.Net/
 
 # Installshield output folder
 [Ee]xpress/
-
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.Python
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/
 DocProject/Help/*.HxT
