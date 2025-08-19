@@ -11,7 +11,7 @@ In this lab we will:
 
 ## Estimated Time 
 
-30 minutes 
+5 minutes 
 
 ## Scenario
 Connect the Azure AI Search to the AI Foundry resource.

@@ -13,7 +13,7 @@ In this lab we will deploy the following models
 
 ## Estimated Time 
 
-30 minutes 
+5 minutes 
 
 ## Scenario
 You are deploying models that will be utilized later in the labs for several modules in this workshop.

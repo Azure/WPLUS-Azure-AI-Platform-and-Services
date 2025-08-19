@@ -12,7 +12,7 @@ In this lab we will:
 
 ## Estimated Time 
 
-30 minutes 
+5 minutes 
 
 ## Scenario
 Connect the Grounding with Bing Search resource to the Azure AI Foundry resource.	

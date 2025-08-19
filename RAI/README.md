@@ -39,45 +39,29 @@ In this lab we will:
 
 **Setup** 
 
-Setup the environment for evaluations in Azure AI Foundry. Follow these steps to create the necessary resources and deploy models.
+Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the steps below to specifically create hub resource for this lab.
 
-1. **Create AI Search Resource**
-   - Go to the resource group.
-   - Search for a resource of type **AI Search**.
-   - Select it and press Create. 
-   - Choose the correct resource group. 
-   - Choose a region like *Sweden Central*.
-   - Select and create it with **Basic** pricing tier.
-   - Ensure the resource is created successfully.
-
-2. **Create Azure AI Foundry Hub**
-   - Search for a resource of type **Azure AI Foundry**.
-   - Navigate to **AI Hubs** under **Use with AI Foundry**.
+1. **Create Azure AI Foundry Hub Project**
+   - Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
+   - Click **Azure AI Foundry** at the top left
+   - Click Your AI Foundry
    - Create a new hub in a region like *France Central*.
-   - Leave the rest as it is. This creates AOAI, storage account, and key vault.
-    - Ensure the hub is created successfully.
+   ![Go to resource](rai_md_img/AIfoundry.png)
+   - Click on Advanced and remember to use the existing resource group pre-created for this lab VM
+   ![Go to resource](rai_md_img/AdvancedOptions.png)
+   ![Go to resource](rai_md_img/foundryhubproject.png)
+    - Click **Create** Ensure the hub is created successfully.
 
-3. **Launch Foundry and Create Project**
-    - Go to the resource group and Launch the Azure AI Foundry.
-        - Create a project and name it (e.g., `myProject`).
-        - In another tab, go to the resource group and find the storage account that was created.
-        - Access it and find the container ending in `-azureml-blobstore`.
-        - Upload folder from `Files/Contoso`
+2. **Upload Files**
+    - Go to the resource group **azureaiworkshoprg** and Launch the Azure AI Foundry.
+    - Go to the resource group and find the storage account that was created.
+    ![Go to resource](rai_md_img/storageaccount.png)
+    - Access it and find the container ending in `-azureml-blobstore`.
+    - First create a new directory and name it **Contoso** in the container and upload the contents of C:\Users\Admin\Desktop\Labs\RAI
+    ![Go to resource](rai_md_img/adddirectory.png)
+    <img src="rai_md_img/contoso_folder.png" alt="Contoso Folder Upload" width="25%" />
 
-      <img src="rai_md_img/contoso_folder.png" alt="Contoso Folder Upload" width="25%" />
-
-4. **Deploy Models**
-    - Going back to the **Foundry project** in the previous browser tab.
-    - On the left side, under the My Assets section go to **Models + endpoints**
-    - Press **Deploy model** button. 
-
-    - Deploy `gpt-4o`
-        - Make sure it’s deployed within the **Connected AI** resource that has been deployed for this Hub.
-
-            <img src="rai_md_img/gpt4o.png" alt="gpt-4o Deployment" width="70%" />
-    - Deploy `text-embedding-3-large` similarly. 
-
-5. **Connect Azure AI Search**
+3. **Connect Azure AI Search**
     - On the left side, go to **Management center** at the bottom.
     - Underneath **Hub** (*your-hub-name*), select **Connected resources**.
     - Click **New connection**.
@@ -85,9 +69,11 @@ Setup the environment for evaluations in Azure AI Foundry. Follow these steps to
     - Search for the Search resource you created at the beginning of this module and select **Add Connection** from the right side.
     - Once you see the green checkmark with **Connected**, you can press **Close**.
 
-6. **Create Index**
-    - On the left side, under **Project**, select **Go to project**.
+4. **Create Index**
+    - Launch the project from portal 
+    ![Go to resource](rai_md_img/hubproject.png)
     - In the **Data + indexes** section, select **Indexes** from the top menu.
+    ![Go to resource](rai_md_img/dataandindexes.png)
     - Click **New index**.
     - For **Data source**, choose **Azure Blob Storage**.
     - Select the blob store named `workspaceblobstore`.
@@ -95,7 +81,7 @@ Setup the environment for evaluations in Azure AI Foundry. Follow these steps to
     - Click **Next**.
     - Select the Azure AI Search Service connected to your hub from the drop-down list.
     - Leave the remaining settings as default and click **Next**.
-    - Ensure the AOAI connection is the one associated with this Hub (set up at the beginning).
+    - Ensure the AOAI connection is the one associated with this Hub (set up in the previous step).
     - Set the **Embedding model** to `text-embedding-3-large`.
     - Confirm that the **Embedding model deployment** is also set to `text-embedding-3-large` (or matches the deployment name you used earlier).
     - Click **Next**.
@@ -109,11 +95,11 @@ Setup the environment for evaluations in Azure AI Foundry. Follow these steps to
 
     <img src="rai_md_img/manual_eval.png" alt="Manual Evaluation" width="80%" />
 
-4. Click **New Manual Evaluation**.
+4. Select **New Manual Evaluation**. Under Configurations, see the options.
 5. On the right, select the model you deployed (e.g., `gpt-4o`).
-6. Still on the right, click **Add your data** and select the index you just created.
+6. Still on the right, click **Add your data** and select the index you just created. Note that this may take some time. Check if the index is in **ready** state and not in **running** 
 7. At the bottom of the page, select **Import test data**.
-8. Click **Upload dataset** and upload the file from `Files/Evaluations/manual_evaluation.jsonl`.
+8. Click **Upload dataset** and upload the file from `C:/Users/Admin/Desktop/Labs/RAI/Files/Evaluations/manual_evaluation.jsonl`.
 9. In the **Map data** pane, scroll down and set:
     - **Input** = `chat_input`
     - **Expected response** = `truth_value`
@@ -135,7 +121,7 @@ Setup the environment for evaluations in Azure AI Foundry. Follow these steps to
 4. Click **Create a new Evaluation**.
 5. Choose **Evaluate an existing query-response dataset** and press **Next**.
 6. Select **Upload new dataset**.
-7. Open the folder `Files/Evaluations` and select the `automated_evaluation.jsonl` file.
+7. Open the folder `C:/Users/Admin/Desktop/Labs/RAI/Files/Evaluations` and select the `automated_evaluation.jsonl` file.
 8. Press **Next** to add evaluators.
 9. In the **AI Quality** section, select **Likert-scale evaluator**:
     - Choose **Groundedness**.

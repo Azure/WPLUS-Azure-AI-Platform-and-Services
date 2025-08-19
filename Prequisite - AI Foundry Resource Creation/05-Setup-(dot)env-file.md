@@ -17,7 +17,7 @@ In this lab we will:
 Setup the .env file that will be leveraged to execute the lab exercises as an interactive way for a learning experience
 
 ## Pre-requisites
-Completed the pre-reuisites labs
+Completed the pre-requisites labs
 - Create Azure AI Foundry Project
 - Deploy models into the Azure AI Foundry Project
 - Create connections to Bing Resources at Azure AI Foundry resource level
@@ -26,7 +26,8 @@ Completed the pre-reuisites labs
 ## 🛠️ Tasks
 
 ### 1. Copy .env.example as .env
-- Find the .env.example file that is supplied as the template
+- Find the .env.example file that is supplied as the template. You can find it in the folder provided within the lab VM
+![Go to resource](images/Envfile_location.png)
 - Copy .env.example to save as .env in the same folder location
 - Edit .env to provide the actual value from your environment by following the steps
 - Do not modify the section that is marked for not to modify

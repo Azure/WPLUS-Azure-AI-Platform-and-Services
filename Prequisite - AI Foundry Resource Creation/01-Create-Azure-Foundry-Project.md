@@ -14,7 +14,7 @@ In this lab we will:
 
 ## Estimated Time 
 
-30 minutes 
+2- 10 minutes 
 
 ## Scenario
 You are creating Azure AI Foundry project that will be utilized later in the labs for several modules in this workshop.
