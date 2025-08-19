@@ -1,39 +1,34 @@
-# Title of the lab
+# Responsible AI
 
 ## Introduction 
 
-This lab shows <provide intro>.
+This lab shows walks through Evaluations, Content Safety, PII Detection and Masking.
 
 ## Objectives 
- List the objectives
-In this lab we will:
--	
-
-
-## Estimated Time 
-
-30 minutes 
-
-## Scenario
-
-
-## Pre-requisites
-
-## Tasks
-
-
-
-# Responsible AI Upskilling VBD – LAB Instructions
-
-## Contents
+In this lab we will explore the following:
 - [Evaluations](#evaluations)
 - [Manual Evaluation](#manual-evaluation)
 - [Automated Evaluation](#automated-evaluation)
 - [Content Safety](#content-safety)
 - [PII Detection and Masking](#pii-detection-and-masking)
-- [System Message](#system-message)
+- [System Message](#system-message)	
 
 
+## Estimated Time 
+
+45 minutes 
+
+## Scenario
+Test Evaluations(manual, automated, content safety, PII Detectionand Masking, System Message)
+
+## Pre-requisites
+Completed the pre-requisites labs
+- Create Azure AI Foundry Project
+- Deploy models into the Azure AI Foundry Project
+- Create connections to Bing Resources at Azure AI Foundry resource level
+- Create connections to Azure AI Search at AI Foundry resource level
+
+## Tasks
 
 ## Evaluations
 
