@@ -25,3 +25,9 @@ nbformat>=5.10.0
 # Model Context Protocol (MCP) Dependencies
 mcp>=1.13.0
 fastmcp>=2.11.0
+
+
+#VectorDB/Cosmos
+azure-cosmos
+openai
+nest-asyncio
