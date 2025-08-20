@@ -116,6 +116,7 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
 4. Click **Create a new Evaluation**.
 5. Choose **Evaluate an existing query-response dataset** and press **Next**.
 6. Select **Upload new dataset**.
+ ![Go to resource](rai_md_img/autoevalnewdataset.png)
 7. Open the folder `C:/Users/Admin/Desktop/Labs/RAI/Files/Evaluations` and select the `automated_evaluation.jsonl` file.
 8. Press **Next** to add evaluators.
 9. In the **AI Quality** section, select **Likert-scale evaluator**:
@@ -150,16 +151,6 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
 
 ## Content Safety
 
-**Assign IAM Role**  
-1. Go to the resource group.  
-2. Identify the Foundry service and access it.  
-3. On the left, select Access control (IAM).  
-4. Add a role assignment.  
-5. Find and select the **Cognitive Services User** role, then press Next.  
-6. Assign access to your user.  
-7. Review and assign.  
-8. Wait 5–10 minutes for access rights to propagate.
-
 **Moderate Text Content**  
 1. Return to the resource group, select the AI project, and launch the studio.  
 2. On the left, select **AI Services**.  
@@ -171,17 +162,14 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
     b. Scroll down and press **Run test**.  
     c. Scroll down and view the results.  
     d. You can experiment further by configuring the content filters on the right, **modifying the blocklist**, or **changing the prompt**.  
-7. If you see an access error, wait a bit longer for permissions to update.  
-<img src="rai_md_img/permission_error_foundry.png" alt="Access error" width="80%" /> 
-
-8. For bulk testing, select **Run a bulk test**, upload `Files/Content_Safety/bulk-text-moderation-data.csv`, and run the test.  
-9. Explore results and adjust filters or datasets as needed.
+7. For bulk testing, select **Run a bulk test**, upload ``C:/Users/Admin/Desktop/Labs/RAI/Files/Content_Safety/bulk-text-moderation-data.csv`, and run the test.  
+8. Explore results and adjust filters or datasets as needed.
 
 **Detect Protected Material**  
 1. In the Content Safety tab, select **Protected material detection for text**.  
 2. Ensure the correct Azure AI Services resource is selected.  
 3. Run a simple test and view results.  
-4. For bulk testing, select **Run a bulk test**, upload `Files/Content_Safety/bulk-protected-material-dataset.csv`, and run the test.  
+4. For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/Labs/RAI/Files/Content_Safety/bulk-protected-material-dataset.csv`, and run the test.  
 5. Explore the results.
 
 **Moderate Image Content**  
@@ -193,7 +181,8 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
     b. Scroll down and press **Run test**.  
     c. Scroll down and view the results.  
     d. You can experiment further by configuring the **content filters** and their **thresholds** on the right.  
-4. For bulk testing, select **Run a bulk test**, upload `Files/Content_Safety/bulk_image_moderation_dataset.zip` (no need to decompress), and run the test.  
+4. For bulk testing, select **Run a bulk test**, upload ``C:/Users/Admin/Desktop/Labs/RAI/Files/Content_Safety/bulk_image_moderation_dataset.zip` (no need to decompress), and run the test. You may need to select **All files** for the .zip file to show up. 
+![Go to resource](rai_md_img/allfiles.png)
 5. Explore results and adjust filters or datasets as needed.
 
 ## PII Detection and Masking
@@ -214,6 +203,8 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
 
 
 ## System Message
+
+Under the Playground, go to Agents Playground by clicking on **Try the Agents Playground** The instructions below givean idea of how to provide instructions to the agent before chatting with it. Step 1-5 below are informational to give an idea of how system prompt will look like.
 
 **1. Define the Purpose of the AI Agent**
 
@@ -272,6 +263,7 @@ After drafting the system message:
 - Refine the message based on feedback and edge cases
 
 ---
+Use the example below to paste under the **instructions** for the agent and start chatting with the agent.
 
 **Sample System Message Template**
 
@@ -298,10 +290,7 @@ You are AzureBot, a professional and friendly assistant for Azure developers. Yo
 Follow these steps to use the Content Safety "Try it out" page:
 
 1. Go to Azure AI Foundry and navigate to your project or hub.
-2. Select the **Guardrails + controls** tab on the left navigation, then choose the **Try it out** tab.
-3. On the **Try it out** page, you can experiment with various Guardrails & controls features for both text and image content, adjusting thresholds to filter inappropriate or harmful content.
-
-    <img src="rai_md_img/try_it_out.png" alt="Try it out page" width="80%" />
+2. Select the **Guardrails + controls** tab on the left navigation, then choose the **Try it out** button.
 
 ### Using Prompt Shields for User Input Risk Detection
 
