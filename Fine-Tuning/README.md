@@ -1,13 +1,13 @@
-# Title of the lab
+# Fine Tuning
 
 ## Introduction 
 
-This lab shows <provide intro>.
+In this lab, you’ll explore the fine-tuning process for **GPT models** using the **Azure AI Foundry Dashboard**. 
 
 ## Objectives 
  List the objectives
 In this lab we will:
--	
+-	Fine tune a model with given training and test dataset
 
 
 ## Estimated Time 
@@ -15,19 +15,15 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+Fine tuning a model with given training and test dataset
 
 ## Pre-requisites
+Completed the pre-requisites labs
+- Create Azure AI Foundry Project
 
 ## Tasks
 
-
-
-# 🔍 Fine Tuning Lab
-
-In this lab, you’ll explore the fine-tuning process for **GPT models** using the **Azure AI Foundry Dashboard**.  
-
-Navigate to the `LABS/Fine-Tuning` folder. You’ll find:
+Navigate to the `C:/Users/Admin/Desktop/LABS/Fine-Tuning/` folder. You’ll find:
 
 - `training_set_10samples.jsonl` – your training dataset  
 - `validation_set_10samples.jsonl` – your validation dataset  
@@ -42,32 +38,23 @@ Navigate to the `LABS/Fine-Tuning` folder. You’ll find:
 Go to [https://portal.azure.com](https://portal.azure.com)
 
 ---
-
-### 2. Create a Resource Group
-- Choose a **region that supports fine-tuning**, e.g., `Sweden Central`.
-
----
-
-### 3. Deploy Azure AI Foundry
-- Create an **Azure AI Foundry** resource inside your Resource Group.  
-- Use a **unique name** for the default project to avoid validation errors.
+### 2. Open the Azure AI Foundry Portal  
+Launch the Azure AI Foundry Resource created in the pre-requisites lab.
 
 ---
 
-### 4. Open the Azure AI Foundry Portal  
-Access the portal to begin the fine-tuning process.
-
----
-
-### 5. Start Fine-Tuning  
+### 3. Start Fine-Tuning  
 - Navigate to the **Fine-tuning** section.  
 - Click **+ Fine-tune model**.
+- Here choose GPT-4.1-mini or GPT-4-o-mini or GPT-4.o
 
 ---
 
-### 6. Configure Fine-Tuning Job
+### 4. Configure Fine-Tuning Job
 - Select **Supervised** method  
-- Upload both the **training** and **validation** files  
+- Upload both the **training** and **validation** files. By navigating to `C:/Users/Admin/Desktop/LABS/Fine-Tuning/`
+  - `training_set_10samples.jsonl` – your training dataset  
+  - `validation_set_10samples.jsonl` – your validation dataset 
 - Add a **suffix name** for your model  
 - Leave **hyperparameters** as default  
 - Click **Submit**  
@@ -75,18 +62,17 @@ Access the portal to begin the fine-tuning process.
 
 ---
 
-### 7. Review Results
+### 5. Review Results
 - Once complete, go to the **Metrics** tab  
 - Click **Use this model to deploy**
 
 ---
 
-### 8. Deploy and Test
+### 6. Deploy and Test
 - After deployment, locate your model under:  
   `My assets > Models + endpoints`
 - Review **Details** (URI, API keys, etc.)  
 - Click **Open in playground** to interact with your fine-tuned model
 
----
 
-✅ **End of Lab Instructions**
+
