@@ -1,18 +1,13 @@
 # Title of the lab
 
 ## Introduction 
-In this lab, you will master the art and science of prompt engineering to optimize interactions with language models and achieve more accurate, relevant, and consistent results. Prompt engineering is a fundamental skill for maximizing the performance of generative AI models and creating effective AI-powered applications.
 
+This lab shows <provide intro>.
 
-# Objectives 
-
+## Objectives 
+ List the objectives
 In this lab we will:
-- Understand fundamental principles of prompt engineering
-- Master 8 different advanced prompting techniques
-- Apply proven strategies to improve response quality and consistency
-- Implement best practices in prompt design and optimization
-- Compare effectiveness of different approaches through practical examples
-- Create robust, production-ready prompting strategies	
+-	
 
 
 ## Estimated Time 
@@ -23,18 +18,33 @@ In this lab we will:
 
 
 ## Pre-requisites
-Completed the pre-requisites labs
-- Create Azure AI Foundry Project
-- Deploy models into the Azure AI Foundry Project
-- Create connections to Bing Resources at Azure AI Foundry resource level
-- Create connections to Azure AI Search at AI Foundry resource level
-- Populate the environment file
 
 ## Tasks
 
 
 # Prompt Engineering Mastery
 
+## Overview
+
+In this laboratory, you will master the art and science of prompt engineering to optimize interactions with language models and achieve more accurate, relevant, and consistent results. Prompt engineering is a fundamental skill for maximizing the performance of generative AI models and creating effective AI-powered applications.
+
+## Objectives
+
+- ✅ Understand fundamental principles of prompt engineering
+- ✅ Master 8 different advanced prompting techniques
+- ✅ Apply proven strategies to improve response quality and consistency
+- ✅ Implement best practices in prompt design and optimization
+- ✅ Compare effectiveness of different approaches through practical examples
+- ✅ Create robust, production-ready prompting strategies
+
+## Prerequisites
+
+- Basic knowledge of AI and language models
+- Completion of Lab 1 and Lab 2 (recommended)
+- Access to Azure AI Foundry and Azure OpenAI Service
+- Understanding of Azure OpenAI API fundamentals
+
+## Laboratory Content
 
 ### Theoretical Foundation
 
