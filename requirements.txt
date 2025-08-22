@@ -1,0 +1,33 @@
+# Azure SDK and AI Services
+azure-identity>=1.24.0
+azure-ai-projects>=1.1.0b2
+azure-ai-inference[opentelemetry]>=1.0.0b9
+azure-ai-evaluation>=1.10.0
+azure-ai-contentsafety>=1.0.0
+azure-search-documents>=11.5.0
+azure-ai-ml>=1.28.0
+
+# Telemetry and Monitoring  
+azure-monitor-opentelemetry>=1.6.0
+azure-core-tracing-opentelemetry>=1.0.0b12
+opentelemetry-exporter-otlp>=1.36.0
+opentelemetry-sdk>=1.36.0
+
+# Jupyter and Development Tools
+jupyter>=1.1.0
+python-dotenv>=1.1.0
+notebook>=7.4.0
+ipykernel>=6.30.0
+pandas>=2.3.0
+tabulate>=0.9.0
+nbformat>=5.10.0
+
+# Model Context Protocol (MCP) Dependencies
+mcp>=1.13.0
+fastmcp>=2.11.0
+
+
+#VectorDB/Cosmos
+azure-cosmos
+openai
+nest-asyncio
