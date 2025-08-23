@@ -153,9 +153,11 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 17. Select **Detect Personal Information (V3.1)**.
 
 ![Alt text](./Images/DetectPersonalInformation.png)
+
 18. Select Authentication Type as **Api Key** and add the API Key and Endpoint (Target) you saved earlier.
 ![Alt text](./Images/AfterDetectPersonalInformation.png)
-19. Select the Detect Personal Information action. 
+
+20. Select the Detect Personal Information action. 
 Under Parameters, search for the Documents heading. Select **+ Add new item**.  
 
 ![Alt text](./Images/AddaNewItem.png)
@@ -167,22 +169,22 @@ Insert:
 
 ![Alt text](./Images/InsertExpression.png)
 
-20. In the pop-up expression window, paste:  
+21. In the pop-up expression window, paste:  
     ```
     body('Parse_JSON')['description']
     ```
 ![Alt text](./Images/BodyParseJSONDesc.png)
 
-21. Click the plus sign to add the final action, then **select Add an action**.
+22. Click the plus sign to add the final action, then **select Add an action**.
 
 ![Alt text](./Images/AddAnAction.png)
 
-22. Search for _Response_ and select the option under Request.
+23. Search for _Response_ and select the option under Request.
 
 ![Alt text](./Images/RequestResponse.png)
 
-23. Fill in the parameters for the Response, leaving Status Code as 200.
-24. In the Body, select the expression using the fx icon and paste:
+24. Fill in the parameters for the Response, leaving Status Code as 200.
+25. In the Body, select the expression using the fx icon and paste:
     ```
     body('Detect_Personal_Information_(V3.1)')['documents'][0]['redactedText']
     ```
@@ -190,25 +192,25 @@ Insert:
 
 ![Alt text](./Images/PasteExpression.png)
 
-25. Save your Logic App.
+26. Save your Logic App.
 
-26. Select the arrow next to Run, then **Run with payload**.
+27. Select the arrow next to Run, then **Run with payload**.
 
 ![Alt text](./Images/RunwithPayload.png)
 
 
-27. In the Body of the Run with payload pane, paste:
+28. In the Body of the Run with payload pane, paste:
     ```json
     {
       "description": "My phone number is (04) 12 345 678"
     }
     ```
 
-28. Confirm that the output displays the redacted phone number.
+29. Confirm that the output displays the redacted phone number.
 
 ![Alt text](./Images/RunwithPayloadoutput.png)
 
-29. The final completed flow should look like the image below:
+30. The final completed flow should look like the image below:
 
 ![Alt text](./Images/PIIRedactionFlow.png)
 
