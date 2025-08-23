@@ -287,10 +287,13 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 14. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot2.png)
+
 15. Select **Save** on the canvas.
+        
 16. Click the plus sign to add an action, then **select Add an action**.
 
 ![Alt text](./Images/AddAnAction.png)
+
 17. Search for _Azure Language_ and then click **See more**.
 18. Search for _Microsoft Translator V3_ and then click **See more**.
 19. Select **Translate Text**. Create the connection using the same API Key and Resource name (not the full Endpoint) from Foundry.
