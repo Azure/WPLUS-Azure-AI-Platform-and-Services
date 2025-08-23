@@ -105,24 +105,24 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
     }
   ```
     
-9. In the description field, add:  
+8. In the description field, add:  
    _When a request is received, review the message for PII data and redact it with ******._
    ![Alt text](./Images/DescFieldRequestRecieved.png)
-10. Click the plus sign to add an action, then **select Add an action**. 
+9. Click the plus sign to add an action, then **select Add an action**. 
 
 ![Alt text](./Images/AddAnAction.png)
 
-11. Search for _Parse JSON_ and select the option under Data operations. 
+10. Search for _Parse JSON_ and select the option under Data operations. 
 
 ![Alt text](./Images/ParseJSON.png)
 
-12. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+11. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
 
 ![Alt text](./Images/DynamicContentLightningBolt.png)
 ![Alt text](./Images/SelectBody.png)
 
 
-13. Under the Schema box, paste in:
+12. Under the Schema box, paste in:
 
     ```json
     {
@@ -138,7 +138,7 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 
 
 
-14. The final screen should look like the screenshot below:
+13. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot.png)  
 
@@ -146,6 +146,7 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 15. Click the plus sign to add an action, then **select Add an action**.
 
 ![Alt text](./Images/AddAnAction2.png)
+
 16. Search for _Azure Language_ and then click **See more**.
 
 ![Alt text](./Images/Seemore.png)
