@@ -17,11 +17,11 @@ In this lab we will:
 Setup the .env file that will be leveraged to execute the lab exercises as an interactive way for a learning experience
 
 ## Pre-requisites
-Completed the pre-requisites labs
-- Create Azure AI Foundry Project
-- Deploy models into the Azure AI Foundry Project
-- Create connections to Bing Resources at Azure AI Foundry resource level
-- Create connections to Azure AI Search at AI Foundry resource level
+Complete the prerequisites Lab exercises
+- [Create Azure AI Foundry Project](01-Create-Azure-Foundry-Project.md)
+- [Deploy models into the Azure AI Foundry Project](02-Deploy-Models.md)
+- [Create connections to Bing Resources at Azure AI Foundry resource level](03-Connect-to-Bing-Resources.md)
+- [Create connections to Azure AI Search at AI Foundry resource level](04-Connect-to-Azure-AI-Search.md)
 
 ## 🛠️ Tasks
 
