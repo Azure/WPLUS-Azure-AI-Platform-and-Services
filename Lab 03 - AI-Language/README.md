@@ -77,7 +77,7 @@ For advanced/bonus content, you can use these Logic Apps to create AI agents.
 
 This Logic App receives text input and outputs the text with PII redacted. It creates an endpoint callable from other applications.
 
-1. In https://portal.azure.com/, navigate to **+ Create a resource** and search for _Logic App_, then click **Create**. 
+1. In https://portal.azure.com/, navigate to **+ Create a resource** and search for _Logic App_, then click **Add**. 
 2. Under plan, choose **Multi-tenant** under Consumption, then click **Select**.
 3. Select the same Resource Group as your AI Foundry project and follow the prompts to create a Logic App resource. ![Alt text](./Images/CreateLogicApp.png)
 4. Once provisioned, select **Go to Resource** in the Azure Portal to open the new Logic App.
