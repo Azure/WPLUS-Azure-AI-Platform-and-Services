@@ -26,7 +26,7 @@ Complete the prerequisites Lab exercises
 ## 🛠️ Tasks
 
 ### 1. Copy .env.example as .env
-- Find the .env.example file that is supplied as the template. You can find it in the folder provided within the lab VM
+- Find the .env.example file that is supplied as the template. You can find it in the root folder provided within the lab VM
 ![Go to resource](images/Envfile_location.png)
 - Copy .env.example to save as .env in the same folder location
 - Edit .env to provide the actual value from your environment by following the steps
