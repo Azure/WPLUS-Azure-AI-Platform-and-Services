@@ -396,6 +396,18 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 
 ---
 
+### Update your Logic App flows to accept the format from AI Foundry
+
+1. In the Azure Portal (https://portal.azure.com/) first open your EnglishTranslation flow, in edit mode click on the **Translate Text** box and click the cross next to the dynamic input, _Body Description_ to remove it.
+
+![Alt text](./Images/ChangeInputEnglishTranslationBefore.png)
+
+2. Put the cursor after the "Text": and then click on the _fx_ function option that appears. In the Dynamic Content box select Http_request_content then click Add. Click outside of the flow and press save. 
+
+![Alt text](./Images/ChangeInputEnglishTranslationBefore.png)
+
+---
+
 ### Deploy an Azure OpenAI Resource for Your Project
 
 1. In your Azure AI Foundry (https://ai.azure.com/) project, click on **Agents**.
@@ -417,7 +429,7 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 1. Select the Agent checkbox and rename the Agent to **EnglishTranslationAgent**.
 ![Alt text](./Images/TranslationAgent.png)
 2. In the Instructions, paste:
-    > Translate all incoming messages into English. First, detect the language of each entry. If the detected language is not English, perform an accurate translation into English while preserving the original meaning and tone. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
+    > Send all incoming messages that are not in English to the EnglishTranslation action. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
 3. In the Description, paste:
     > This agent uses the AI Language Services to translate incoming information to English for downstream analytics.
 4. Next to Actions, select **+ Add**.
@@ -434,9 +446,14 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 9. Try a sentence in English, then in Spanish:  
    - `Hello, how are you today?`  
    - `Hola ¿cómo estás hoy?`
-![Alt text](./Images/Translationconv.png)
-![Alt text](./Images/Translationconv2.png)
-10. **NOTE:** If you see a gateway error you may need to try again as services complete deployment 
+![Alt text](./Images/RunWithEnglishAgent.png)
+
+10. Click on View Run Info to show that the translation ran with the Logic App action to support the translation:
+
+![Alt text](./Images/RunWithLogicApps.png)
+
+
+11. **NOTE:** If you see a gateway error you may need to try again as services complete deployment 
 
 ---
 
