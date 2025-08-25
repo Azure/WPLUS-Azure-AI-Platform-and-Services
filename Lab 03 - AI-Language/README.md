@@ -465,32 +465,27 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 
 ---
 
-### Create a PII Redaction Agent
+### Add a PII Redaction Agent
 
-1. Select Agents from the left menu and then **+ New Agent**.
-2. In the setup screen, input:
-    - **Agent Name:** PIIRedactionAgent
+1. Update the agent instructions to :
     - **Instructions:**  
-      > Scan all incoming text for personally identifiable information (PII), including names, phone numbers, email addresses, physical addresses, and identification numbers. Redact or replace any detected PII with appropriate placeholders (e.g., [REDACTED]) while preserving the overall structure and readability of the text. Ensure no sensitive data remains in the output.
-    - **Agent Description:**  
-      > This agent redacts PII and sensitive information from text.
- ![Alt text](./Images/RedactionAgent.png)
-3. Next to Actions, click **+ Add** then **Azure Logic Apps**.
-4. Select call external HTTP or HTTPS endpoints.
-![Alt text](./Images/calltohttp.png)
-5. On the basic information screen, add:
-    - **Action Name:** PIIRedactionAgent
+      > Send all messages to the PIIRedaction action to have personal information removed. 
+Then send all incoming messages with the personal information remoed that are not in English to the EnglishTranslation action. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
+
+2. Next to Actions, click **+ Add** then **Azure Logic Apps**.
+3. Select Azure Logic Apps and choose your PIIRedaction flow
+4. On the basic information screen, add:
     - **Action Description:**  
       > For any text provided, replace any sensitive or personal identifying information (PII) with *********
-6. Select **POST** as the Endpoint Method and acknowledge the LogicApps service charge.
-7. On the Schema screen, under "describe how to invoke this tool," paste:
-    > All text should come to this tool and have any PII or sensitive information detected and redacted.
-8. On the setup screen, select **Try in playground** and paste in:
+5. On the setup screen, select **Try in playground** and paste in:
     ```
-    Hello, my name is Mateo Gomez. I lost my Credit card on August 17th, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation: Profession: Accountant Social Security number is 123-45-6788 Date of birth: 9-9-1989 Phone number: 949-555-0110 Personal address: 1234 Hollywood Boulevard Los Angeles CA Linked email account: mateo@contosorestaurant.com Swift code: CHASUS33XXX
+    Hola, me llamo Mateo Gómez. Perdí mi tarjeta de crédito el 17 de agosto y quisiera solicitar su cancelación. Mi última compra fue un plato de pollo a la parmesana en el Restaurante Contoso, cerca del Museo de Hollywood, por $40. A continuación, se detallan mis datos personales para su validación: Profesión: Contador. Número de Seguro Social: 123-45-6788. Fecha de nacimiento: 9-9-1989. Número de teléfono: 949-555-0110. Dirección personal: 1234 Hollywood Boulevard, Los Ángeles, CA. Correo electrónico vinculado: mateo@contosorestaurant.com. Código Swift: CHASUS33XXX.
     ```
 
-9. The output should look similar to the below:  
- ![Alt text](./Images/Reactionagentconv.png)
+6. The output should look similar to the below:  
+ ![Alt text](./Images/FinalOutputBothAgents.png)
+
+7. Click on View Run Info to show that the translation ran with both the Logic App actions to support the translation: 
+ ![Alt text](./Images/FinalOutputFlowRuns.png)
 
 
