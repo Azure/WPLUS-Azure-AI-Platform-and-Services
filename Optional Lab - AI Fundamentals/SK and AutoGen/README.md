@@ -1,13 +1,21 @@
-# Title of the lab
+# AI Frameworks - Semantic Kernel and AutoGen
 
 ## Introduction 
 
-This lab shows <provide intro>.
+In this lab, you will explore advanced frameworks for building intelligent applications: **Semantic Kernel** and **AutoGen** with Azure OpenAI. You'll learn how to create conversational agents, orchestrate multiple agents, implement custom plugins, and develop complex automation workflows.
+
+**Semantic Kernel** is Microsoft's open-source SDK that enables integrating AI models (like Azure OpenAI) with conventional programming languages, offering features like plugins, planning, and memory management.
+
+**AutoGen** is Microsoft's framework for creating multi-agent applications where different agents can collaborate to solve complex problems through structured conversation.
 
 ## Objectives 
- List the objectives
 In this lab we will:
--	
+- ✅ Master Semantic Kernel for AI orchestration and plugin development
+- ✅ Understand AutoGen for multi-agent conversational systems
+- ✅ Create custom plugins and specialized agents
+- ✅ Implement complex workflows with both frameworks
+- ✅ Compare when to use each framework for different scenarios
+- ✅ Build a practical product analysis system combining both technologies	
 
 
 ## Estimated Time 
@@ -15,44 +23,18 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+Explore advanced frameworks for building intelligent applications: **Semantic Kernel** and **AutoGen** 
 
 ## Pre-requisites
-
-## Tasks
-
-
-
-
-
-# AI Frameworks - Semantic Kernel and AutoGen
-
-## Overview
-
-In this laboratory, you will explore advanced frameworks for building intelligent applications: **Semantic Kernel** and **AutoGen** with Azure OpenAI. You'll learn how to create conversational agents, orchestrate multiple agents, implement custom plugins, and develop complex automation workflows.
-
-**Semantic Kernel** is Microsoft's open-source SDK that enables integrating AI models (like Azure OpenAI) with conventional programming languages, offering features like plugins, planning, and memory management.
-
-**AutoGen** is Microsoft's framework for creating multi-agent applications where different agents can collaborate to solve complex problems through structured conversation.
-
-## Objectives
-
-- ✅ Master Semantic Kernel for AI orchestration and plugin development
-- ✅ Understand AutoGen for multi-agent conversational systems
-- ✅ Create custom plugins and specialized agents
-- ✅ Implement complex workflows with both frameworks
-- ✅ Compare when to use each framework for different scenarios
-- ✅ Build a practical product analysis system combining both technologies
-
-## Prerequisites
-
 - Azure account with access to Azure OpenAI Service
 - Environment variables configured in the `.env` file at repository root
 - Basic Python knowledge
 - Completion of previous labs (recommended)
 - Understanding of async programming concepts
 
-## Laboratory Content
+## Tasks
+
+Open the **SK and AutoGen.ipynb** notebook and run through the steps
 
 ### Exercise 1 - Initial Setup and Semantic Kernel
 
