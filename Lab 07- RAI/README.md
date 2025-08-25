@@ -94,7 +94,7 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
 5. On the right, select the model you deployed (e.g., `gpt-4o`).
 6. Still on the right, click **Add your data** and select the index you just created. Note that this may take some time. Check if the index is in **ready** state and not in **running** 
 7. At the bottom of the page, select **Import test data**.
-8. Click **Upload dataset** and upload the file from `C:/Users/Admin/Desktop/Labs/RAI/Files/Evaluations/manual_evaluation.jsonl`.
+8. Click **Upload dataset** and upload the file from `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Evaluations/manual_evaluation.jsonl`.
 9. In the **Map data** pane, scroll down and set:
     - **Input** = `chat_input`
     - **Expected response** = `truth_value`
@@ -117,7 +117,7 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
 5. Choose **Evaluate an existing query-response dataset** and press **Next**.
 6. Select **Upload new dataset**.
  ![Go to resource](rai_md_img/autoevalnewdataset.png)
-7. Open the folder `C:/Users/Admin/Desktop/Labs/RAI/Files/Evaluations` and select the `automated_evaluation.jsonl` file.
+7. Open the folder `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Evaluations` and select the `automated_evaluation.jsonl` file.
 8. Press **Next** to add evaluators.
 9. In the **AI Quality** section, select **Likert-scale evaluator**:
     - Choose **Groundedness**.
@@ -162,14 +162,14 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
     b. Scroll down and press **Run test**.  
     c. Scroll down and view the results.  
     d. You can experiment further by configuring the content filters on the right, **modifying the blocklist**, or **changing the prompt**.  
-7. For bulk testing, select **Run a bulk test**, upload ``C:/Users/Admin/Desktop/Labs/RAI/Files/Content_Safety/bulk-text-moderation-data.csv`, and run the test.  
+7. For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Content_Safety/bulk-text-moderation-data.csv`, and run the test.  
 8. Explore results and adjust filters or datasets as needed.
 
 **Detect Protected Material**  
 1. In the Content Safety tab, select **Protected material detection for text**.  
 2. Ensure the correct Azure AI Services resource is selected.  
 3. Run a simple test and view results.  
-4. For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/Labs/RAI/Files/Content_Safety/bulk-protected-material-dataset.csv`, and run the test.  
+4. For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Content_Safety/bulk-protected-material-dataset.csv`, and run the test.  
 5. Explore the results.
 
 **Moderate Image Content**  
@@ -181,7 +181,7 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
     b. Scroll down and press **Run test**.  
     c. Scroll down and view the results.  
     d. You can experiment further by configuring the **content filters** and their **thresholds** on the right.  
-4. For bulk testing, select **Run a bulk test**, upload ``C:/Users/Admin/Desktop/Labs/RAI/Files/Content_Safety/bulk_image_moderation_dataset.zip` (no need to decompress), and run the test. You may need to select **All files** for the .zip file to show up. 
+4. For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Content_Safety/bulk_image_moderation_dataset.zip` (no need to decompress), and run the test. You may need to select **All files** for the .zip file to show up. 
 ![Go to resource](rai_md_img/allfiles.png)
 5. Explore results and adjust filters or datasets as needed.
 

@@ -52,7 +52,7 @@ Launch the Azure AI Foundry Resource created in the pre-requisites lab.
 
 ### 4. Configure Fine-Tuning Job
 - Select **Supervised** method  
-- Upload both the **training** and **validation** files. By navigating to `C:/Users/Admin/Desktop/LABS/Fine-Tuning/`
+- Upload both the **training** and **validation** files. By navigating to `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning`
   - `training_set_10samples.jsonl` – your training dataset  
   - `validation_set_10samples.jsonl` – your validation dataset 
 - Add a **suffix name** for your model  
