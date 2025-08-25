@@ -47,7 +47,6 @@ Complete the prerequisites Lab exercises
 - At  the center of the **Overview** section, you can find the Azure AI Foundry project endpoint as shown below
 - Copy and paste into .env file as the value for PROJECT_CONNECTION_STRING
 ![Go to project](images/AZURE_AI_FOUNDRY_PROJECT_ENDPOINT.png)
--
 - Copy and paste into .env file the project name. Project name is the last part of the endpoint string after the "/" (eg. defaultProject)
 
 
@@ -145,8 +144,6 @@ Complete the prerequisites Lab exercises
 - Click on the name
 - Next screen, in the **Overview** section, Copy **Server Name** and paste into .env file as the value for SQL_SERVER
 ![Go to project](images/sqlserver.png)
-
-
 
 
 
