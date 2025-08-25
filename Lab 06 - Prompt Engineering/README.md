@@ -1,35 +1,11 @@
-# Title of the lab
+# Prompt Engineering
 
 ## Introduction 
 
-This lab shows <provide intro>.
-
-## Objectives 
- List the objectives
-In this lab we will:
--	
-
-
-## Estimated Time 
-
-30 minutes 
-
-## Scenario
-
-
-## Pre-requisites
-
-## Tasks
-
-
-# Prompt Engineering Mastery
-
-## Overview
-
 In this laboratory, you will master the art and science of prompt engineering to optimize interactions with language models and achieve more accurate, relevant, and consistent results. Prompt engineering is a fundamental skill for maximizing the performance of generative AI models and creating effective AI-powered applications.
 
-## Objectives
-
+## Objectives 
+In this lab we will:
 - ✅ Understand fundamental principles of prompt engineering
 - ✅ Master 8 different advanced prompting techniques
 - ✅ Apply proven strategies to improve response quality and consistency
@@ -37,16 +13,28 @@ In this laboratory, you will master the art and science of prompt engineering to
 - ✅ Compare effectiveness of different approaches through practical examples
 - ✅ Create robust, production-ready prompting strategies
 
-## Prerequisites
 
+## Estimated Time 
+
+30 minutes 
+
+## Scenario
+Learn Prompt Engineering Techniques to optimize interactions with language models and achieve more accurate, relevant, and consistent results.
+
+## Pre-requisites
+- Completed the pre-requisites labs
 - Basic knowledge of AI and language models
 - Completion of Lab 1 and Lab 2 (recommended)
 - Access to Azure AI Foundry and Azure OpenAI Service
 - Understanding of Azure OpenAI API fundamentals
 
-## Laboratory Content
 
-### Theoretical Foundation
+## Tasks
+
+Launch the **Prompt Engineering.ipynb** notebook in the folder - `C:/Users/Admin/Desktop/LABS/Lab 06 - Prompt Engineering` and run through the steps of the lab
+
+
+### Theoretical Concepts for reference
 
 **What is Prompt Engineering?**
 Prompt Engineering involves the careful design of instructions (prompts) that guide AI model behavior to produce desired outputs. This includes word choice, information structuring, context provision, and output format definition.
@@ -235,6 +223,3 @@ Upon completing this laboratory, you will be able to:
 - [Best Practices for LLM Applications](https://learn.microsoft.com/azure/ai-services/openai/concepts/fine-tuning)
 - [Responsible AI for Prompt Engineering](https://learn.microsoft.com/azure/ai-services/responsible-use-of-ai-overview)
 
-## Next Steps
-
-After completing this laboratory, you will be prepared to apply advanced prompt engineering techniques in real-world projects, creating more effective interactions with AI models and obtaining more accurate and consistent results. You'll be ready to proceed to Lab 4, where you'll explore specialized frameworks like Semantic Kernel and AutoGen for building complex AI applications.
