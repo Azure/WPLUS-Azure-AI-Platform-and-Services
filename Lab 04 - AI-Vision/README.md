@@ -1,13 +1,16 @@
-# Title of the lab
+# Azure AI Vision – Low Code Lab
 
 ## Introduction 
 
-This lab shows <provide intro>.
+Azure AI Vision is a cloud-based service from Microsoft that uses advanced algorithms to analyze images and extract valuable information. It includes capabilities like Optical Character Recognition (OCR), face detection, image analysis, and video indexing. This lab guides you through low-code exercises.
 
 ## Objectives 
  List the objectives
-In this lab we will:
--	
+In this lab we will walk through
+- OCR
+- Face Analysis
+- Image Analysis
+- Video Indexer
 
 
 ## Estimated Time 
@@ -15,18 +18,12 @@ In this lab we will:
 30 minutes 
 
 ## Scenario
-
+Walk through OCR, Face Analysis, Image Analysis and Video Indexer
 
 ## Pre-requisites
+Complete the pre-requisite instructions
 
 ## Tasks
-
-
-
-
-# Azure AI Vision Lab Instructions – Low Code Lab
-
-Azure AI Vision is a cloud-based service from Microsoft that uses advanced algorithms to analyze images and extract valuable information. It includes capabilities like Optical Character Recognition (OCR), face detection, image analysis, and video indexing. This lab guides you through low-code exercises.
 
 ---
 
