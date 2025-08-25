@@ -402,9 +402,17 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 
 ![Alt text](./Images/ChangeInputEnglishTranslationBefore.png)
 
-2. Put the cursor after the "Text": and then click on the _fx_ function option that appears. In the Dynamic Content box select Http_request_content then click Add. Click outside of the flow and press save. 
+2. Put the cursor after the "Text": and then click on the _fx_ function option that appears. In the Dynamic Content box select Http_request_content then click Add. Click outside of the flow and press save. Ensure you have saved the changes to the flow. 
 
 ![Alt text](./Images/ChangeInputEnglishTranslationBefore.png)
+
+3. Repeat this step for your PII Redaction flow , in edit mode click on the **Detect Personal Information (V3.1)** box and click the cross next to the dynamic input, _Body Description_ to remove it.
+
+![Alt text](./Images/PIIRedactionFlowBefore.png)
+
+4. Put the cursor after the "Text": and then click on the _fx_ function option that appears. In the Dynamic Content box select Http_request_content then click Add. Click outside of the flow and press save. Ensure you have saved the changes to the flow. 
+
+![Alt text](./Images/PIIRedactionFlowAfter.png)
 
 ---
 
