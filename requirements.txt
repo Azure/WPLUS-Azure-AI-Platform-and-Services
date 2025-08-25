@@ -31,3 +31,10 @@ fastmcp>=2.11.0
 azure-cosmos
 openai
 nest-asyncio
+
+
+#frameworks
+semantic-kernel
+autogen-agentchat
+autogen_ext
+tiktoken
