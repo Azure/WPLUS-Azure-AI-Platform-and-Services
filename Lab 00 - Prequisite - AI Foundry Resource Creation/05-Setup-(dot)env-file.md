@@ -17,16 +17,16 @@ In this lab we will:
 Setup the .env file that will be leveraged to execute the lab exercises as an interactive way for a learning experience
 
 ## Pre-requisites
-Completed the pre-requisites labs
-- Create Azure AI Foundry Project
-- Deploy models into the Azure AI Foundry Project
-- Create connections to Bing Resources at Azure AI Foundry resource level
-- Create connections to Azure AI Search at AI Foundry resource level
+Complete the prerequisites Lab exercises
+- [Create Azure AI Foundry Project](01-Create-Azure-Foundry-Project.md)
+- [Deploy models into the Azure AI Foundry Project](02-Deploy-Models.md)
+- [Create connections to Bing Resources at Azure AI Foundry resource level](03-Connect-to-Bing-Resources.md)
+- [Create connections to Azure AI Search at AI Foundry resource level](04-Connect-to-Azure-AI-Search.md)
 
 ## 🛠️ Tasks
 
 ### 1. Copy .env.example as .env
-- Find the .env.example file that is supplied as the template. You can find it in the folder provided within the lab VM
+- Find the .env.example file that is supplied as the template. You can find it in the root folder provided within the lab VM
 ![Go to resource](images/Envfile_location.png)
 - Copy .env.example to save as .env in the same folder location
 - Edit .env to provide the actual value from your environment by following the steps
@@ -37,9 +37,9 @@ Completed the pre-requisites labs
 
 - Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
 - Click **Azure AI Foundry** at the top left
-- Click Your AI Foundry (eg ai-foundry-53439517)
+- Click on the project name to go to project overview (eg defaultProject)
 
-![Go to resource](images/aifoundryfromaifoundryportal.png)
+![Go to resource](images/gotoprojectoverview.png)
 
 
 ### 3. Set value for PROJECT_CONNECTION_STRING, AZURE_PROJECT_NAME
@@ -56,14 +56,14 @@ Completed the pre-requisites labs
 - Scroll to the bottom on the left side menu
 - Click **Models + endpoints** in the My assets section 
 - You can view list of Model deployments on the right side
-- Click on each name to get details
+- Right click on each name to open in a new browser tab and to get details
 ![Go to project](images/modelapikey1.png)
 
 - As shown in the screenshot Copy Endpoint Target URI and paste into .env file as the value for AZURE_OPENAI_ENDPOINT
 - Copy Key and paste into .env file as the value for AZURE_OPENAI_API_KEY
 ![Go to project](images/modelapikey2.png)
 
-- The Endpoint Target URI is in the form of https://<AI-FOUNDRY-NAME>.cognitiveservices.azure.com/openai/deployments/<MODEL-DEPLOYMENT-NAME>/chat/completions?api-version=<MODEL-API-VERSION>
+- The Endpoint Target URI is in the form of https://_AI-FOUNDRY-NAME_.cognitiveservices.azure.com/openai/deployments/_MODEL-DEPLOYMENT-NAME_/chat/completions?api-version=_MODEL-API-VERSION_
 - Copy corresponding string from the URI and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and MODEL_API_VERSION
 ![Go to project](images/modelapikey3.png)
 
@@ -75,7 +75,7 @@ Completed the pre-requisites labs
 - Copy Key and paste into .env file as the value for AZURE_OPENAI_EMBEDDING_API_KEY
 ![Go to project](images/modelapikey2e.png)
 
-- The Endpoint Target URI is in the form of https://<AI-FOUNDRY-NAME>.cognitiveservices.azure.com/openai/deployments/<MODEL-DEPLOYMENT-NAME>/chat/completions?api-version=<MODEL-API-VERSION>
+- The Endpoint Target URI is in the form of https://_AI-FOUNDRY-NAME_.cognitiveservices.azure.com/openai/deployments/_MODEL-DEPLOYMENT-NAME_/chat/completions?api-version=_MODEL-API-VERSION_
 - Copy corresponding string from the URI and paste into .env file as the value for EMBEDDING_MODEL_DEPLOYMENT_NAME and EMBEDDING_MODEL_API_VERSION
 
 
@@ -89,7 +89,7 @@ Completed the pre-requisites labs
 ![List models deployed](images/gwbingconnectedinlist.png)
 - Copy the "Name" of the "Grounding with Bing Search" connection (Corresponding Target columns is https://api.bing.microsoft.com/) and paste into .env file as the value for GROUNDING_WITH_BING_CONNECTION_NAME
 
-### 7. Set value for TENANT_ID
+### 7. Set value for TENANT_ID, AZURE_RESOURCE_GROUP, AZURE_SUBSCRIPTION_ID
 
 - Go to [https://portal.azure.com](https://portal.azure.com) and sign into the Azure portal with your Azure credentials.
 - In the top search bar, type **entra id**
@@ -100,6 +100,15 @@ Completed the pre-requisites labs
 - Copy Tenant ID and paste into .env file as the value for TENANT_ID
 ![Go to project](images/tenantid2.png)
 
+- In the top search bar, type **resource groups**
+- Select **Resource groups** from the search results
+![Go to project](images/rg1.png)
+- Copy the resource group name (eg azureaiworkshoprg) and paste into .env file as the value for AZURE_RESOURCE_GROUP
+![Go to project](images/rg2.png)
+
+- Click the resource group name to go to the next page and Overview section
+- Copy the Subscription ID as shown in the screeshot and paste into .env file as the value for
+![Go to project](images/sub1.png)
 
 ### 8. Set value for AZURE_AI_SEARCH_ENDPOINT & AZURE_AI_SEARCH_API_KEY
 

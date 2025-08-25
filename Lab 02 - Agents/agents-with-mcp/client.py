@@ -15,7 +15,7 @@ from azure.identity import DefaultAzureCredential
 os.system('cls' if os.name=='nt' else 'clear')
 
 # Load environment variables from .env file
-load_dotenv('../.env')  # Load from Agent directory
+load_dotenv('.../../.env')  # Load from Agent directory
 project_endpoint = os.getenv("PROJECT_CONNECTION_STRING") or os.getenv("AZURE_AI_PROJECT_ENDPOINT") or os.getenv("PROJECT_ENDPOINT")
 model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME")
 

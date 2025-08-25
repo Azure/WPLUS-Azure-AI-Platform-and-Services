@@ -77,7 +77,7 @@ For advanced/bonus content, you can use these Logic Apps to create AI agents.
 
 This Logic App receives text input and outputs the text with PII redacted. It creates an endpoint callable from other applications.
 
-1. In https://portal.azure.com/, navigate to **+ Create a resource** and search for _Logic App_, then click **Create**. 
+1. In https://portal.azure.com/, navigate to **+ Create a resource** and search for _Logic App_, then click **Add**. 
 2. Under plan, choose **Multi-tenant** under Consumption, then click **Select**.
 3. Select the same Resource Group as your AI Foundry project and follow the prompts to create a Logic App resource. ![Alt text](./Images/CreateLogicApp.png)
 4. Once provisioned, select **Go to Resource** in the Azure Portal to open the new Logic App.
@@ -105,24 +105,24 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
     }
   ```
     
-9. In the description field, add:  
+8. In the description field, add:  
    _When a request is received, review the message for PII data and redact it with ******._
    ![Alt text](./Images/DescFieldRequestRecieved.png)
-10. Click the plus sign to add an action, then **select Add an action**. 
+9. Click the plus sign to add an action, then **select Add an action**. 
 
 ![Alt text](./Images/AddAnAction.png)
 
-11. Search for _Parse JSON_ and select the option under Data operations. 
+10. Search for _Parse JSON_ and select the option under Data operations. 
 
 ![Alt text](./Images/ParseJSON.png)
 
-12. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
+11. Under Content, select the Dynamic content lightning bolt, and under When a HTTP request is received, select Body.
 
 ![Alt text](./Images/DynamicContentLightningBolt.png)
 ![Alt text](./Images/SelectBody.png)
 
 
-13. Under the Schema box, paste in:
+12. Under the Schema box, paste in:
 
     ```json
     {
@@ -138,7 +138,7 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 
 
 
-14. The final screen should look like the screenshot below:
+13. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot.png)  
 
@@ -146,14 +146,18 @@ This Logic App receives text input and outputs the text with PII redacted. It cr
 15. Click the plus sign to add an action, then **select Add an action**.
 
 ![Alt text](./Images/AddAnAction2.png)
+
 16. Search for _Azure Language_ and then click **See more**.
 
 ![Alt text](./Images/Seemore.png)
+
 17. Select **Detect Personal Information (V3.1)**.
 
 ![Alt text](./Images/DetectPersonalInformation.png)
+
 18. Select Authentication Type as **Api Key** and add the API Key and Endpoint (Target) you saved earlier.
 ![Alt text](./Images/AfterDetectPersonalInformation.png)
+
 19. Select the Detect Personal Information action. 
 Under Parameters, search for the Documents heading. Select **+ Add new item**.  
 
@@ -283,10 +287,13 @@ This Logic App receives text, detects the language, and outputs the text in Engl
 14. The final screen should look like the screenshot below:
 
 ![Alt text](./Images/FinalScreenshot2.png)
+
 15. Select **Save** on the canvas.
+        
 16. Click the plus sign to add an action, then **select Add an action**.
 
 ![Alt text](./Images/AddAnAction.png)
+
 17. Search for _Azure Language_ and then click **See more**.
 18. Search for _Microsoft Translator V3_ and then click **See more**.
 19. Select **Translate Text**. Create the connection using the same API Key and Resource name (not the full Endpoint) from Foundry.
@@ -389,6 +396,26 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 
 ---
 
+### Update your Logic App flows to accept the format from AI Foundry
+
+1. In the Azure Portal (https://portal.azure.com/) first open your EnglishTranslation flow, in edit mode click on the **Translate Text** box and click the cross next to the dynamic input, _Body Description_ to remove it.
+
+![Alt text](./Images/ChangeInputEnglishTranslationBefore.png)
+
+2. Put the cursor after the "Text": and then click on the _fx_ function option that appears. In the Dynamic Content box select Http_request_content then click Add. Click outside of the flow and press save. Ensure you have saved the changes to the flow. 
+
+![Alt text](./Images/ChangeInputEnglishTranslationBefore.png)
+
+3. Repeat this step for your PII Redaction flow , in edit mode click on the **Detect Personal Information (V3.1)** box and click the cross next to the dynamic input, _Body Description_ to remove it.
+
+![Alt text](./Images/PIIRedactionFlowBefore.png)
+
+4. Put the cursor after the "Text": and then click on the _fx_ function option that appears. In the Dynamic Content box select Http_request_content then click Add. Click outside of the flow and press save. Ensure you have saved the changes to the flow. 
+
+![Alt text](./Images/PIIRedactionFlowAfter.png)
+
+---
+
 ### Deploy an Azure OpenAI Resource for Your Project
 
 1. In your Azure AI Foundry (https://ai.azure.com/) project, click on **Agents**.
@@ -410,7 +437,7 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 1. Select the Agent checkbox and rename the Agent to **EnglishTranslationAgent**.
 ![Alt text](./Images/TranslationAgent.png)
 2. In the Instructions, paste:
-    > Translate all incoming messages into English. First, detect the language of each entry. If the detected language is not English, perform an accurate translation into English while preserving the original meaning and tone. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
+    > Send all incoming messages that are not in English to the EnglishTranslation action. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
 3. In the Description, paste:
     > This agent uses the AI Language Services to translate incoming information to English for downstream analytics.
 4. Next to Actions, select **+ Add**.
@@ -427,38 +454,38 @@ By selecting the same resource group for each Logic App as your Foundry Project,
 9. Try a sentence in English, then in Spanish:  
    - `Hello, how are you today?`  
    - `Hola ¿cómo estás hoy?`
-![Alt text](./Images/Translationconv.png)
-![Alt text](./Images/Translationconv2.png)
-10. **NOTE:** If you see a gateway error you may need to try again as services complete deployment 
+![Alt text](./Images/RunWithEnglishAgent.png)
+
+10. Click on View Run Info to show that the translation ran with the Logic App action to support the translation:
+
+![Alt text](./Images/RunWithLogicApps.png)
+
+
+11. **NOTE:** If you see a gateway error you may need to try again as services complete deployment 
 
 ---
 
-### Create a PII Redaction Agent
+### Add a PII Redaction Agent
 
-1. Select Agents from the left menu and then **+ New Agent**.
-2. In the setup screen, input:
-    - **Agent Name:** PIIRedactionAgent
+1. Update the agent instructions to :
     - **Instructions:**  
-      > Scan all incoming text for personally identifiable information (PII), including names, phone numbers, email addresses, physical addresses, and identification numbers. Redact or replace any detected PII with appropriate placeholders (e.g., [REDACTED]) while preserving the overall structure and readability of the text. Ensure no sensitive data remains in the output.
-    - **Agent Description:**  
-      > This agent redacts PII and sensitive information from text.
- ![Alt text](./Images/RedactionAgent.png)
-3. Next to Actions, click **+ Add** then **Azure Logic Apps**.
-4. Select call external HTTP or HTTPS endpoints.
-![Alt text](./Images/calltohttp.png)
-5. On the basic information screen, add:
-    - **Action Name:** PIIRedactionAgent
+      > Send all messages to the PIIRedaction action to have personal information removed. 
+Then send all incoming messages with the personal information remoed that are not in English to the EnglishTranslation action. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
+
+2. Next to Actions, click **+ Add** then **Azure Logic Apps**.
+3. Select Azure Logic Apps and choose your PIIRedaction flow
+4. On the basic information screen, add:
     - **Action Description:**  
       > For any text provided, replace any sensitive or personal identifying information (PII) with *********
-6. Select **POST** as the Endpoint Method and acknowledge the LogicApps service charge.
-7. On the Schema screen, under "describe how to invoke this tool," paste:
-    > All text should come to this tool and have any PII or sensitive information detected and redacted.
-8. On the setup screen, select **Try in playground** and paste in:
+5. On the setup screen, select **Try in playground** and paste in:
     ```
-    Hello, my name is Mateo Gomez. I lost my Credit card on August 17th, and I would like to request its cancellation. The last purchase I made was of a Chicken parmigiana dish at Contoso Restaurant, located near the Hollywood Museum, for $40. Below is my personal information for validation: Profession: Accountant Social Security number is 123-45-6788 Date of birth: 9-9-1989 Phone number: 949-555-0110 Personal address: 1234 Hollywood Boulevard Los Angeles CA Linked email account: mateo@contosorestaurant.com Swift code: CHASUS33XXX
+    Hola, me llamo Mateo Gómez. Perdí mi tarjeta de crédito el 17 de agosto y quisiera solicitar su cancelación. Mi última compra fue un plato de pollo a la parmesana en el Restaurante Contoso, cerca del Museo de Hollywood, por $40. A continuación, se detallan mis datos personales para su validación: Profesión: Contador. Número de Seguro Social: 123-45-6788. Fecha de nacimiento: 9-9-1989. Número de teléfono: 949-555-0110. Dirección personal: 1234 Hollywood Boulevard, Los Ángeles, CA. Correo electrónico vinculado: mateo@contosorestaurant.com. Código Swift: CHASUS33XXX.
     ```
 
-9. The output should look similar to the below:  
- ![Alt text](./Images/Reactionagentconv.png)
+6. The output should look similar to the below:  
+ ![Alt text](./Images/FinalOutputBothAgents.png)
+
+7. Click on View Run Info to show that the translation ran with both the Logic App actions to support the translation: 
+ ![Alt text](./Images/FinalOutputFlowRuns.png)
 
 
