@@ -1,43 +1,12 @@
-# Title of the lab
+# Optional Lab RAG (Retrieval-Augmented Generation) Implementation
 
 ## Introduction 
 
-This lab shows <provide intro>.
+In this lab, you will implement a comprehensive RAG (Retrieval-Augmented Generation) system using Azure AI Search and Azure OpenAI. RAG is a technique that combines information retrieval with text generation, enabling language models to access specific external knowledge beyond their training data.
+
 
 ## Objectives 
- List the objectives
-In this lab we will:
--	
-
-
-## Estimated Time 
-
-30 minutes 
-
-## Scenario
-
-
-## Pre-requisites
-
-## Tasks
-
-
-
-
-
-# RAG (Retrieval-Augmented Generation) Implementation
-
-## Overview
-
-In this laboratory, you will implement a comprehensive RAG (Retrieval-Augmented Generation) system using Azure AI Search and Azure OpenAI. RAG is a technique that combines information retrieval with text generation, enabling language models to access specific external knowledge beyond their training data.
-
 You will explore:
-1. **Query without RAG**: How LLMs respond without additional knowledge
-2. **Azure AI Search configuration**: Preparing vector search indexes
-3. **RAG implementation**: Integrating search with response generation
-4. **Results comparison**: Demonstrating the difference between responses with and without RAG
-
-## Objectives
 
 - ✅ Understand fundamental RAG concepts and architecture
 - ✅ Configure Azure AI Search for vector search capabilities
@@ -46,15 +15,31 @@ You will explore:
 - ✅ Apply best practices for production RAG systems
 - ✅ Handle real-world scenarios like document chunking and embedding storage
 
-## Prerequisites
+## Estimated Time 
 
+30 minutes 
+
+## Scenario
+
+You will explore:
+1. **Query without RAG**: How LLMs respond without additional knowledge
+2. **Azure AI Search configuration**: Preparing vector search indexes
+3. **RAG implementation**: Integrating search with response generation
+4. **Results comparison**: Demonstrating the difference between responses with and without RAG
+
+## Pre-requisites
+
+- Compleate pre-requisites lab
 - Azure subscription with access to Azure OpenAI Service and Azure AI Search
 - Environment variables configured in the `.env` file at repository root
 - Python 3.8 or higher
 - Completion of previous labs (recommended)
 - Basic understanding of embeddings and vector search
 
-## Laboratory Content
+## Tasks
+
+Run through steps in **RAG.ipynb** file. 
+The explanation below is detailed on what is being done in each step in the **RAG.ipynb** file.
 
 ### Exercise 1 - Configuration and Library Setup
 
@@ -252,5 +237,3 @@ After completing this laboratory, you will have mastered the fundamentals of RAG
 You now have the complete foundation to build sophisticated, knowledge-grounded AI applications using the Azure AI platform!
 
 ---
-
-*This laboratory is part of Microsoft's AI workshop series.*
