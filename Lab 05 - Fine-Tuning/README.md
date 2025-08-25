@@ -23,7 +23,7 @@ Completed the pre-requisites labs
 
 ## Tasks
 
-Navigate to the `C:/Users/Admin/Desktop/LABS/Fine-Tuning/` folder. You’ll find:
+Navigate to the `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning/` folder. You’ll find:
 
 - `training_set_10samples.jsonl` – your training dataset  
 - `validation_set_10samples.jsonl` – your validation dataset  
