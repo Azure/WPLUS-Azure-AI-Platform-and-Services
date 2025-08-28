@@ -30,8 +30,8 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
    # Azure OpenAI
    AZURE_OPENAI_API_KEY="your-api-key-here"
    AZURE_OPENAI_ENDPOINT="https://endpoint-name.openai.azure.com/openai/deployments/deployment-name/chat/completions"
-   AZURE_OPENAI_DEPLOYMENT_NAME="gpt-4"
-   AZURE_OPENAI_API_VERSION="2023-12-01-preview"
+   AZURE_OPENAI_DEPLOYMENT="gpt-4o-mini"
+   AZURE_OPENAI_API_VERSION="2024-12-01-preview"
 
    # Azure AI Project
    AZURE_SUBSCRIPTION_ID="<your-subscription-id>"
