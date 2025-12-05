@@ -1,8 +1,8 @@
 # Fine Tuning
 
-## Introduction 
+## Introduction
 
-In this lab, you’ll explore the fine-tuning process for **GPT models** using the **Azure AI Foundry Dashboard**. 
+In this lab, you’ll explore the fine-tuning process for **GPT models** using the **Azure AI Foundry Dashboard**.
 
 ## Objectives 
  List the objectives
