@@ -6,14 +6,13 @@ In this section you will find **advance Fine Tuning** laboratories using **Micro
 
 ## Objectives
 
- List the objectives
 In this lab we will:
 
-- Fine tune a model using the training technique DPO (Direct preference optimization) with a given training and test dataset.
+- Fine-tune a model using the Direct Preference Optimization (DPO) technique with a designated training and test dataset. This session will guide you through programmatically fine-tuning a model while applying best practices in data science.
 
 ## Estimated Time
 
-50 minutes
+60 minutes
 
 ## Scenario
 
@@ -21,18 +20,23 @@ Fine tune a model using the training technique DPO (Direct preference optimizati
 
 ## Pre-requisites
 
-Completed the pre-requisites labs
+Complete the pre-requisites labs
 
-- Create Azure AI Foundry Project
+- Azure subscription
+- A Microsoft Foundry Project
+- Python 3.8 or higher
+- VS Code or Jupyter Notebook environment
+- **Azure AI User role** assigned to your account for the Azure AI Foundry project
+  - See [Azure AI Foundry RBAC documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/rbac-azure-ai-foundry?pivots=fdp-project) for more details on role assignments
 
 ## Tasks
 
 Navigate to the `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning/Advance Fine-Tuning/` folder. You’ll find:
 
-- `gpt-41_mini_dpo_ft.ipynb` - Jupyter notebook with detailed lab instructions
-- `gpt4o_generated_qa_dpo_train_25_samples.jsonl` – your training dataset  
+- `gpt-4_o_dpo_ft.ipynb` - Jupyter notebook with detailed lab instructions
+- `gpt4o_generated_qa_dpo_train_10_samples.jsonl` – your training dataset  
 - `gpt4o_generated_qa_dpo_validation_10_samples.jsonl` – your validation dataset  
 
-> ⚠️ **Note:** Each dataset contains only 10 samples. The goal of this lab is not to outperform the base model, but to **walk through the fine-tuning workflow** using Azure AI Foundry Fine-Tuning UI Dashboard.
+> ⚠️ **Note:** Each dataset contains only 10 samples. The goal of this lab is not to outperform the base model, but to **walk through the fine-tuning workflow** using Microsoft Foundry Fine-Tuning Python SDK.
 
 ---
