@@ -12,7 +12,7 @@ In this lab we will:
 
 ## Estimated Time
 
-60 minutes
+120 minutes
 
 ## Scenario
 
@@ -25,7 +25,7 @@ Complete the pre-requisites labs
 - Azure subscription
 - A Microsoft Foundry Project
 - Python 3.8 or higher
-- VS Code or Jupyter Notebook environment
+- VS Code with Jupyter Notebook extension
 - **Azure AI User role** assigned to your account for the Azure AI Foundry project
   - See [Azure AI Foundry RBAC documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/rbac-azure-ai-foundry?pivots=fdp-project) for more details on role assignments
 
