@@ -1,6 +1,6 @@
 # Azure SDK and AI Services
 azure-identity>=1.24.0
-azure-ai-projects>=1.1.0b2
+azure-ai-projects==1.1.0b2
 azure-ai-inference[opentelemetry]>=1.0.0b9
 azure-ai-evaluation>=1.10.0
 azure-ai-contentsafety>=1.0.0
