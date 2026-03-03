@@ -24,10 +24,10 @@ No Pre-requisites
 ### 1. Sign in to Azure AI Foundry portal
 
 - Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
-- Click **Azure AI Foundry** at the top left
+- Click **Microsoft Foundry** at the top left
 - Click Your AI Foundry (eg ai-foundry-53439517)
 
-![Go to resource](images/aifoundryfromaifoundryportal.png)
+![Go to resource](images/msfoundry_ClickYourMSFoundryInstance.png)
 
 ### 2. Connected Resources
 

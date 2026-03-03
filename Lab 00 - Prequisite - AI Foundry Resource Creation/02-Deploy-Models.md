@@ -1,8 +1,8 @@
-# Deploy models into the Azure AI Foundry Project
+# Deploy models into the Microsoft Foundry Project
 
 ## Introduction 
 
-This lab walks you through the steps to deploy various models into the **Azure AI Foundry** project.
+This lab walks you through the steps to deploy various models into the **Microsoft Foundry** project.
 
 ## Objectives 
 In this lab we will deploy the following models
@@ -24,23 +24,23 @@ No pre-requisites
 
 ## 🛠️ Tasks
 
-### 1. Sign in to Azure AI Foundry portal
+### 1. Sign in to the Microsoft Foundry portal
 - Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
-- Click **Azure AI Foundry** at the top left
-- Click Your AI Foundry (eg ai-foundry-53439517)
-
-![Go to resource](images/aifoundryfromaifoundryportal.png)
+- On the top-left corner of the web page, click **Microsoft Foundry**
+![Click Microsoft Foundry](images/msfoundry_ClickMSFoundry.png)
+- Click the AI Foundry you just created (**ai-foundry-@lab.LabInstance.Id**)
+![Go to resource](images/msfoundry_ClickYourMSFoundryInstance.png)
 
 ### 2. Go to project
 
-- Left side, in the **Management center**, Click **Go to project**
-![Go to project](images/aifoundrygotoproject.png)
+- In the vertical navigation menu on the left, click **Go to project**
+![Go to project](images/msfoundry_Nav_ClickGoToProject.png)
 
 ### 3. Deploy gpt-4o model
 
 - In the left side menu, Click **Model catalog**
-- At the center, scroll down and search **gpt-4o**
-- Right Click on **gpt-4o** and open link in new tab
+- At the center, scroll down and search +++gpt-4o+++
+- Right Click on **gpt-4o** and click **Open link in new tab**
 ![Find gpt-4o models](images/findgpt4omodels.png)
 
 - Go to the newly opened tab for gpt-4o
@@ -49,30 +49,29 @@ No pre-requisites
 
 - For this lab, keep all defaults
 - (Optional) Click **Customize** to review additional details
-- (Optional) Modify additional details in Customize section if needed
 - Click **Deploy** button 
 ![Deploy gpt-4o](images/deploygpt4o.png)
 - After deployment completes, close the browser tab.
 
 ### 4. Deploy gpt-4o-mini model
 
-- Similar steps above. Search **gpt-4o-mini**
+- Repeat the steps above to deploy the +++**gpt-4o-mini**+++ model.
 
 
 ### 5. Deploy embedding model
 
-- Similar steps above. Search **text-embedding-3-large**
+- Repeat the steps above to deploy the +++**text-embedding-3-large**+++ model.
 
 ### 6. Deploy text-embedding-ada-002 model
 
-- Similar steps above. Search **text-embedding-ada-002**
+- Repeat the steps above to deploy the +++**text-embedding-ada-002**+++ model.
 
 ## ✅ Completed. Verify models deployment
 
 - In the left side menu, scroll down to the bottom, Click **Models + endpoints**
 - You can see list of models deployed
 
-![List models deployed](images/listofmodelsdeployed.png)
+![List models deployed](images/msfoundry_listofmodelsdeployed.png)
 
 
 
