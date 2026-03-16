@@ -55,7 +55,7 @@ Setup is already done with pre-requisite AI Foundry Creation Lab. Follow the ste
     - Access it and find the container ending in `-azureml-blobstore`.
     - First create a new directory and name it **Contoso** in the container and upload the contents of C:\Users\Admin\Desktop\LABS\Lab 07- RAI\Files\Contoso
     ![Go to resource](rai_md_img/adddirectory.png)
-    <img src="rai_md_img/contoso_folder.png" alt="Contoso Folder Upload" width="25%" />
+    ![Contoso Folder Upload](rai_md_img/contoso_folder.png)
 
 3. **Connect Azure AI Search**
     - On the left side, go to **Management center** at the bottom.
