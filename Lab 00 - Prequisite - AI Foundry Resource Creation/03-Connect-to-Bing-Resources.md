@@ -24,6 +24,7 @@ No pre-requisites
 
 ### 1. Connected Resources
 
+- Login to Azure AI Foundry: +++https://ai.azure.com/+++
 - Left side, in the **Management center**, in the Resource section, Click **Connected resources**
 ![Foundry connected resources](images/foundryconnectedresources.png)
 
