@@ -24,19 +24,12 @@ No pre-requisites
 
 ## 🛠️ Tasks
 
-### 1. Sign in to the Microsoft Foundry portal
-- Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
-- On the top-left corner of the web page, click **Microsoft Foundry**
-![Click Microsoft Foundry](images/msfoundry_ClickMSFoundry.png)
-- Click the AI Foundry you just created (**ai-foundry-@lab.LabInstance.Id**)
-![Go to resource](images/msfoundry_ClickYourMSFoundryInstance.png)
-
-### 2. Go to project
+### 1. Go to project
 
 - In the vertical navigation menu on the left, click **Go to project**
 ![Go to project](images/msfoundry_Nav_ClickGoToProject.png)
 
-### 3. Deploy gpt-4o model
+### 2. Deploy gpt-4o model
 
 - In the left side menu, Click **Model catalog**
 - At the center, scroll down and search +++gpt-4o+++
@@ -53,16 +46,16 @@ No pre-requisites
 ![Deploy gpt-4o](images/deploygpt4o.png)
 - After deployment completes, close the browser tab.
 
-### 4. Deploy gpt-4o-mini model
+### 3. Deploy gpt-4o-mini model
 
 - Repeat the steps above to deploy the +++**gpt-4o-mini**+++ model.
 
 
-### 5. Deploy embedding model
+### 4. Deploy embedding model
 
 - Repeat the steps above to deploy the +++**text-embedding-3-large**+++ model.
 
-### 6. Deploy text-embedding-ada-002 model
+### 5. Deploy text-embedding-ada-002 model
 
 - Repeat the steps above to deploy the +++**text-embedding-ada-002**+++ model.
 
