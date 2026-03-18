@@ -81,9 +81,9 @@ Complete the prerequisites Lab exercises
 
 ### 6. Set value for GROUNDING_WITH_BING_CONNECTION_NAME
 
-- At the top left, Click **Azure AI Foundry**
+- At the top left, Click **Microsoft Foundry**
 - Click Your AI Foundry (eg ai-foundry-53439517)
-![Go to resource](images/aifoundryfromaifoundryportal.png)
+![Go to resource](images/msfoundry_ClickYourMSFoundryInstance.png)
 - Left side, in the **Management center**, in the Resource section, Click **Connected resources**
 - You can see list of connected resources
 ![List models deployed](images/gwbingconnectedinlist.png)
