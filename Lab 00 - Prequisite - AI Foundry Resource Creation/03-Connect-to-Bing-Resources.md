@@ -24,23 +24,23 @@ No pre-requisites
 
 ### 1. Connected Resources
 
-- Login to Azure AI Foundry: +++https://ai.azure.com/+++
-- Left side, in the **Management center**, in the Resource section, Click **Connected resources**
+- [ ] Login to Azure AI Foundry: +++https://ai.azure.com/+++
+- [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
 ![Foundry connected resources](images/foundryconnectedresources.png)
 
-- Click **+New connection**
-- Search **bing**
-- Click **Grounding with Bing Search**
+- [ ] Click **+New connection**
+- [ ] Search **bing**
+- [ ] Click **Grounding with Bing Search**
 
 ![Foundry connected resources](images/newconnbing1.png)
 
-- Review the name of the bing resource
-- Click **Add connection** on the right
+- [ ] Review the name of the bing resource
+- [ ] Click **Add connection** on the right
 
 ![Foundry connected resources](images/gwbingaddconn.png)
 
-- You can see the green tick at the right with Connected label
-- Click **Close** button
+- [ ] You can see the green tick at the right with Connected label
+- [ ] Click **Close** button
 
 ![List models deployed](images/gwbingconnected.png)
 
@@ -48,8 +48,8 @@ No pre-requisites
 
 ## ✅ Completed. 
 
-- Left side, in the **Management center**, in the Resource section, Click **Connected resources**
-- You can see list of connected resources
+- [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
+- [ ] You can see list of connected resources
 
 ![List models deployed](images/gwbingconnectedinlist.png)
 

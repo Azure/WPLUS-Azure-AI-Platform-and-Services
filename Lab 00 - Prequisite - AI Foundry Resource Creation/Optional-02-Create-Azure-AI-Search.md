@@ -27,33 +27,33 @@ Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your
 
 ### 2. Search for "ai search"
 
-- In the top search bar, type **ai search**
-- Select **AI Search** from the search results
+- [ ] In the top search bar, type **ai search**
+- [ ] Select **AI Search** from the search results
 
 ![Search Azure AI Foundry](images/search_aisearch.png)
 
 ### 3. Create AI Search
 
-- Click **+ Create**
+- [ ] Click **+ Create**
 
   
 ![Create Azure AI Foundry](images/createaisearch.png)
 
 ### 4. Fill in the details and deploy
 
-- Choose the Subscription if not filled in automatically
-- Choose the correct Resource Group (eg rg-53439517)
-- Give a Service name (eg ai-search-53439517)
-- Choose Location (eg East US 2)
-- Keep Pricing tier as Standard
-- Click **Review + Create** button
-- Next screen, Click **Create** button
-- In less than 2 minutes your deployment should complete
+- [ ] Choose the Subscription if not filled in automatically
+- [ ] Choose the correct Resource Group (eg rg-53439517)
+- [ ] Give a Service name (eg ai-search-53439517)
+- [ ] Choose Location (eg East US 2)
+- [ ] Keep Pricing tier as Standard
+- [ ] Click **Review + Create** button
+- [ ] Next screen, Click **Create** button
+- [ ] In less than 2 minutes your deployment should complete
 ![Fill in Details](images/aisearchdetails.png)
 
 
 ## ✅ Completed
 Verify Deployment
-- Click **Go to resource**
-- You can find the Bing resource you just created.
+- [ ] Click **Go to resource**
+- [ ] You can find the Bing resource you just created.
 ![Fill in Details](images/aisearchcreated.png)
