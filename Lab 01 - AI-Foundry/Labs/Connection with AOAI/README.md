@@ -39,34 +39,34 @@ You are a developer getting started with Azure AI Foundry. You need to establish
 ### Task 1 - Import Required Libraries and Setup
 
 Configure authentication and import necessary Azure SDK libraries:
-- Import Azure SDK libraries (azure.identity, azure.ai.projects)
-- Import standard Python libraries for environment variables and JSON handling
-- Initialize Azure credentials using DefaultAzureCredential with tenant-specific authentication
-- Create a robust credential chain with fallbacks for authentication
-- Load environment variables from `.env` file
+- [ ] Import Azure SDK libraries (azure.identity, azure.ai.projects)
+- [ ] Import standard Python libraries for environment variables and JSON handling
+- [ ] Initialize Azure credentials using DefaultAzureCredential with tenant-specific authentication
+- [ ] Create a robust credential chain with fallbacks for authentication
+- [ ] Load environment variables from `.env` file
 
 ### Task 2 - Initialize AI Project Client
 
 Create and configure the AI Project client:
-- Load project connection string from environment variables
-- Create AIProjectClient using the connection string and credentials
-- Establish connection to your Azure AI Foundry project
-- Handle authentication errors and provide troubleshooting guidance
+- [ ] Load project connection string from environment variables
+- [ ] Create AIProjectClient using the connection string and credentials
+- [ ] Establish connection to your Azure AI Foundry project
+- [ ] Handle authentication errors and provide troubleshooting guidance
 
 Key steps:
-- Copy `.env.example` file to `.env` in the root directory
-- Update the project connection string in your `.env` file
-- Ensure you have a Foundry Project already provisioned in Azure AI Foundry
-- Find your project connection string in [Azure AI Foundry](https://ai.azure.com) under project settings
+- [ ] Copy `.env.example` file to `.env` in the root directory
+- [ ] Update the project connection string in your `.env` file
+- [ ] Ensure you have a Foundry Project already provisioned in Azure AI Foundry
+- [ ] Find your project connection string in [Azure AI Foundry](https://ai.azure.com) under project settings
 
 ### Task 3 - Create a Simple Completion
 
 Make your first chat completion request:
-- Get Azure OpenAI client from the AI Project client
-- Use the MODEL_DEPLOYMENT_NAME from your `.env` file
-- Create a simple chat completion request
-- Handle responses and error scenarios
-- Understand the difference between different model providers (Azure OpenAI, Microsoft models, etc.)
+- [ ] Get Azure OpenAI client from the AI Project client
+- [ ] Use the MODEL_DEPLOYMENT_NAME from your `.env` file
+- [ ] Create a simple chat completion request
+- [ ] Handle responses and error scenarios
+- [ ] Understand the difference between different model providers (Azure OpenAI, Microsoft models, etc.)
 
 The example demonstrates:
 - Basic message structure with user role
@@ -76,11 +76,11 @@ The example demonstrates:
 ### Task 4 - Create a Simple Agent
 
 Explore Azure AI Agent Service capabilities:
-- Learn about Azure AI Agent Service as a fully managed service
-- Create an agent with code interpreter tool capabilities
-- Configure agent instructions and behaviors
-- Create conversation threads for multi-turn interactions
-- Process agent requests and handle responses
+- [ ] Learn about Azure AI Agent Service as a fully managed service
+- [ ] Create an agent with code interpreter tool capabilities
+- [ ] Configure agent instructions and behaviors
+- [ ] Create conversation threads for multi-turn interactions
+- [ ] Process agent requests and handle responses
 
 Agent capabilities demonstrated:
 - BMI calculation using US metrics
@@ -117,21 +117,21 @@ The example shows how agents can:
 ## Execution Instructions
 
 1. **Initial Setup**:
-   - Ensure you have completed the environment setup from the previous notebook
-   - Configure environment variables in the `.env` file at repository root
-   - Verify your Azure AI User role assignment
+   - [ ] Ensure you have completed the environment setup from the previous notebook
+   - [ ] Configure environment variables in the `.env` file at repository root
+   - [ ] Verify your Azure AI User role assignment
 
 2. **Execution**:
-   - Open the `setup and quick_start.ipynb` notebook in Azure AI Foundry or VS Code
-   - Execute cells sequentially, following the authentication flow
-   - Test the simple completion example
-   - Create and interact with the BMI calculator agent
+   - [ ] Open the `setup and quick_start.ipynb` notebook in Azure AI Foundry or VS Code
+   - [ ] Execute cells sequentially, following the authentication flow
+   - [ ] Test the simple completion example
+   - [ ] Create and interact with the BMI calculator agent
 
 3. **Troubleshooting**:
-   - Verify your AI_FOUNDRY_PROJECT_ENDPOINT is correctly set
-   - Ensure MODEL_DEPLOYMENT_NAME matches your deployed model
-   - Check your Azure AI User role permissions
-   - Review authentication error messages for guidance
+   - [ ] Verify your AI_FOUNDRY_PROJECT_ENDPOINT is correctly set
+   - [ ] Ensure MODEL_DEPLOYMENT_NAME matches your deployed model
+   - [ ] Check your Azure AI User role permissions
+   - [ ] Review authentication error messages for guidance
 
 ## Expected Results
 
