@@ -97,13 +97,13 @@ sed -i '/^GRAPHRAG_API_KEY=/d' ragtest/.env \
 
 ### Update settings.yaml
 
-1. Copy, update (with Azure OpenAI endpoint instance), and execute the following command in Cloud Shell.
+1. [ ] Copy, update (with Azure OpenAI endpoint instance), and execute the following command in Cloud Shell.
 
 ```bash
 export AZURE_OPENAI_ENDPOINT=<instance>.openai.azure.com
 ```
 
-2. Then run the following in Cloudshell
+2. [ ] Then run the following in Cloudshell
 
 ```bash
 

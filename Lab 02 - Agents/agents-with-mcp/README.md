@@ -27,12 +27,12 @@ A cosmetics retailer needs proactive visibility into inventory velocity and stoc
 - (Optional) Azure CLI authenticated: `az login`
 
 ## Tasks (High-Level)
-1. Environment setup
-2. Configure authentication
-3. Run MCP client (auto-starts server)
-4. Interact with the agent
-5. Explore architecture & code
-6. Troubleshoot & extend
+1. [ ] Environment setup
+2. [ ] Configure authentication
+3. [ ] Run MCP client (auto-starts server)
+4. [ ] Interact with the agent
+5. [ ] Explore architecture & code
+6. [ ] Troubleshoot & extend
 
 ---
 
@@ -51,7 +51,7 @@ A cosmetics retailer needs proactive visibility into inventory velocity and stoc
 
 ---
 ## Exercise 1: Environment Setup
-1. Clone repository & create virtual environment:
+1. [ ] Clone repository & create virtual environment:
    ```bash
    git clone <repository-url>
    cd WPLUS-Azure-AI-Platform-and-Services/Agents/agents-with-mcp
@@ -62,7 +62,7 @@ A cosmetics retailer needs proactive visibility into inventory velocity and stoc
    source .venv/bin/activate
    pip install -r ../requirements.txt
    ```
-2. Confirm `.env` exists two levels up (root). Do not duplicate local secrets.
+2. [ ] Confirm `.env` exists two levels up (root). Do not duplicate local secrets.
 
 ---
 ## Exercise 2: Configure Authentication

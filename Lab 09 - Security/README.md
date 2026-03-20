@@ -18,13 +18,13 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
 
 ## Setup
 
-1. Install the required packages:
+1. [ ] Install the required packages:
 
    ```bash
    pip install azure-ai-evaluation[redteam]
    ```
 
-2. Set up your environment variables:
+2. [ ] Set up your environment variables:
 
    ```env
    # Azure OpenAI
@@ -41,7 +41,7 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
    AI_FOUNDRY_PROJECT_ENDPOINT="https://your-aifoundry-endpoint-name.services.ai.azure.com/api/projects/yourproject-name"
    ```
 
-3. Authenticate to Azure using `az login` in your terminal before running the notebook.
+3. [ ] Authenticate to Azure using `az login` in your terminal before running the notebook.
 
 ## Key Concepts
 
@@ -89,10 +89,10 @@ The notebook provides two main examples:
 
 After running the AI red teaming scan:
 
-1. **Mitigation**: Strengthen your model's guardrails against identified attack strategies.
-2. **Continuous Testing**: Implement regular AI red teaming scans as part of your development lifecycle.
-3. **Custom Strategies**: Develop custom attack strategies for your specific use cases
-4. **Safety Layers**: Consider adding additional safety layers like [Azure AI Content Safety filters](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview) or safety system messages using our [templates](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/safety-system-message-templates).
+1. [ ] **Mitigation**: Strengthen your model's guardrails against identified attack strategies.
+2. [ ] **Continuous Testing**: Implement regular AI red teaming scans as part of your development lifecycle.
+3. [ ] **Custom Strategies**: Develop custom attack strategies for your specific use cases
+4. [ ] **Safety Layers**: Consider adding additional safety layers like [Azure AI Content Safety filters](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview) or safety system messages using our [templates](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/safety-system-message-templates).
 
 ## Additional Resources
 

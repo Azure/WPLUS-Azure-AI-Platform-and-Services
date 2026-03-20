@@ -40,11 +40,11 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 ## Exercise 1: Agent Basics
 **Learn the fundamentals of Azure AI Agents using [1-basics.ipynb](./1-basics.ipynb)**
 
-1. Initialize Azure AI projects using `azure-ai-projects` SDK
-2. Create a specialized health and fitness advisor agent with safety disclaimers
-3. Manage conversation threads and message handling
-4. Implement OpenTelemetry logging and tracing for monitoring
-5. Apply best practices for agent creation and configuration
+1. [ ] Initialize Azure AI projects using `azure-ai-projects` SDK
+2. [ ] Create a specialized health and fitness advisor agent with safety disclaimers
+3. [ ] Manage conversation threads and message handling
+4. [ ] Implement OpenTelemetry logging and tracing for monitoring
+5. [ ] Apply best practices for agent creation and configuration
 
 **Key Learning Outcomes:**
 - Agent creation and configuration patterns
@@ -57,11 +57,11 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 ## Exercise 2: Code Interpreter Integration
 **Add computational capabilities to your agents using [2-code_interpreter.ipynb](./2-code_interpreter.ipynb)**
 
-1. Create agents with code interpreter tools for mathematical computations
-2. Upload and process files for complex health and fitness calculations
-3. Handle BMI calculations, nutritional analysis, and fitness metrics
-4. Manage file attachments at message level for data processing
-5. Demonstrate mathematical analysis capabilities with visualizations
+1. [ ] Create agents with code interpreter tools for mathematical computations
+2. [ ] Upload and process files for complex health and fitness calculations
+3. [ ] Handle BMI calculations, nutritional analysis, and fitness metrics
+4. [ ] Manage file attachments at message level for data processing
+5. [ ] Demonstrate mathematical analysis capabilities with visualizations
 
 **Key Learning Outcomes:**
 - Code interpreter tool integration and configuration
@@ -74,11 +74,11 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 ## Exercise 3: File Search and Knowledge Retrieval
 **Enable document search and knowledge retrieval using [3-file-search.ipynb](./3-file-search.ipynb)**
 
-1. Upload health and nutrition documents to Azure AI Agent service
-2. Create agents with file search capabilities for knowledge retrieval
-3. Search through uploaded health resources with semantic queries
-4. Implement citation and reference systems for source tracking
-5. Clean up resources and manage file lifecycle effectively
+1. [ ] Upload health and nutrition documents to Azure AI Agent service
+2. [ ] Create agents with file search capabilities for knowledge retrieval
+3. [ ] Search through uploaded health resources with semantic queries
+4. [ ] Implement citation and reference systems for source tracking
+5. [ ] Clean up resources and manage file lifecycle effectively
 
 **Key Learning Outcomes:**
 - File upload for agent knowledge base creation
@@ -91,11 +91,11 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 ## Exercise 4: Bing Search Grounding
 **Connect agents to real-time web information using [4-bing_grounding.ipynb](./4-bing_grounding.ipynb)**
 
-1. Configure Bing Search integration for real-time information access
-2. Create web-grounded health and fitness agents with current data
-3. Access current health trends, research, and fitness information
-4. Handle real-time queries with web context and fact-checking
-5. Compare responses with and without grounding to understand benefits
+1. [ ] Configure Bing Search integration for real-time information access
+2. [ ] Create web-grounded health and fitness agents with current data
+3. [ ] Access current health trends, research, and fitness information
+4. [ ] Handle real-time queries with web context and fact-checking
+5. [ ] Compare responses with and without grounding to understand benefits
 
 **Key Learning Outcomes:**
 - Bing Search integration and configuration
@@ -108,11 +108,11 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 ## Exercise 5: Azure AI Search Integration
 **Advanced search integration with Azure AI Search using [5-agents-aisearch.ipynb](./5-agents-aisearch.ipynb)**
 
-1. Set up Azure AI Search indexes for enterprise knowledge bases
-2. Create agents with Azure AI Search tool integration
-3. Implement sophisticated search queries for fitness equipment and knowledge
-4. Handle complex search scenarios with filtering and ranking
-5. Demonstrate enterprise search patterns and best practices
+1. [ ] Set up Azure AI Search indexes for enterprise knowledge bases
+2. [ ] Create agents with Azure AI Search tool integration
+3. [ ] Implement sophisticated search queries for fitness equipment and knowledge
+4. [ ] Handle complex search scenarios with filtering and ranking
+5. [ ] Demonstrate enterprise search patterns and best practices
 
 **Key Learning Outcomes:**
 - Azure AI Search integration and configuration
@@ -125,11 +125,11 @@ You are an AI developer tasked with building a comprehensive agent ecosystem for
 ## Exercise 6: Multi-Agent Solution
 **Build sophisticated multi-agent systems using [6-multi-agent-solution.ipynb](./6-multi-agent-solution.ipynb)**
 
-1. Design and implement a multi-agent ticket triage system
-2. Create three specialist agents for priority, team assignment, and effort estimation
-3. Build an orchestrator agent that coordinates specialist agents
-4. Use connected agent tools for seamless agent-to-agent communication
-5. Process complex support tickets through automated triage workflows
+1. [ ] Design and implement a multi-agent ticket triage system
+2. [ ] Create three specialist agents for priority, team assignment, and effort estimation
+3. [ ] Build an orchestrator agent that coordinates specialist agents
+4. [ ] Use connected agent tools for seamless agent-to-agent communication
+5. [ ] Process complex support tickets through automated triage workflows
 
 **Key Learning Outcomes:**
 - Multi-agent system architecture and design
