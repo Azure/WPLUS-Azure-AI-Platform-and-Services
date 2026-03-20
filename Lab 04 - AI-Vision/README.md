@@ -32,9 +32,9 @@ Complete the pre-requisite instructions.
 
 ## Exercise 1: Provision Azure Resources
 
-1. Access the Azure portal (portal.azure.com) and create a Computer Vision resource. +++**cv-@lab.LabInstance.Id**+++ (eg cv-53439517) Ensure to use this name, you will not be able to use a different name to create the resource. The screen shot provided here is just for reference, do not use the name provided in the screenshot below. Select **S1** as SKU. ![Alt text](./Images/create_resource.png).
-2. Ensure the resource is created in a supported region. ![Alt text](./Images/create_resource_2.png)
-3. Access Vision Studio at [https://portal.vision.cognitive.azure.com/](https://portal.vision.cognitive.azure.com/) and select your resource. ![Alt text](./Images/select_resource.png)
+1. [ ] Access the Azure portal (portal.azure.com) and create a Computer Vision resource. +++**cv-@lab.LabInstance.Id**+++ (eg cv-53439517) Ensure to use this name, you will not be able to use a different name to create the resource. The screen shot provided here is just for reference, do not use the name provided in the screenshot below. Select **S1** as SKU. ![Alt text](./Images/create_resource.png).
+2. [ ] Ensure the resource is created in a supported region. ![Alt text](./Images/create_resource_2.png)
+3. [ ] Access Vision Studio at [https://portal.vision.cognitive.azure.com/](https://portal.vision.cognitive.azure.com/) and select your resource. ![Alt text](./Images/select_resource.png)
 
 ---
 
@@ -44,7 +44,7 @@ This exercise demonstrates how to use Azure AI Vision, Face to detect and analys
 ![Alt text](./Images/selectfaceresource.png)
 ![Alt text](./Images/labfaceresource.png)
 ![Alt text](./Images/vision1.png)
-01. Iteratively click the samples to the right of the box.
+01. [ ] Iteratively click the samples to the right of the box.
 ![Alt text](./Images/vision2.png)
 In order to try the Face liveness detection, feature you need to apply access for the service from your subscription. For the purpose of this lab, you may skip this but have this as an option when you work on your organizational subscription.
 

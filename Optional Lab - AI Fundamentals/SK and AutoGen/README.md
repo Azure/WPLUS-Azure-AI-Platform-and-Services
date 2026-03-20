@@ -145,28 +145,28 @@ Build a product analysis system that combines both frameworks:
 
 ## Execution Instructions
 
-1. **Environment Setup**:
-   - Ensure Azure OpenAI Service is configured in `.env`
-   - Install required dependencies for both frameworks
-   - Verify async execution environment
+1. [ ] **Environment Setup**:
+   - [ ] Ensure Azure OpenAI Service is configured in `.env`
+   - [ ] Install required dependencies for both frameworks
+   - [ ] Verify async execution environment
 
-2. **Progressive Learning**:
-   - Start with Semantic Kernel basics and simple functions
-   - Progress to custom plugin development
-   - Move to AutoGen concepts and agent creation
-   - Combine both frameworks in practical examples
+2. [ ] **Progressive Learning**:
+   - [ ] Start with Semantic Kernel basics and simple functions
+   - [ ] Progress to custom plugin development
+   - [ ] Move to AutoGen concepts and agent creation
+   - [ ] Combine both frameworks in practical examples
 
-3. **Hands-on Practice**:
-   - Execute all code examples and observe results
-   - Modify parameters and configurations to understand impact
-   - Create your own plugins and agents
-   - Test different conversation flows and scenarios
+3. [ ] **Hands-on Practice**:
+   - [ ] Execute all code examples and observe results
+   - [ ] Modify parameters and configurations to understand impact
+   - [ ] Create your own plugins and agents
+   - [ ] Test different conversation flows and scenarios
 
-4. **Experimentation**:
-   - Try different agent personalities and roles
-   - Experiment with various plugin functionalities
-   - Test integration between frameworks
-   - Explore advanced features and capabilities
+4. [ ] **Experimentation**:
+   - [ ] Try different agent personalities and roles
+   - [ ] Experiment with various plugin functionalities
+   - [ ] Test integration between frameworks
+   - [ ] Explore advanced features and capabilities
 
 ## Expected Results
 

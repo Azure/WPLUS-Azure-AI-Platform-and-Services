@@ -33,10 +33,10 @@ You are an AI developer responsible for evaluating AI applications in production
 ### Task 1 - Environment Setup and Basic Configuration
 
 Configure evaluation environment and test basic AI operations:
-- Load environment variables and initialize AIProjectClient with browser-based authentication
-- Perform basic LLM calls using Azure OpenAI client
-- List and inspect project connections (Azure OpenAI, Azure AI Services)
-- Verify model deployments and connectivity
+- [ ] Load environment variables and initialize AIProjectClient with browser-based authentication
+- [ ] Perform basic LLM calls using Azure OpenAI client
+- [ ] List and inspect project connections (Azure OpenAI, Azure AI Services)
+- [ ] Verify model deployments and connectivity
 
 Key components:
 - Azure CLI credential authentication
@@ -46,11 +46,11 @@ Key components:
 ### Task 2 - Local Evaluation Setup
 
 Perform local model evaluations using built-in metrics:
-- Create synthetic health & fitness Q&A evaluation data
-- Configure F1Score evaluator for precision-recall analysis
-- Set up AI-assisted Relevance evaluator (when Azure OpenAI is available)
-- Run local evaluations with error handling and fallbacks
-- Generate comprehensive evaluation reports
+- [ ] Create synthetic health & fitness Q&A evaluation data
+- [ ] Configure F1Score evaluator for precision-recall analysis
+- [ ] Set up AI-assisted Relevance evaluator (when Azure OpenAI is available)
+- [ ] Run local evaluations with error handling and fallbacks
+- [ ] Generate comprehensive evaluation reports
 
 Evaluation features:
 - NLP-based metrics (F1 Score) for basic quality assessment
@@ -61,11 +61,11 @@ Evaluation features:
 ### Task 3 - Cloud-based Evaluation
 
 Submit evaluations to Azure AI Foundry for scalable processing:
-- Configure Azure AI Project client for cloud evaluations
-- Upload evaluation data and results to Azure AI Foundry
-- Monitor evaluation jobs in the Azure AI Foundry portal
-- Access advanced metrics and visualization capabilities
-- Compare local vs. cloud evaluation results
+- [ ] Configure Azure AI Project client for cloud evaluations
+- [ ] Upload evaluation data and results to Azure AI Foundry
+- [ ] Monitor evaluation jobs in the Azure AI Foundry portal
+- [ ] Access advanced metrics and visualization capabilities
+- [ ] Compare local vs. cloud evaluation results
 
 Cloud evaluation advantages:
 - Scalability for large datasets
@@ -90,20 +90,20 @@ Cloud evaluation advantages:
 ## Execution Instructions
 
 1. **Initial Setup**:
-   - Ensure you have completed the environment setup from previous notebooks
-   - Configure environment variables in the `.env` file at repository root
-   - Verify your Azure AI User role assignment
+   - [ ] Ensure you have completed the environment setup from previous notebooks
+   - [ ] Configure environment variables in the `.env` file at repository root
+   - [ ] Verify your Azure AI User role assignment
 
 2. **Evaluation Execution**:
-   - Open the `1-evaluation.ipynb` notebook in Azure AI Foundry or VS Code
-   - Execute data creation and local evaluation cells
-   - Test cloud evaluation submission (requires proper Azure AI Foundry setup)
-   - Review evaluation results and metrics
+   - [ ] Open the `1-evaluation.ipynb` notebook in Azure AI Foundry or VS Code
+   - [ ] Execute data creation and local evaluation cells
+   - [ ] Test cloud evaluation submission (requires proper Azure AI Foundry setup)
+   - [ ] Review evaluation results and metrics
 
 3. **Troubleshooting**:
-   - Verify your AI_FOUNDRY_PROJECT_ENDPOINT is correctly set
-   - Check Azure AI User role permissions for evaluation operations
-   - Review authentication error messages for guidance
+   - [ ] Verify your AI_FOUNDRY_PROJECT_ENDPOINT is correctly set
+   - [ ] Check Azure AI User role permissions for evaluation operations
+   - [ ] Review authentication error messages for guidance
 
 ## Expected Results
 

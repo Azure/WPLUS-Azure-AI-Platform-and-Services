@@ -44,35 +44,35 @@ Launch the Azure AI Foundry Resource created in the pre-requisites lab.
 ---
 
 ### 3. Start Fine-Tuning  
-- Navigate to the **Fine-tuning** section.  
-- Click **+ Fine-tune model**.
-- Here choose GPT-4.1-mini or GPT-4-o-mini or GPT-4.o
+- [ ] Navigate to the **Fine-tuning** section.  
+- [ ] Click **+ Fine-tune model**.
+- [ ] Here choose GPT-4.1-mini or GPT-4-o-mini or GPT-4.o
 
 ---
 
 ### 4. Configure Fine-Tuning Job
-- Select **Supervised** method  
-- Upload both the **training** and **validation** files. By navigating to `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning`
-  - `training_set_10samples.jsonl` – your training dataset  
-  - `validation_set_10samples.jsonl` – your validation dataset 
-- Add a **suffix name** for your model  
-- Leave **hyperparameters** as default  
-- Click **Submit**  
-  - ⏱️ Estimated time: **50–90 minutes**
+- [ ] Select **Supervised** method  
+- [ ] Upload both the **training** and **validation** files. By navigating to `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning`
+  - [ ] `training_set_10samples.jsonl` – your training dataset  
+  - [ ] `validation_set_10samples.jsonl` – your validation dataset 
+- [ ] Add a **suffix name** for your model  
+- [ ] Leave **hyperparameters** as default  
+- [ ] Click **Submit**  
+  - [ ] ⏱️ Estimated time: **50–90 minutes**
 
 ---
 
 ### 5. Review Results
-- Once complete, go to the **Metrics** tab  
-- Click **Use this model to deploy**
+- [ ] Once complete, go to the **Metrics** tab  
+- [ ] Click **Use this model to deploy**
 
 ---
 
 ### 6. Deploy and Test
-- After deployment, locate your model under:  
+- [ ] After deployment, locate your model under:  
   `My assets > Models + endpoints`
-- Review **Details** (URI, API keys, etc.)  
-- Click **Open in playground** to interact with your fine-tuned model
+- [ ] Review **Details** (URI, API keys, etc.)  
+- [ ] Click **Open in playground** to interact with your fine-tuned model
 
 
 

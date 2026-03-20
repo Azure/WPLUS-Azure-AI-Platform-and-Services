@@ -187,23 +187,23 @@ Discover techniques for creating prompts that adapt dynamically based on context
 ## Execution Instructions
 
 1. **Setup**:
-   - Ensure Azure OpenAI Service is configured in your `.env` file
-   - Open the **Prompt Engineering.ipynb** notebook in Azure AI Foundry or VS Code
+   - [ ] Ensure Azure OpenAI Service is configured in your `.env` file
+   - [ ] Open the **Prompt Engineering.ipynb** notebook in Azure AI Foundry or VS Code
 
 2. **Learning Approach**:
-   - Execute cells sequentially, observing examples of each technique
-   - Read theoretical explanations before practical examples
-   - Compare results between different approaches for similar tasks
+   - [ ] Execute cells sequentially, observing examples of each technique
+   - [ ] Read theoretical explanations before practical examples
+   - [ ] Compare results between different approaches for similar tasks
 
 3. **Experimentation**:
-   - Experiment with modifying prompts to see how changes affect results
-   - Try your own examples with each technique
-   - Test edge cases and limitations
+   - [ ] Experiment with modifying prompts to see how changes affect results
+   - [ ] Try your own examples with each technique
+   - [ ] Test edge cases and limitations
 
 4. **Practice**:
-   - Complete hands-on exercises for each technique
-   - Compare effectiveness of different approaches
-   - Build your own prompt library for common tasks
+   - [ ] Complete hands-on exercises for each technique
+   - [ ] Compare effectiveness of different approaches
+   - [ ] Build your own prompt library for common tasks
 
 ## Expected Results
 
