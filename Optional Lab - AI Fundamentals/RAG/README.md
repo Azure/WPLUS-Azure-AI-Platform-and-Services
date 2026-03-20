@@ -181,28 +181,28 @@ The explanation below is detailed on what is being done in each step in the **RA
 
 ## Execution Instructions
 
-1. **Environment Setup**:
-   - Configure Azure OpenAI and Azure AI Search credentials in `.env`
-   - Ensure access to both services and appropriate quotas
-   - Install required Python packages for vector search
+1. [ ] **Environment Setup**:
+   - [ ] Configure Azure OpenAI and Azure AI Search credentials in `.env`
+   - [ ] Ensure access to both services and appropriate quotas
+   - [ ] Install required Python packages for vector search
 
-2. **Progressive Learning**:
-   - Start with baseline queries to understand limitations
-   - Implement document preparation and embedding generation
-   - Build semantic search capabilities step by step
-   - Integrate all components into complete RAG pipeline
+2. [ ] **Progressive Learning**:
+   - [ ] Start with baseline queries to understand limitations
+   - [ ] Implement document preparation and embedding generation
+   - [ ] Build semantic search capabilities step by step
+   - [ ] Integrate all components into complete RAG pipeline
 
-3. **Hands-on Practice**:
-   - Execute each exercise sequentially
-   - Experiment with different documents and queries
-   - Observe quality improvements with RAG implementation
-   - Test edge cases and error handling
+3. [ ] **Hands-on Practice**:
+   - [ ] Execute each exercise sequentially
+   - [ ] Experiment with different documents and queries
+   - [ ] Observe quality improvements with RAG implementation
+   - [ ] Test edge cases and error handling
 
-4. **Experimentation**:
-   - Try different embedding models and parameters
-   - Experiment with various chunking strategies
-   - Test different search ranking algorithms
-   - Optimize for your specific use cases
+4. [ ] **Experimentation**:
+   - [ ] Try different embedding models and parameters
+   - [ ] Experiment with various chunking strategies
+   - [ ] Test different search ranking algorithms
+   - [ ] Optimize for your specific use cases
 
 ## Expected Results
 
