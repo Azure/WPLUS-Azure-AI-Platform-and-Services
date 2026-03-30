@@ -46,9 +46,9 @@ If the terminal is not current set to using PowerShell, then type in "powershell
 Enter the command below to set the PGPassword for the user that we will be using to connect to the PostgreSQL database:
 
 ```powershell
-$env:PGPASSWORD = "Password12345!!"
+$env:PGPASSWORD = "<use the password from sqlcredentials.txt>"
 ```
-
+![find PG Password](images/sqlcredentials.png)
 ![Set PG Password](images/3_SetPGAdminPwd.png)
 
 This sets your PostgreSQL password for the current session. Be sure to keep this terminal open for the duration of the lab.
