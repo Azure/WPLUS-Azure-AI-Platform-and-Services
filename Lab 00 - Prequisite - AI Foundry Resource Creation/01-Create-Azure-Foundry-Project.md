@@ -26,7 +26,7 @@ No pre-requisites
 
 ### 1. Sign in to Azure Portal
 
-Go to [https://portal.azure.com](https://portal.azure.com) and sign in with your Azure credentials. These credentials are present on the right hand side under resources tab below **Azure Portal**.
+Go to +++https://portal.azure.com+++ and sign in with your Azure credentials. These credentials are present on the right hand side under resources tab below **Azure Portal**.
 ![Azure Credentials](images/azurecredentials.png)
 
 
