@@ -52,7 +52,9 @@ For advanced/bonus content, you can use these Logic Apps to create AI agents.
 ## Copy the Access Language API Key and Endpoint URL
 
 1. [ ] Login to Azure AI Foundry: https://ai.azure.com/. 
+
   _Note: Make sure you are logged in the MS Foundry project created in the prereqs_
+  
 1. [ ] Go to the Overview page, check the **API Key** and **Azure AI Services** endpoint URL.
 ![Alt text](./Images/SaveEndpointAPIKey.png)
 
