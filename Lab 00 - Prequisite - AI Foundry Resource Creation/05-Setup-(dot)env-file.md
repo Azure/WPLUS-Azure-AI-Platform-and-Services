@@ -33,26 +33,25 @@ Complete the prerequisites Lab exercises
 
 - [ ] Find the .env.example file that is supplied as the template. You can find it in the root folder provided within the lab VM
 ![Go to resource](images/Envfile_location.png)
+
 - [ ] Copy .env.example to save as .env in the same folder location
 - [ ] Edit .env to provide the actual value from your environment by following the steps
 - [ ] Do not modify the section that is marked for not to modify
 
-### 2. Go to the default Project
+### 2. Go to the Microsoft Foundry – Overview page
 
-- [ ] Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
-- [ ] Click **Azure AI Foundry** at the top left
-- [ ] Click on the project name to go to project overview (eg firstProject). Ignore the name in the screenshot as you have created project with name **firstProject** in pre-requisite lab exercise 1
+- [ ] Go to [https://ai.azure.com](https://ai.azure.com/) 
+- [ ] Sign in with your Azure credentials (if requested)
 
-![Go to resource](images/gotoprojectoverview.png)
-
-### 3. Set value for AI_FOUNDRY_PROJECT_ENDPOINT, AZURE_PROJECT_NAME
+### 3. Set the values for the AI_FOUNDRY_PROJECT_ENDPOINT and AZURE_PROJECT_NAME variables
 
 - [ ] At  the center of the **Overview** section, you can find the Azure AI Foundry project endpoint as shown below
 - [ ] Copy and paste into .env file as the value for AI_FOUNDRY_PROJECT_ENDPOINT
 ![Go to project](images/AZURE_AI_FOUNDRY_PROJECT_ENDPOINT.png)
+
 - [ ] Copy and paste into .env file the project name. Project name is the last part of the endpoint string after the "/" (eg. firstProject)
 
-### 4. Set value for AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_KEY and more
+### 4. Set the values for the AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY variables
 
 - [ ] Scroll to the bottom on the left side menu
 - [ ] Click **Models + endpoints** in the My assets section
@@ -68,7 +67,7 @@ Complete the prerequisites Lab exercises
 - [ ] Copy corresponding string from the URI and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and MODEL_API_VERSION
 ![Go to project](images/modelapikey3.png)
 
-### 5. Set value for AZURE_OPENAI_EMBEDDING_ENDPOINT and more
+### 5. Set the values for the AZURE_OPENAI_EMBEDDING_ENDPOINT and AZURE_OPENAI_EMBEDDING_API_KEY variables
 
 - [ ] Similar steps as above. Follow for both text-embedding-3-large and text-embedding-ada-002 models
 - [ ] Click on embeddding model name to get details
@@ -79,17 +78,17 @@ Complete the prerequisites Lab exercises
 - [ ] The Endpoint Target URI is in the form of https://_AI-FOUNDRY-NAME_.cognitiveservices.azure.com/openai/deployments/_MODEL-DEPLOYMENT-NAME_/chat/completions?api-version=_MODEL-API-VERSION_
 - [ ] Copy corresponding string from the URI and paste into .env file as the value for EMBEDDING_MODEL_DEPLOYMENT_NAME and EMBEDDING_MODEL_API_VERSION
 
-### 6. Set value for GROUNDING_WITH_BING_CONNECTION_NAME
+### 6. Set the value for the GROUNDING_WITH_BING_CONNECTION_NAME variable
 
-- [ ] At the top left, Click **Microsoft Foundry**
-- [ ] Click Your AI Foundry (eg ai-foundry-53439517)
-![Go to resource](images/msfoundry_ClickYourMSFoundryInstance.png)
+#### Go to the Connected Resources section
+
 - [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
 - [ ] You can see list of connected resources
 ![List models deployed](images/gwbingconnectedinlist.png)
+
 - [ ] Copy the "Name" of the "Grounding with Bing Search" connection (Corresponding Target columns is https://api.bing.microsoft.com/) and paste into .env file as the value for GROUNDING_WITH_BING_CONNECTION_NAME
 
-### 7. Set value for TENANT_ID, AZURE_RESOURCE_GROUP, AZURE_SUBSCRIPTION_ID
+### 7. Set the values for the TENANT_ID, AZURE_RESOURCE_GROUP and AZURE_SUBSCRIPTION_ID variables
 
 - [ ] Go to [https://portal.azure.com](https://portal.azure.com) and sign into the Azure portal with your Azure credentials.
 - [ ] In the top search bar, type **entra id**
@@ -103,6 +102,7 @@ Complete the prerequisites Lab exercises
 - [ ] In the top search bar, type **resource groups**
 - [ ] Select **Resource groups** from the search results
 ![Go to project](images/rg1.png)
+
 - [ ] Copy the resource group name (eg azureaiworkshoprg) and paste into .env file as the value for AZURE_RESOURCE_GROUP
 ![Go to project](images/rg2.png)
 
@@ -110,7 +110,7 @@ Complete the prerequisites Lab exercises
 - [ ] Copy the Subscription ID as shown in the screeshot and paste into .env file as the value for
 ![Go to project](images/sub1.png)
 
-### 8. Set value for AZURE_AI_SEARCH_ENDPOINT & AZURE_AI_SEARCH_API_KEY
+### 8. Set the values for the AZURE_AI_SEARCH_ENDPOINT and AZURE_AI_SEARCH_API_KEY variables
 
 - [ ] In the top search bar, type **ai search**
 - [ ] Select **AI Search** from the search results
@@ -124,7 +124,7 @@ Complete the prerequisites Lab exercises
 - [ ] Copy the key as shown in the screenshot for this Lab, and paste into .env file as the value for AZURE_AI_SEARCH_API_KEY
 ![Go to project](images/aisearchapikey.png)
 
-### 9. Set value for COSMOS_ENDPOINT & COSMOS_KEY
+### 9. Set the values for the COSMOS_ENDPOINT and COSMOS_KEY variables
 
 - [ ] In the top search bar, type **cosmos**
 - [ ] Select **Azure Cosmos DB** from the search results
@@ -135,7 +135,7 @@ Complete the prerequisites Lab exercises
 - [ ] Toggle the eye icon at the far right of **PRIMARY KEY**, Copy the key and paste into .env file as the value for COSMOS_KEY
 ![Go to project](images/cosmos_ep_key.png)
 
-### 10. Set value for SQL_SERVER
+### 10. Set the value for the SQL_SERVER variable
 
 - [ ] In the top search bar, type **sql**
 - [ ] Select **SQL Servers** from the search results
@@ -152,7 +152,7 @@ Complete the prerequisites Lab exercises
 
     ![Screenshot of the Azure OpenAI resource management pane](../Lab%2005%20-%20Fine-Tuning/Advance%20Fine-Tuning/images/screenshot-foundry-overview-1.png)
 
-- [ ] Go to **Resource Management**, click **Keys and Endpoint** sub-section
+- [ ] Go to **Resource Management** section, click **Keys and Endpoint** sub-section
 - [ ] Click **OpenAI**
 - [ ] Copy and save the following values:
   - **Endpoint URL**.

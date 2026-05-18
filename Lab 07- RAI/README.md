@@ -54,7 +54,7 @@ Configure the environment with the required tools and files:
 
 1. [ ] **Connect Azure AI Search**
 
-    _Note: Skip this connection if already done in the [Create connections to Azure AI Search at AI Foundry resource level prereqs](../Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/04-Connect-to-Azure-AI-Search.md)_
+    _Note: Skip this step if already done in the [Create connections to Azure AI Search at AI Foundry resource level prereqs](../Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/04-Connect-to-Azure-AI-Search.md)_
 
     - [ ] On the left side, go to **Management center** at the bottom.
     - [ ] Underneath **Hub** (*your-hub-name*), select **Connected resources**.
