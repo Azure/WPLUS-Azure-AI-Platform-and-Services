@@ -7,22 +7,24 @@ This lab walks you through the steps to connect the Grounding with Bing Search r
 ## Objectives 
 
 In this lab we will:
-- Connect the Grounding with Bing Search resource to the Azure AI Foundry resource.	
 
+- Connect the Grounding with Bing Search resource to the Azure AI Foundry resource.	
 
 ## Estimated Time 
 
 5 minutes 
 
 ## Scenario
+
 Connect the Grounding with Bing Search resource to the Azure AI Foundry resource.	
 
 ## Pre-requisites
+
 No pre-requisites
 
 ## 🛠️ Tasks
 
-### 1. Connected Resources
+### 1. Go to the Connected Resources section
 
 - [ ] Login to Azure AI Foundry: +++https://ai.azure.com/+++
 - [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
@@ -44,15 +46,9 @@ No pre-requisites
 
 ![List models deployed](images/gwbingconnected.png)
 
-
-
 ## ✅ Completed. 
 
 - [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
 - [ ] You can see list of connected resources
 
 ![List models deployed](images/gwbingconnectedinlist.png)
-
-
-
-
