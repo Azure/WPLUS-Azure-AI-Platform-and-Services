@@ -5,33 +5,32 @@
 This lab walks you through the steps to connect the Azure AI Search to the AI Foundry resource.
 
 ## Objectives 
-In this lab we will:
--	Connect the Azure AI Search to the AI Foundry resource.
 
+In this lab we will:
+
+-	Connect the Azure AI Search to the AI Foundry resource.
 
 ## Estimated Time 
 
 5 minutes 
 
 ## Scenario
+
 Connect the Azure AI Search to the AI Foundry resource.
 
 ## Pre-requisites
+
 No Pre-requisites
 
 ## 🛠️ Tasks
 
-### 1. Sign in to Azure AI Foundry portal
+### 1. Go to the Connected Resources section
 
-- [ ] Go to [https://ai.azure.com](https://ai.azure.com/) and sign in with your Azure credentials.
-- [ ] Click **Microsoft Foundry** at the top left
-- [ ] Click Your AI Foundry (eg ai-foundry-53439517)
+ _Note: Skip this step if you are already in the Management center_
 
-![Go to resource](images/msfoundry_ClickYourMSFoundryInstance.png)
-
-### 2. Connected Resources
-
+- [ ] Login to Azure AI Foundry: +++https://ai.azure.com/+++
 - [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
+
 ![Foundry connected resources](images/foundryconnectedresources.png)
 
 - [ ] Click **+New connection**
@@ -49,14 +48,9 @@ No Pre-requisites
 
 ![List models deployed](images/aisearchconnected.png)
 
-
-
 ## ✅ Completed. 
 
 - [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
 - [ ] You can see list of connected resources
 
 ![List models deployed](images/aisearchconnectedinlist.png)
-
-
-
