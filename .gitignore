@@ -527,6 +527,6 @@ cython_debug/
 ehthumbs.db
 Thumbs.db
 
-# Github
+# Github and Github Agents
 .github/
 evaluation/
