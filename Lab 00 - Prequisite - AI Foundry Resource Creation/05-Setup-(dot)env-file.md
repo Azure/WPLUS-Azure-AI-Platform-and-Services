@@ -49,7 +49,8 @@ Complete the prerequisites Lab exercises
 - [ ] Copy and paste into .env file as the value for AI_FOUNDRY_PROJECT_ENDPOINT
 ![Go to project](images/AZURE_AI_FOUNDRY_PROJECT_ENDPOINT.png)
 
-- [ ] Copy and paste into .env file the project name. Project name is the last part of the endpoint string after the "/" (eg. firstProject)
+- [ ] Copy and paste into .env file the AZURE_PROJECT_NAME value. 
+  - The "AZURE_PROJECT_NAME" value is the last part of the endpoint string after the "/" (eg. firstProject)
 
 ### 4. Set the values for the AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY variables
 
