@@ -23,7 +23,14 @@ You are deploying models that will be utilized later in the labs for several mod
 
 ## Pre-requisites
 
-No pre-requisites
+Make sure you are using the legacy Microsoft Foundry UI.
+
+- If the following UI is shown
+![New Foundry UI](images/ai_foundry_new_ui.png)
+
+- Change the UI to the legacy UI by clicking the **New Foundry** switch
+![New Foundry UI](images/ai_foundry_new_ui_2.png)
+
 
 ## 🛠️ Tasks
 
