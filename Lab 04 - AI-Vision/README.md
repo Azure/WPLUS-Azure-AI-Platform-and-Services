@@ -34,10 +34,11 @@ Complete the pre-requisite instructions.
 
 1. [ ] Go to +++https://portal.azure.com+++ .
 1. [ ] In the top search bar, type **"Microsoft Foundry"**
-1. [ ] Select **Microsoft Foundry** from the search results
-    ![Search Microsoft Foundry](images/search_ai_foundry.png)
+1. [ ] Select **Microsoft Foundry** from the search results    
+    ![Search Microsoft Foundry](/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/images/search_ai_foundry.png)
+    
 
-1. [ ] In the left panel, inside the **More services**, click **Computer Vision**.
+1. [ ] In the left panel, inside the **More services** section, click **Computer Vision**.
 1. [ ] Click the **Create** button inside the Computer Vision resource. 
     ![Alt text](./Images/create_resource.png).
 1. [ ] Inside the **Create Computer Vision** section, use the following values to create the resource:
