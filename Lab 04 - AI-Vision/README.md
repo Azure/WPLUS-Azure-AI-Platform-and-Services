@@ -32,27 +32,66 @@ Complete the pre-requisite instructions.
 
 ## Exercise 1: Provision Azure Resources
 
-1. [ ] Access the Azure portal (portal.azure.com) and create a Computer Vision resource. +++**cv-@lab.LabInstance.Id**+++ (eg cv-53439517) Ensure to use this name, you will not be able to use a different name to create the resource. The screen shot provided here is just for reference, do not use the name provided in the screenshot below. Select **S1** as SKU. ![Alt text](./Images/create_resource.png).
-2. [ ] Ensure the resource is created in a supported region. ![Alt text](./Images/create_resource_2.png)
-3. [ ] Access Vision Studio at [https://portal.vision.cognitive.azure.com/](https://portal.vision.cognitive.azure.com/) and select your resource. ![Alt text](./Images/select_resource.png)
+1. [ ] Go to +++https://portal.azure.com+++ .
+1. [ ] In the top search bar, type **"Microsoft Foundry"**
+1. [ ] Select **Microsoft Foundry** from the search results
+    ![Search Microsoft Foundry](images/search_ai_foundry.png)
+
+1. [ ] In the left panel, inside the **More services**, click **Computer Vision**.
+1. [ ] Click the **Create** button inside the Computer Vision resource. 
+    ![Alt text](./Images/create_resource.png).
+1. [ ] Inside the **Create Computer Vision** section, use the following values to create the resource:
+    - Region: _select a supported region._ You may check the service availability in the [Product Availability by Region - Search for **Azure Vision**](https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table)
+    - Name: ++**cv-@lab.LabInstance.Id**+++ (eg cv-53439517) _Ensure to use this name (++**cv-@lab.LabInstance.Id**+++), you will not be able to use a different name to create the resource. The screen shot provided is just for reference, do not use the name provided in the screenshot below._
+    - Pricing Tier:  **Standard S1**
+    - Click the policy checkbox.
+    - Click **Review + create**
+    ![Alt text](./Images/create_resource_2.png)
+
+1. [ ] Click **Create**
+1. [ ] Access the Vision Studio at [https://portal.vision.cognitive.azure.com/](https://portal.vision.cognitive.azure.com/)
+1. [ ] Click the **Sign in** button in the top right section.
+1. [ ] You should be inside the Azure Vision Studio (Computer Vision Studio)
+    ![Alt text](./Images/vision_studio.png)
 
 ---
 
 ## Exercise 2: Face Analysis
 
-This exercise demonstrates how to use Azure AI Vision, Face to detect and analyse human faces in images. Navigate to [Azure AI | Vision Studio](https://portal.vision.cognitive.azure.com/), log in with your Azure credentials, and then click on the "Face" tab. Note that you may need to create a resource to access. Use this name for Face Vision resource. +++**faceresource-@lab.LabInstance.Id**+++ (eg faceresource-53439517). Ensure to use this name, you will not be able to use a different name to create the resource. The screen shot provided here is just for reference, do not use the name provided in the screenshot below. Choose **S0** SKU
-![Alt text](./Images/selectfaceresource.png)
-![Alt text](./Images/labfaceresource.png)
-![Alt text](./Images/vision1.png)
-01. [ ] Iteratively click the samples to the right of the box.
-![Alt text](./Images/vision2.png)
-In order to try the Face liveness detection, feature you need to apply access for the service from your subscription. For the purpose of this lab, you may skip this but have this as an option when you work on your organizational subscription.
+This exercise demonstrates how to use the Azure AI Vision Faces features to detect and analyse human faces in images. 
+
+1. [ ] Inside the **Vision Studio** Portal.
+1. [ ] Click on the **Detect faces in an image**.
+1. [ ] Click the **Acknowledge** checkbox.
+1. [ ] Click the **Please select a resource** link 
+    ![Alt text](./Images/face_studio.png)
+
+1. [ ] Select the **Subscription** and click **Create a new resource**
+
+    ![Alt text](./Images/selectfaceresource.png)
+
+1. [ ] Inside the **Create a new resource**, select the following values:
+    - **Name**:  +++**faceresource-@lab.LabInstance.Id**+++ (eg faceresource-53439517). Ensure to use this name, you will not be able to use a different name to create the resource.
+    - **Subscription**: _existing subscription_
+    - **Resource Group**: _existing resource group_
+    - **Location**: _select a region_
+    - **Price tier**: S0
+    - Click **Create resource**
+
+    ![Alt text](./Images/selectfaceresource_2.png)
+
+1. [ ] Click **Confirm**
+
+1. [ ] Select an image and cthen click **JSON** to see the face attributes.
+1. [ ] Iteratively click the samples to the right of the box.
+    ![Alt text](./Images/vision2.png)
+1. [ ] Close the Azure vision portal and continue with the lab
 
 ---
 
 ## Exercise 3: Optical Character Recognition (OCR) via SDK/API
 
-> :warning: **Deprecation Notice:** The Image Analysis 4.0 OCR service is deprecated and will be **retired on September 25, 2028**. Legacy Computer Vision API versions (v1.0-v3.1) will be **retired on September 13, 2026**. Consider migrating to:
+> Warning: **Deprecation Notice:** The Image Analysis 4.0 OCR service is deprecated and will be **retired on September 25, 2028**. Legacy Computer Vision API versions (v1.0-v3.1) will be **retired on September 13, 2026**. Consider migrating to:
 > - [Azure AI Document Intelligence - Read model](https://learn.microsoft.com/azure/ai-services/document-intelligence/prebuilt/read) (optimized for documents)
 > - [Azure Content Understanding](https://learn.microsoft.com/azure/ai-services/content-understanding/overview) (managed generative solution)
 
@@ -60,7 +99,26 @@ While the OCR feature is no longer available in the Vision Studio portal, the **
 
 The OCR API extracts printed and handwritten text from images such as posters, street signs, product labels, business documents, invoices, and receipts. It supports multiple languages and works with text on various surfaces and backgrounds.
 
-**Hands-on exercise:** Open the notebook at [`LabFiles/AI_vision_services_lab.ipynb`](./LabFiles/AI_vision_services_lab.ipynb) and complete **Section 02 - Extract Text from Images** to call the OCR API programmatically.
+### Set the Azure Computer Vision (Azure AI Vision) variables in the .ENV file
+
+1. [ ] Go to +++https://portal.azure.com+++ 
+1. [ ] In the top search bar, type **"Microsoft Foundry"**
+1. [ ] Select **Microsoft Foundry** from the search results
+    ![Search Microsoft Foundry](images/search_ai_foundry.png)
+
+1. [ ] In the left panel, inside the **More services**, click **Computer Vision**.
+1. [ ] Click the **Computer resource** ++**cv-@lab.LabInstance.Id**+++
+1. [ ] In the left panel, inside **Resource Management**, click **Keys and EndPoint**
+1. [ ] Copy the values **KEY 1** and **Endpoint**
+    ![Alt text](./Images/computer_resource_ke.png)
+
+1. [ ] Inside Visual Studio Code, open the **.env** file
+1. [ ] Set the following values:
+    - **COMPUTER_VISION_API_KEY**: _Paste the **KEY 1** value_
+    - **COMPUTER_VISION_ENDPOINT**: _Paste the **Endpoint** value_
+
+1. [ ] Open the **Hands-on exercise:** Open the notebook at [`LabFiles/AI_vision_services_lab.ipynb`](./LabFiles/AI_vision_services_lab.ipynb)
+1. [ ] Complete **Section 02 - Extract Text from Images** to call the OCR API programmatically.
 
 ---
 
