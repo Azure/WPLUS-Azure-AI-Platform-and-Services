@@ -25,12 +25,16 @@ You are deploying models that will be utilized later in the labs for several mod
 
 Make sure you are using the legacy Microsoft Foundry UI.
 
-- If the following UI is shown
-![New Foundry UI](images/ai_foundry_new_ui.png)
+- If this is the first Portal view in the **Foundry Portal**, then click **firstProject** inside the **All resources** section.
+    ![New Foundry UI](images/ai_foundry_new_ui_3.png)
 
-- Change the UI to the legacy UI by clicking the **New Foundry** switch
-![New Foundry UI](images/ai_foundry_new_ui_2.png)
+- If the following Microsoft Foundry UI(User Interface) is shown:
+    ![New Foundry UI](images/ai_foundry_new_ui.png)
 
+- Change the UI to the legacy UI by clicking the **New Foundry** switch:
+    ![New Foundry UI](images/ai_foundry_new_ui_2.png)
+
+- If the feedback popups is displayed, click **Continue without feedback**.
 
 ## 🛠️ Tasks
 

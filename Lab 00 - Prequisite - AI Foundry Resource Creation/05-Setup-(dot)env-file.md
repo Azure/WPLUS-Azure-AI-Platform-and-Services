@@ -119,11 +119,11 @@ Complete the prerequisites Lab exercises
 - [ ] Click on the name
 - [ ] Next screen, In the Overview section, find the **Url** as shown in below screenshot
 - [ ] Copy and paste into .env file as the value for AZURE_AI_SEARCH_ENDPOINT
-![Go to project](images/aisearchurl.png)
-- [ ] On the left side Menu, expand **Settings**
+  ![Go to project](images/aisearchurl.png)
+- [ ] On the left side Menu, expand **Security + networking**
 - [ ] Click **Keys**
 - [ ] Copy the key as shown in the screenshot for this Lab, and paste into .env file as the value for AZURE_AI_SEARCH_API_KEY
-![Go to project](images/aisearchapikey.png)
+  ![Go to project](images/aisearchapikey.png)
 
 ### 9. Set the values for the COSMOS_ENDPOINT and COSMOS_KEY variables
 
