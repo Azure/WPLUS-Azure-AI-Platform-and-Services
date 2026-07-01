@@ -38,7 +38,7 @@ In this lab we will:
 - Azure OpenAI Service resource (provided for you in the Resources tab)
 - Deploy these models at https://ai.azure.com using your Azure OpenAI Service resource.
 - Text embedding model: `text-embedding-ada-002` or `text-embedding-3-small`
-- LLM: `gpt-4o-mini`
+- LLM: `gpt-5-mini`
 
 ## Tasks
 
