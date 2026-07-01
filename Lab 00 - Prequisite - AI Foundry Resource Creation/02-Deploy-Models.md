@@ -9,8 +9,8 @@ This lab walks you through the steps to deploy various models into the **Microso
 In this lab we will deploy the following models:
 
 - text-embedding-3-large
-- GPT-4o
-- GPT-4o-mini	
+- GPT-5.1
+- GPT-5-mini	
 - text-embedding-ada-002
 
 ## Estimated Time 
@@ -40,14 +40,14 @@ Make sure you are using the legacy Microsoft Foundry UI.
 
 ### 1. Ensure that you are on the Microsoft Foundry – Overview page
 
-### 2. Deploy gpt-4o model
+### 2. Deploy gpt-5.1 model
 
 - [ ] In the left side menu, Click **Model catalog**
-- [ ] At the center, scroll down and search +++gpt-4o+++
-- [ ] Right Click on **gpt-4o** and click **Open link in new tab**
+- [ ] At the center, scroll down and search +++gpt-5.1+++
+- [ ] Right Click on **gpt-5.1** and click **Open link in new tab**
 ![Find gpt-4o models](images/findgpt4omodels.png)
 
-- [ ] Go to the newly opened tab for gpt-4o
+- [ ] Go to the newly opened tab for gpt-5.1
 - [ ] Click **Use this model** button
 ![Use this model](images/usethismodel.png)
 
@@ -58,9 +58,9 @@ Make sure you are using the legacy Microsoft Foundry UI.
 
 - [ ] After deployment completes, close the browser tab.
 
-### 3. Deploy gpt-4o-mini model
+### 3. Deploy gpt-5-mini model
 
-- [ ] Repeat the steps above to deploy the +++**gpt-4o-mini**+++ model.
+- [ ] Repeat the steps above to deploy the +++**gpt-5-mini**+++ model.
 
 ### 4. Deploy embedding model
 

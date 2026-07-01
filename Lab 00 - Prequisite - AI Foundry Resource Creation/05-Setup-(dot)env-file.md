@@ -61,11 +61,12 @@ Complete the prerequisites Lab exercises
 ![Go to project](images/modelapikey1.png)
 
 - [ ] As shown in the screenshot Copy Endpoint Target URI and paste into .env file as the value for AZURE_OPENAI_ENDPOINT
-- [ ] Copy Key and paste into .env file as the value for AZURE_OPENAI_API_KEY
+- [ ] Copy the Model Name and Key and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and AZURE_OPENAI_API_KEY respectively.
 ![Go to project](images/modelapikey2.png)
+  - The Model Name is the first box string.
 
 - [ ] The Endpoint Target URI is in the form of https://_AI-FOUNDRY-NAME_.cognitiveservices.azure.com/openai/deployments/_MODEL-DEPLOYMENT-NAME_/chat/completions?api-version=_MODEL-API-VERSION_
-- [ ] Copy corresponding string from the URI and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and MODEL_API_VERSION
+- [ ] Copy the last section from the URI (date) and paste into .env file as the value for MODEL_API_VERSION
 ![Go to project](images/modelapikey3.png)
 
 ### 5. Set the values for the AZURE_OPENAI_EMBEDDING_ENDPOINT and AZURE_OPENAI_EMBEDDING_API_KEY variables
