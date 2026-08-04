@@ -18,7 +18,7 @@ In this lab you will:
 A cosmetics retailer needs proactive visibility into inventory velocity and stock risks. Instead of manually exporting reports, an AI Agent should dynamically call tool endpoints (inventory & weekly sales) and synthesize restock, clearance, and insight recommendations in natural language.
 
 ## Pre-requisites
-- Azure AI Foundry project with a deployed model (e.g. `gpt-4o`)
+- Azure AI Foundry project with a deployed model (e.g. `gpt-5.1`)
 - Root `.env` in repository configured with:
   - `PROJECT_CONNECTION_STRING`
   - `MODEL_DEPLOYMENT_NAME`
@@ -81,7 +81,7 @@ python client.py
 Expected initial output:
 ```
 Project Endpoint: https://<project>.services.ai.azure.com/api/projects/<name>
-Model Deployment: gpt-4o
+Model Deployment: gpt-5.1
 Connected to server with tools: ['get_inventory_levels', 'get_weekly_sales']
 Enter a prompt for the inventory agent. Use 'quit' to exit.
 ```

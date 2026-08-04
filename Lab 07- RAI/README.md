@@ -88,7 +88,7 @@ Configure the environment with the required tools and files:
 1. [ ] At the top, choose **Manual evaluations**.
  ![Go to resource](rai_md_img/manual_eval.png)
 1. [ ] Select **New Manual Evaluation**. Under Configurations, see the options.
-1. [ ] On the right, select the model you deployed (e.g., `gpt-4o`).
+1. [ ] On the right, select the model you deployed (e.g., `gpt-5.1`).
 1. [ ] Still on the right, click **Add your data** and select the index you just created. Note that this may take some time. Check if the index is in **ready** state and not in **running** 
 1. [ ] At the bottom of the page, select **Import test data**.
 1. [ ] Click **Upload dataset** and upload the file from `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Evaluations/manual_evaluation.jsonl`.

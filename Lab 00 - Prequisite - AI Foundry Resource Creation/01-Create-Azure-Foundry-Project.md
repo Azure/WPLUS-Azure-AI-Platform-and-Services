@@ -49,7 +49,7 @@ Go to +++https://portal.azure.com+++ and sign in with your Azure credentials. Th
 - [ ] In the **Name** field, enter +++**ai-foundry-@lab.LabInstance.Id**+++ (eg ai-foundry-53439517).The screen shot provided here is just for reference, do not use the name provided in the screenshot below
 - [ ] Choose a Region (e.g. East US 2)
 
-> ⚠️ **Note:** Make sure the selected Azure region supports model GPT-4o. You may check the **[Region availability for Foundry Models site](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability?tabs=az-americas&pivots=standard#global-standard)**.
+> ⚠️ **Note:** Make sure the selected Azure region supports model GPT-5.1. You may check the **[Region availability for Foundry Models site](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability?tabs=az-americas&pivots=standard#global-standard)**.
 
 - [ ] In the **Default project name** field, delete the default value (if there is one) and enter +++**firstProject**+++. The lab environment will not let you use another name.
 
