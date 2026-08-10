@@ -1,9 +1,8 @@
 import pyodbc
-import json
 import os
-from openai import AzureOpenAI
+from urllib.parse import urlsplit
+
 from dotenv import load_dotenv
-import os
 
 load_dotenv("../../.env")
 
@@ -14,6 +13,24 @@ sql_server = os.getenv("SQL_SERVER")
 sql_database = os.getenv("SQL_DATABASE")
 sql_user = os.getenv("SQL_USER")
 sql_pwd = os.getenv("SQL_PWD")
+
+
+def get_base_endpoint(value):
+    if not value:
+        raise ValueError("AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT is required")
+
+    parsed_endpoint = urlsplit(value)
+    if parsed_endpoint.scheme.lower() != "https" or not parsed_endpoint.netloc:
+        raise ValueError("AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT must be a valid HTTPS URL")
+
+    base_endpoint = f"https://{parsed_endpoint.netloc}"
+    if len(base_endpoint) > 128:
+        raise ValueError("The Azure OpenAI base endpoint exceeds SQL's 128-character credential-name limit")
+
+    return base_endpoint
+
+
+base_endpoint = get_base_endpoint(endpoint)
 
 
 def create_SQLMasterKey():
@@ -64,11 +81,10 @@ def create_database_credential():
     )
     cursor = conn.cursor()
     sql = (
-        f"CREATE DATABASE SCOPED CREDENTIAL [{endpoint}] "
+        f"CREATE DATABASE SCOPED CREDENTIAL [{base_endpoint}] "
         f"WITH IDENTITY = 'HTTPEndpointHeaders', "
         f"SECRET = '{{\"api-key\": \"{api_key}\"}}';"
     )
-    print(sql)
     cursor.execute(sql)
     conn.commit()
     
@@ -89,8 +105,8 @@ def create_embedding_procedure():
     )
     cursor = conn.cursor()
     
-    url = f"{endpoint.rstrip('/')}/openai/deployments/{deployment}/embeddings?api-version=2024-02-01"
-    credential = f"[{endpoint.rstrip('/')}]"
+    url = f"{base_endpoint}/openai/deployments/{deployment}/embeddings?api-version=2024-02-01"
+    credential = f"[{base_endpoint}]"
 
     sql = """
     CREATE OR ALTER PROCEDURE [dbo].[get_embedding]
@@ -109,7 +125,20 @@ def create_embedding_procedure():
             @payload = @payload,
             @response = @response OUTPUT;
 
+        IF @retval <> 0
+        BEGIN
+            DECLARE @errorMessage NVARCHAR(2048) = CONCAT(
+                'Azure OpenAI embedding request failed with HTTP status ', @retval, '.'
+            );
+            THROW 50001, @errorMessage, 1;
+        END;
+
         SET @embedding = JSON_QUERY(@response, '$.result.data[0].embedding');
+
+        IF @embedding IS NULL
+        BEGIN
+            THROW 50002, 'Azure OpenAI returned no embedding.', 1;
+        END;
 
         RETURN @retval;
     END;
