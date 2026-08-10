@@ -182,9 +182,9 @@ Execute files in [SQL folder](https://github.com/Azure/WPLUS-Azure-AI-Platform-a
 ## 16. Update the `.env` File
 1. [ ] Open `.env` in VS Code. (This file should have been renamed from .env.example - so remove the .example part if you have not already.)
 2. [ ] Populate the variables:
-   - [ ] `AZURE_OPENAI_EMBEDDING_ENDPOINT` with your Azure OpenAI endpoint
-   - [ ] `EMBEDDING_MODEL_DEPLOYMENT_NAME` for your embedding model.  This should be "text-embedding-ada-002" and was created in the PostgreSQL lab.  Review the steps in the PostgreSQL lab to deploy this model if you have not already.
-   - [ ] `AZURE_OPENAI_EMBEDDING_API_KEY` from Step 15
+   - [ ] `AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT` with your Azure OpenAI endpoint
+   - [ ] `EMBEDDING_ADA_MODEL_DEPLOYMENT_NAME` for your embedding model. This should be "text-embedding-ada-002" and was created in the PostgreSQL lab. Review the steps in the PostgreSQL lab to deploy this model if you have not already.
+   - [ ] `AZURE_OPENAI_EMBEDDING_ADA_API_KEY` from Step 15
    - [ ] `SQL_SERVER` - full URL of your Azure SQL Server
 
 ---
