@@ -4,7 +4,7 @@
 
 Azure AI Vision is a cloud-based service from Microsoft that uses advanced algorithms to analyze images and extract valuable information. It includes capabilities like face detection, Optical Character Recognition (OCR), image analysis, and video indexing.
 
-> **Note:** The Azure Vision Studio portal now only displays the **Face** feature. OCR, Image Analysis, and Video Indexer capabilities are still accessible through their respective **SDKs and REST APIs**. This lab covers Face Analysis through the portal and provides SDK/API-based exercises for the other services via the accompanying notebook.
+> **Note:** In the validated learner environment, Azure Vision Studio opened to the **Face** experience and did not expose OCR or Image Analysis tiles. This lab covers Face Analysis through the portal and provides SDK-based exercises for OCR and Image Analysis via the accompanying notebook.
 
 ## Objectives
 
@@ -19,7 +19,7 @@ In this lab we will walk through:
 
 ## Scenario
 
-Explore Azure AI Vision services: use the Vision Studio portal for Face Analysis, and the SDK/REST APIs for OCR, Image Analysis, and Video Indexer.
+Explore Azure AI Vision services: use the Vision Studio portal for Face Analysis and the SDK for OCR and Image Analysis.
 
 ## Pre-requisites
 
@@ -82,7 +82,7 @@ This exercise demonstrates how to use the Azure AI Vision Faces features to dete
 
 1. [ ] Click **Confirm**
 
-1. [ ] Select an image and cthen click **JSON** to see the face attributes.
+1. [ ] Select an image and then click **JSON** to see the face attributes.
 1. [ ] Iteratively click the samples to the right of the box.
     ![Alt text](./Images/vision2.png)
 1. [ ] Close the Azure vision portal and continue with the lab
@@ -91,11 +91,11 @@ This exercise demonstrates how to use the Azure AI Vision Faces features to dete
 
 ## Exercise 3: Optical Character Recognition (OCR) via SDK/API
 
-> Warning: **Deprecation Notice:** The Image Analysis 4.0 OCR service is deprecated and will be **retired on September 25, 2028**. Legacy Computer Vision API versions (v1.0-v3.1) will be **retired on September 13, 2026**. Consider migrating to:
+> Warning: **Deprecation Notice:** The Image Analysis 4.0 OCR service is deprecated and will be **retired on September 25, 2028**. Legacy Computer Vision API versions v1.0, v2.0, v2.1, and v3.0-v3.1 will be **retired on September 13, 2026**. Consider migrating to:
 > - [Azure AI Document Intelligence - Read model](https://learn.microsoft.com/azure/ai-services/document-intelligence/prebuilt/read) (optimized for documents)
 > - [Azure Content Understanding](https://learn.microsoft.com/azure/ai-services/content-understanding/overview) (managed generative solution)
 
-While the OCR feature is no longer available in the Vision Studio portal, the **REST API and SDKs** remain fully functional until the retirement dates above.
+In the validated learner environment, Vision Studio did not expose the OCR tile. The **REST API and SDKs** are deprecated and remain available until the retirement dates above.
 
 The OCR API extracts printed and handwritten text from images such as posters, street signs, product labels, business documents, invoices, and receipts. It supports multiple languages and works with text on various surfaces and backgrounds.
 
@@ -124,11 +124,11 @@ The OCR API extracts printed and handwritten text from images such as posters, s
 
 ## Exercise 4: Image Analysis via SDK/API
 
-> :warning: **Deprecation Notice:** The Image Analysis 4.0 service is deprecated and will be **retired on September 25, 2028**. Consider migrating to:
+> **Warning - Deprecation Notice:** The Image Analysis 4.0 service is deprecated and will be **retired on September 25, 2028**. Consider migrating to:
 > - [GPT models in Microsoft Foundry](https://learn.microsoft.com/azure/ai-foundry/concepts/foundry-models-overview) (flexible custom vision solutions)
 > - [Azure Content Understanding](https://learn.microsoft.com/azure/ai-services/content-understanding/overview) (managed generative solution for images, documents, audio, and video)
 
-While Image Analysis is no longer available in the Vision Studio portal, the **REST API and SDKs** remain fully functional until the retirement date above.
+In the validated learner environment, Vision Studio did not expose the Image Analysis tile. The **REST API and SDKs** are deprecated and remain available until the retirement date above.
 
 The Image Analysis API provides capabilities including:
 - **Caption generation** - Generate natural language descriptions of images
@@ -141,18 +141,8 @@ The Image Analysis API provides capabilities including:
 
 ---
 
-## Exercise 5: Video Indexer via API
+## Video Indexer is not included
 
-Azure AI Video Indexer is a cloud-based service that extracts insights from videos using AI models for speech, vision, and natural language processing. The service is **actively supported** with no announced retirement date.
-
-> **Note:** Azure Media Services (AMS)-based Video Indexer accounts were retired in June 2024. All new accounts are AMS-less. If migrating from an older account, see the [AMS migration guide](https://learn.microsoft.com/azure/azure-video-indexer/create-account).
-
-The Video Indexer API enables you to:
-- Upload and index videos programmatically
-- Extract insights including people detection, topics, keywords, labels, named entities, and scenes
-- Generate transcriptions, captions, and multi-modal video summaries
-- Perform face redaction and object detection
-
-**Hands-on exercise:** Open the notebook at [`LabFiles/AI_vision_services_lab.ipynb`](./LabFiles/AI_vision_services_lab.ipynb) and complete **Section 08 - Video Indexer** to upload and index a video via the API.
+The previous Video Indexer exercise referenced a notebook section that is not present in this repository. A current API exercise requires a paid Azure AI Video Indexer standard account, API subscription credentials, and an accessible media source, none of which this lab provisions. See [Use the Azure AI Video Indexer API](https://learn.microsoft.com/azure/azure-video-indexer/video-indexer-use-apis) when those prerequisites and a maintained sample are available.
 
 ---
