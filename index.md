@@ -2,12 +2,39 @@
 
 ## Lab 00 - Pre-requisites
 
-### [01 - Create Azure Foundry Project](./Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/01-Create-Azure-Foundry-Project.md)
-### [02 - Deploy Models](./Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/02-Deploy-Models.md)
-### [03 - Connect to Bing Resource](./Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/03-Connect-to-Bing-Resources.md)
-### [04 - Connect to Azure AI Search](./Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/04-Connect-to-Azure-AI-Search.md)
-### [05 - Setup - (dot)env file](./Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/05-Setup-(dot)env-file.md)
-### [06 - Run requirements](./Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/06-Run-requirements.md)
+[!include [01 - Create Azure Foundry Project](https://raw.githubusercontent.com/katherinelocke6/WPLUS-Azure-AI-Platform-and-Services/fix/surrey-learner-instructions/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/01-Create-Azure-Foundry-Project.md)]
+
+===
+
+## Lab 00 - Pre-requisites
+
+[!include [02 - Deploy Models](https://raw.githubusercontent.com/katherinelocke6/WPLUS-Azure-AI-Platform-and-Services/fix/surrey-learner-instructions/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/02-Deploy-Models.md)]
+
+===
+
+## Lab 00 - Pre-requisites
+
+[!include [03 - Connect to Bing Resource](https://raw.githubusercontent.com/katherinelocke6/WPLUS-Azure-AI-Platform-and-Services/fix/surrey-learner-instructions/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/03-Connect-to-Bing-Resources.md)]
+
+===
+
+## Lab 00 - Pre-requisites
+
+[!include [04 - Connect to Azure AI Search](https://raw.githubusercontent.com/katherinelocke6/WPLUS-Azure-AI-Platform-and-Services/fix/surrey-learner-instructions/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/04-Connect-to-Azure-AI-Search.md)]
+
+===
+
+## Lab 00 - Pre-requisites
+
+[!include [05 - Setup - (dot)env file](https://raw.githubusercontent.com/katherinelocke6/WPLUS-Azure-AI-Platform-and-Services/fix/surrey-learner-instructions/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/05-Setup-%28dot%29env-file.md)]
+
+===
+
+## Lab 00 - Pre-requisites
+
+[!include [06 - Run requirements](https://raw.githubusercontent.com/katherinelocke6/WPLUS-Azure-AI-Platform-and-Services/fix/surrey-learner-instructions/Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/06-Run-requirements.md)]
+
+===
 
 ## Lab 01 - AI Foundry
 ### [Connection with AOAI](./Lab%2001%20-%20AI-Foundry/Labs/Connection%20with%20AOAI/README.md)
