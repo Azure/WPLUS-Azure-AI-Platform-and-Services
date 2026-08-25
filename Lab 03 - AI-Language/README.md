@@ -341,9 +341,6 @@ Then click **Add**
     {
        "description" : "Mi número de teléfono es (04) 12 345 678"
     }
-    {
-       "HTTP_request_content" : "Mi número de teléfono es (04) 12 345 678"
-    }
 ```
 
 1. [ ] Confirm the output displays the translated text.

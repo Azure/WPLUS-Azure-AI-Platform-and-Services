@@ -23,7 +23,11 @@ You are a developer getting started with Azure AI Foundry. You need to establish
 ## Pre-requisites
 
 - Completed environment setup from previous notebook
-- Azure credentials configured
+- Signed in to Azure from the lab VM:
+  - [ ] Open a terminal in VS Code (**Terminal** → **New Terminal**)
+  - [ ] Run `az login --use-device-code`
+  - [ ] Open the displayed URL in the browser, enter the device code, and sign in with your Azure Username and Temporary Access Pass
+  - [ ] When prompted, select the default subscription
 - **azure-ai-projects** package version 1.0.0b12 or greater (`azure-ai-projects>=1.0.0b12`)
 - **Azure AI User role** assigned to your account for the Azure AI Foundry project
   - See [Azure AI Foundry RBAC documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/rbac-azure-ai-foundry?pivots=fdp-project) for more details on role assignments
@@ -119,6 +123,7 @@ The example shows how agents can:
 1. **Initial Setup**:
    - [ ] Ensure you have completed the environment setup from the previous notebook
    - [ ] Configure environment variables in the `.env` file at repository root
+   - [ ] Run `az login --use-device-code` in a terminal and complete sign-in before running any cells
    - [ ] Verify your Azure AI User role assignment
 
 2. **Execution**:

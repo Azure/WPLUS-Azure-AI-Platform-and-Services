@@ -34,8 +34,8 @@ Complete the pre-requisites labs
 Navigate to the `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning/Advance Fine-Tuning/` folder. You’ll find:
 
 - `gpt-4_o_dpo_ft.ipynb` - Jupyter notebook with detailed lab instructions
-- `gpt4o_generated_qa_dpo_train_10_samples.jsonl` – your training dataset  
-- `gpt4o_generated_qa_dpo_validation_10_samples.jsonl` – your validation dataset  
+- `data/gpt4o_generated_qa_dpo_train_10_samples.jsonl` – your training dataset  
+- `data/gpt4o_generated_qa_dpo_validation_10_samples.jsonl` – your validation dataset  
 
 > ⚠️ **Note:** Each dataset contains only 10 samples. The goal of this lab is not to outperform the base model, but to **walk through the fine-tuning workflow** using Microsoft Foundry Fine-Tuning Python SDK.
 

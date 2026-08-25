@@ -55,6 +55,20 @@ Execute files in [SQL folder](https://github.com/Azure/WPLUS-Azure-AI-Platform-a
 ![Add Firewall Rule](images/4a.png)
 
 
+   If you cannot reach the SQL Server page in the Azure portal, you can add the same firewall rule from a PowerShell terminal on the lab VM. Replace `<sql-server-name>` with the short server name from Step 2 (the part before `.database.windows.net`) and `<resource-group>` with your lab resource group:
+
+   ```powershell
+   az login --use-device-code
+   $ip = (Invoke-RestMethod https://api.ipify.org)
+   az sql server firewall-rule create --resource-group <resource-group> --server <sql-server-name> --name labclient --start-ip-address $ip --end-ip-address $ip
+   ```
+
+   Confirm the rule was created:
+
+   ```powershell
+   az sql server firewall-rule list --resource-group <resource-group> --server <sql-server-name> -o table
+   ```
+
 3. [ ] In the **Connect to Server** dialog:
    - [ ] **Server type:** Database Engine  
    - [ ] **Server name:** Paste the value from Step 2.  

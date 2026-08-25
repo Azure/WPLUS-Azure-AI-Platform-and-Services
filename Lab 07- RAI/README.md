@@ -33,9 +33,11 @@ Completed the pre-requisites labs:
 
 _Note: See [Prequisite - AI Foundry Resource Creation](../Lab%2000%20-%20Prequisite%20-%20AI%20Foundry%20Resource%20Creation/01-Create-Azure-Foundry-Project.md) folder to ensure Microsoft Foundry Project is correctly set up._
 
-## Evaluations
+## Tasks
 
-### Setup
+### Evaluations
+
+#### Setup
 
 Configure the environment with the required tools and files:
 
@@ -81,7 +83,7 @@ Configure the environment with the required tools and files:
     - [ ] Click **Next**.
     - [ ] Click **Create vector index**.
 
-### Manual Evaluation
+#### Manual Evaluation
 
 1. [ ] On the left side, go to the **Protect and govern** section.
 1. [ ] Select **Evaluation**.
@@ -101,7 +103,7 @@ Configure the environment with the required tools and files:
 1. [ ] Explore the results. Consider adjusting the **Temperature** or **Search type** to compare different outcomes.
 1. [ ] Save your results if you want to compare different iterations.
 
-### Automated Evaluation
+#### Automated Evaluation
 
 1. [ ] On the left side, go to the **Protect and govern** section.
 1. [ ] Select **Evaluation**.
@@ -144,9 +146,9 @@ Configure the environment with the required tools and files:
     - [ ] *Tip 1:* Try both the **Report** and **Data** tabs at the top.
     - [ ] *Tip 2:* Modify the dataset to see how the evaluation results change.
 
-## Content Safety
+### Content Safety
 
-### Moderate Text Content
+#### Moderate Text Content
 
 1. [ ] Return to the resource group, select the AI project, and launch the studio.  
 1. [ ] On the left, select **AI Services**.  
@@ -161,7 +163,7 @@ Configure the environment with the required tools and files:
 1. [ ] For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Content_Safety/bulk-text-moderation-data.csv`, and run the test.  
 1. [ ] Explore results and adjust filters or datasets as needed.
 
-### Detect Protected Material
+#### Detect Protected Material
 
 1. [ ] In the Content Safety tab, select **Protected material detection for text**.  
 1. [ ] Ensure the correct Azure AI Services resource is selected.  
@@ -169,7 +171,7 @@ Configure the environment with the required tools and files:
 4. [ ] For bulk testing, select **Run a bulk test**, upload `C:/Users/Admin/Desktop/LABS/Lab 07- RAI/Files/Content_Safety/bulk-protected-material-dataset.csv`, and run the test.  
 5. [ ] Explore the results.
 
-### Moderate Image Content
+#### Moderate Image Content
 
 1. [ ] In the Content Safety tab, under **Filter image content**, select **Moderate image content**.  
     <span style="color: red;">**Note:**</span>  Some sample content may be offensive.
@@ -183,7 +185,7 @@ Configure the environment with the required tools and files:
 ![Go to resource](rai_md_img/allfiles.png)
 1. [ ] Explore results and adjust filters or datasets as needed.
 
-## PII Detection and Masking
+### PII Detection and Masking
 
 1. [ ] Go to the resource group.
 1. [ ] Identify the Azure AI project service and access it.
@@ -199,7 +201,7 @@ Configure the environment with the required tools and files:
 1. [ ] Explore with different samples and configurations from the left pane.
     - [ ] *Note:* To modify a sample, press the **Edit** (crayon) icon next to the Hide PII button.
 
-## System Message
+### System Message
 
 Under the Playground, go to Agents Playground by clicking on **Try the Agents Playground**. When prompted to choose AOAI resource, choose the AOAI resource that is precreated that was part of the Lab VM deployment. The instructions below givean idea of how to provide instructions to the agent before chatting with it. Step 1-5 below are informational to give an idea of how system prompt will look like.
 
@@ -281,16 +283,16 @@ You are AzureBot, a professional and friendly assistant for Azure developers. Yo
 - Respond with empathy and professionalism
 - Escalate or defer if unsure
 
-## Prompt Shields
+### Prompt Shields
 
-### Setup
+#### Prompt Shields Setup
 
 Follow these steps to use the Content Safety "Try it out" page:
 
 1. [ ] Go to Azure AI Foundry and navigate to your project or hub.
 1. [ ] Select the **Guardrails + controls** tab on the left navigation, then choose the **Try it out** button.
 
-### Using Prompt Shields for User Input Risk Detection
+#### Using Prompt Shields for User Input Risk Detection
 
 The **Prompt Shields** panel allows you to test user input risk detection. This feature identifies prompts intended to provoke the Generative AI model into unsafe behaviors or to bypass the rules defined in the System Message. Such attacks may include complex role-play or subtle attempts to undermine safety measures.
 

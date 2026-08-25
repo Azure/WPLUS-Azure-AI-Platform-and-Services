@@ -115,7 +115,7 @@ Complete the prerequisites Lab exercises
 ### 8. Set the values for the AZURE_AI_SEARCH_ENDPOINT and AZURE_AI_SEARCH_API_KEY variables
 
 - [ ] In the top search bar, type **ai search**
-- [ ] Select **AI Search** from the search results
+- [ ] Select **AI Search** (shown in the portal as **AI Search (Foundry IQ)**) from the search results
 - [ ] You will see the AI Search service that you have created (eg ai-search-53439517)
 - [ ] Click on the name
 - [ ] Next screen, In the Overview section, find the **Url** as shown in below screenshot
