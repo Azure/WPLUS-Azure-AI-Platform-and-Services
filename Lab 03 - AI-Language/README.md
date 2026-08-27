@@ -317,7 +317,7 @@ Then click **Add**
 1. [ ] Click **Save**.
 1. [ ] Click the plus sign to add the final action, then **select Add an action**.
 
-![Alt text](./Images/AddanAction2.png)
+![Alt text](./Images/AddAnAction2.png)
 
 1. [ ] Search for _Response_ and select the option under Request.
 
@@ -437,7 +437,7 @@ You will create **2 agents** using Azure AI Foundry:
 1. [ ] Update the agent instructions to :
     - [ ] **Instructions:**  
       > Send all messages to the PIIRedaction action to have personal information removed. 
-Then send all incoming messages with the personal information remoed that are not in English to the EnglishTranslation action. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
+Then send all incoming messages with the personal information removed that are not in English to the EnglishTranslation action. If the entry is already in English, return the original text unchanged. Ensure the output maintains the structure and formatting of the input data.
 
 1. [ ] Next to Actions, click **+ Add** then **Azure Logic Apps**.
 1. [ ] Select Azure Logic Apps and choose your PIIRedaction flow

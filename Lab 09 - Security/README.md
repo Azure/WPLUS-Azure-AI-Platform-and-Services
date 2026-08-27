@@ -35,7 +35,7 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
 
    # Azure AI Project
    AZURE_SUBSCRIPTION_ID="<your-subscription-id>"
-   AZURE_RESOURCE_GROUP_NAME="<your-resource-group>"
+   AZURE_RESOURCE_GROUP="<your-resource-group>"
    AZURE_PROJECT_NAME="<your-project-name>"
    # Azure AI Project
    AI_FOUNDRY_PROJECT_ENDPOINT="https://your-aifoundry-endpoint-name.services.ai.azure.com/api/projects/yourproject-name"
