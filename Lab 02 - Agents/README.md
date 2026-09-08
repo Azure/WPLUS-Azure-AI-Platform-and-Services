@@ -1,145 +1,65 @@
-# Azure AI Agents Tutorial Collection
+# Microsoft Foundry Agents Tutorial Collection
 
-## Introduction 
+## Introduction
 
-This lab provides a comprehensive hands-on introduction to Azure AI Agents using Azure AI Foundry SDKs. You'll learn how to build, deploy, and manage intelligent agents that can perform various tasks from basic conversations to complex multi-agent orchestration systems with health and fitness themed examples.
+This lab is a hands-on introduction to Microsoft Foundry Agent Service with the current `azure-ai-projects` SDK. You will create versioned prompt agents, invoke them through the OpenAI Responses API, maintain multi-turn state with Conversations, and add tools for code execution, document retrieval, web grounding, enterprise search, and client-side orchestration.
 
-## Objectives 
-In this lab we will:
-- Initialize Azure AI projects and create specialized health and fitness advisor agents
-- Implement agents with computational capabilities using code interpreter tools
-- Enable document search and knowledge retrieval through file search
-- Connect agents to real-time web information using Bing Search integration
-- Integrate agents with enterprise search using Azure AI Search
-- Build sophisticated multi-agent systems for ticket triage and orchestration
-- Implement comprehensive observability and tracing for multi-agent workflows
+The health and fitness samples are educational demonstrations only and are not substitutes for professional medical advice.
 
-## Estimated Time 
+## Objectives
+
+- Initialize a Foundry project client and its OpenAI client.
+- Create and delete versioned prompt agents.
+- Use Responses and Conversations for single-turn and multi-turn interactions.
+- Add Code Interpreter, File Search, Bing Grounding, and Azure AI Search tools.
+- Build a multi-agent ticket triage flow with client-side function tools.
+- Connect a prompt agent to locally hosted MCP tools.
+
+## Estimated Time
 
 120 minutes (2 hours)
 
-## Scenario
+## Prerequisites
 
-You are an AI developer tasked with building a comprehensive agent ecosystem for a health and fitness platform. Starting with basic conversational agents, you'll progressively add computational capabilities, knowledge retrieval, real-time information access, and finally orchestrate multiple agents to work together in complex workflows.
+- Azure subscription with Microsoft Foundry resources enabled.
+- Python 3.10 or later.
+- VS Code or Jupyter Notebook.
+- `azure-ai-projects>=2.6.0,<3.0.0`.
+- **Foundry User** role assigned on the Foundry project.
+  - See [Microsoft Foundry RBAC](https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry).
+- A root `.env` file containing `AI_FOUNDRY_PROJECT_ENDPOINT`, `MODEL_DEPLOYMENT_NAME`, and `TENANT_ID`.
+- A provisioned Foundry project and model deployment.
 
-## Pre-requisites
+## Exercises
 
-- Azure subscription with Azure AI services enabled
-- Python 3.8 or higher
-- VS Code or Jupyter Notebook environment
-- **azure-ai-projects** package version 1.0.0b12 or greater (`azure-ai-projects>=1.0.0b12`)
-- **Azure AI User role** assigned to your account for the Azure AI Foundry project
-  - See [Azure AI Foundry RBAC documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/rbac-azure-ai-foundry?pivots=fdp-project) for more details on role assignments
-- `.env` file configured with AI_FOUNDRY_PROJECT_ENDPOINT and MODEL_DEPLOYMENT_NAME
-- Azure AI Foundry project already provisioned
+### Exercise 1: Agent Basics
 
-## Tasks
+Use [1-basics.ipynb](./1-basics.ipynb) to create a health advisor prompt-agent version, start a Conversation, and send multiple requests through the Responses API.
 
----
+### Exercise 2: Code Interpreter
 
-## Exercise 1: Agent Basics
-**Learn the fundamentals of Azure AI Agents using [1-basics.ipynb](./1-basics.ipynb)**
+Use [2-code_interpreter.ipynb](./2-code_interpreter.ipynb) to upload a CSV through the OpenAI client, configure `CodeInterpreterTool`, perform calculations, create visualizations, and download generated container files.
 
-1. [ ] Initialize Azure AI projects using `azure-ai-projects` SDK
-2. [ ] Create a specialized health and fitness advisor agent with safety disclaimers
-3. [ ] Manage conversation threads and message handling
-4. [ ] Implement OpenTelemetry logging and tracing for monitoring
-5. [ ] Apply best practices for agent creation and configuration
+### Exercise 3: File Search
 
-**Key Learning Outcomes:**
-- Agent creation and configuration patterns
-- Thread management for multi-turn conversations
-- Basic interaction patterns and message handling
-- Telemetry and monitoring implementation
+Use [3-file-search.ipynb](./3-file-search.ipynb) to create a vector store, upload and index health resources, configure `FileSearchTool`, and inspect file citations in Responses output.
 
----
+### Exercise 4: Bing Grounding
 
-## Exercise 2: Code Interpreter Integration
-**Add computational capabilities to your agents using [2-code_interpreter.ipynb](./2-code_interpreter.ipynb)**
+Use [4-bing_grounding.ipynb](./4-bing_grounding.ipynb) to retrieve a project connection, configure `BingGroundingTool`, ask current-information questions, and display `url_citation` annotations.
 
-1. [ ] Create agents with code interpreter tools for mathematical computations
-2. [ ] Upload and process files for complex health and fitness calculations
-3. [ ] Handle BMI calculations, nutritional analysis, and fitness metrics
-4. [ ] Manage file attachments at message level for data processing
-5. [ ] Demonstrate mathematical analysis capabilities with visualizations
+### Exercise 5: Azure AI Search
 
-**Key Learning Outcomes:**
-- Code interpreter tool integration and configuration
-- File upload and processing workflows
-- Mathematical computations and data analysis
-- Error handling in code execution environments
+Use [5-agents-aisearch.ipynb](./5-agents-aisearch.ipynb) to create a sample Azure AI Search index, connect it with `AzureAISearchTool`, query it through a prompt agent, and clean up the index.
 
----
+### Exercise 6: Multi-Agent Triage
 
-## Exercise 3: File Search and Knowledge Retrieval
-**Enable document search and knowledge retrieval using [3-file-search.ipynb](./3-file-search.ipynb)**
+Use [6-multi-agent-solution.ipynb](./6-multi-agent-solution.ipynb) to create three specialist prompt-agent versions and an orchestrator with client-side `FunctionTool` definitions. The client invokes specialists and submits `FunctionCallOutput` items back to the orchestrator Conversation.
 
-1. [ ] Upload health and nutrition documents to Azure AI Agent service
-2. [ ] Create agents with file search capabilities for knowledge retrieval
-3. [ ] Search through uploaded health resources with semantic queries
-4. [ ] Implement citation and reference systems for source tracking
-5. [ ] Clean up resources and manage file lifecycle effectively
+For a pro-code MCP scenario, continue to [agents-with-mcp](./agents-with-mcp/README.md).
 
-**Key Learning Outcomes:**
-- File upload for agent knowledge base creation
-- Document search and retrieval mechanisms
-- Citation management and source tracking
-- Resource cleanup patterns and lifecycle management
+## Resources
 
----
-
-## Exercise 4: Bing Search Grounding
-**Connect agents to real-time web information using [4-bing_grounding.ipynb](./4-bing_grounding.ipynb)**
-
-1. [ ] Configure Bing Search integration for real-time information access
-2. [ ] Create web-grounded health and fitness agents with current data
-3. [ ] Access current health trends, research, and fitness information
-4. [ ] Handle real-time queries with web context and fact-checking
-5. [ ] Compare responses with and without grounding to understand benefits
-
-**Key Learning Outcomes:**
-- Bing Search integration and configuration
-- Real-time information retrieval patterns
-- Grounding vs. non-grounded response comparison
-- External data source integration strategies
-
----
-
-## Exercise 5: Azure AI Search Integration
-**Advanced search integration with Azure AI Search using [5-agents-aisearch.ipynb](./5-agents-aisearch.ipynb)**
-
-1. [ ] Set up Azure AI Search indexes for enterprise knowledge bases
-2. [ ] Create agents with Azure AI Search tool integration
-3. [ ] Implement sophisticated search queries for fitness equipment and knowledge
-4. [ ] Handle complex search scenarios with filtering and ranking
-5. [ ] Demonstrate enterprise search patterns and best practices
-
-**Key Learning Outcomes:**
-- Azure AI Search integration and configuration
-- Custom search tool creation and deployment
-- Enterprise knowledge base queries and management
-- Advanced search patterns and optimization techniques
-
----
-
-## Exercise 6: Multi-Agent Solution
-**Build sophisticated multi-agent systems using [6-multi-agent-solution.ipynb](./6-multi-agent-solution.ipynb)**
-
-1. [ ] Design and implement a multi-agent ticket triage system
-2. [ ] Create three specialist agents for priority, team assignment, and effort estimation
-3. [ ] Build an orchestrator agent that coordinates specialist agents
-4. [ ] Use connected agent tools for seamless agent-to-agent communication
-5. [ ] Process complex support tickets through automated triage workflows
-
-**Key Learning Outcomes:**
-- Multi-agent system architecture and design
-- Agent specialization and role definition
-- Agent orchestration and coordination patterns
-- Connected agent tools implementation
-
-## 🔗 Additional Resources
-
-For more examples, please visit:
-**[Azure AI Agents Labs](https://github.com/Azure/azure-ai-agents-labs)**
-
-For pro-code advanced scenarios, explore the `agents-with-mcp/` directory for Model Context Protocol integration examples.
+- [Microsoft Foundry Agent Service quickstart](https://learn.microsoft.com/azure/foundry/agents/quickstart?view=foundry)
+- [Azure AI Projects Python API](https://learn.microsoft.com/python/api/azure-ai-projects/)
+- [Foundry agent tools](https://learn.microsoft.com/azure/foundry/agents/how-to/tools/overview)
