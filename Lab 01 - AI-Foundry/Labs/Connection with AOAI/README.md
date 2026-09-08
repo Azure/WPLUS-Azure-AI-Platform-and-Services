@@ -1,8 +1,8 @@
-# Quick Start Guide - Azure AI Foundry
+# Quick Start Guide - Microsoft Foundry
 
 ## Introduction 
 
-This lab provides a hands-on introduction to Azure AI Foundry. You'll learn the fundamentals of working with Azure AI projects, from authentication to creating intelligent agents with computational capabilities.
+This lab provides a hands-on introduction to Microsoft Foundry. You'll learn the fundamentals of working with Foundry projects, from authentication to creating intelligent agents with computational capabilities.
 
 ## Objectives 
 In this lab we will:
@@ -28,11 +28,11 @@ You are a developer getting started with Azure AI Foundry. You need to establish
   - [ ] Run `az login --use-device-code`
   - [ ] Open the displayed URL in the browser, enter the device code, and sign in with your Azure Username and Temporary Access Pass
   - [ ] When prompted, select the default subscription
-- **azure-ai-projects** package version 1.0.0b12 or greater (`azure-ai-projects>=1.0.0b12`)
-- **Azure AI User role** assigned to your account for the Azure AI Foundry project
-  - See [Azure AI Foundry RBAC documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/rbac-azure-ai-foundry?pivots=fdp-project) for more details on role assignments
+- **azure-ai-projects** package version 2.6.0 or greater (`azure-ai-projects>=2.6.0,<3.0.0`)
+- **Foundry User role** assigned to your account for the Microsoft Foundry project
+  - See [Microsoft Foundry RBAC documentation](https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry) for more details on role assignments
 - `.env` file configured with AI_FOUNDRY_PROJECT_ENDPOINT and MODEL_DEPLOYMENT_NAME
-- Azure AI Foundry project already provisioned
+- Microsoft Foundry project already provisioned
 
 ## Tasks
 
@@ -52,16 +52,16 @@ Configure authentication and import necessary Azure SDK libraries:
 ### Task 2 - Initialize AI Project Client
 
 Create and configure the AI Project client:
-- [ ] Load project connection string from environment variables
-- [ ] Create AIProjectClient using the connection string and credentials
-- [ ] Establish connection to your Azure AI Foundry project
+- [ ] Load the project endpoint from environment variables
+- [ ] Create AIProjectClient using the project endpoint and credentials
+- [ ] Establish connection to your Microsoft Foundry project
 - [ ] Handle authentication errors and provide troubleshooting guidance
 
 Key steps:
 - [ ] Copy `.env.example` file to `.env` in the root directory
-- [ ] Update the project connection string in your `.env` file
+- [ ] Update the project endpoint in your `.env` file
 - [ ] Ensure you have a Foundry Project already provisioned in Azure AI Foundry
-- [ ] Find your project connection string in [Azure AI Foundry](https://ai.azure.com) under project settings
+- [ ] Find your project endpoint in [Microsoft Foundry](https://ai.azure.com) under **Manage > Project details**
 
 ### Task 3 - Create a Simple Completion
 
@@ -79,12 +79,12 @@ The example demonstrates:
 
 ### Task 4 - Create a Simple Agent
 
-Explore Azure AI Agent Service capabilities:
-- [ ] Learn about Azure AI Agent Service as a fully managed service
+Explore Microsoft Foundry Agent Service capabilities:
+- [ ] Learn about Microsoft Foundry Agent Service as a fully managed service
 - [ ] Create an agent with code interpreter tool capabilities
 - [ ] Configure agent instructions and behaviors
-- [ ] Create conversation threads for multi-turn interactions
-- [ ] Process agent requests and handle responses
+- [ ] Create OpenAI conversations for multi-turn interactions
+- [ ] Process agent requests through the Responses API
 
 Agent capabilities demonstrated:
 - BMI calculation using US metrics
@@ -115,8 +115,8 @@ The example shows how agents can:
 **Resource Management:**
 - Proper agent cleanup after use
 - File saving and management
-- Thread and message handling
-- Connection string validation
+- Conversation and response handling
+- Project endpoint validation
 
 ## Execution Instructions
 
@@ -124,7 +124,7 @@ The example shows how agents can:
    - [ ] Ensure you have completed the environment setup from the previous notebook
    - [ ] Configure environment variables in the `.env` file at repository root
    - [ ] Run `az login --use-device-code` in a terminal and complete sign-in before running any cells
-   - [ ] Verify your Azure AI User role assignment
+   - [ ] Verify your Foundry User role assignment
 
 2. **Execution**:
    - [ ] Open the `setup and quick_start.ipynb` notebook in Azure AI Foundry or VS Code
@@ -135,13 +135,13 @@ The example shows how agents can:
 3. **Troubleshooting**:
    - [ ] Verify your AI_FOUNDRY_PROJECT_ENDPOINT is correctly set
    - [ ] Ensure MODEL_DEPLOYMENT_NAME matches your deployed model
-   - [ ] Check your Azure AI User role permissions
+   - [ ] Check your Foundry User role permissions
    - [ ] Review authentication error messages for guidance
 
 ## Expected Results
 
 Upon completing this laboratory, you will:
-- Successfully authenticate with Azure AI Foundry
+- Successfully authenticate with Microsoft Foundry
 - Understand the AI Project client initialization patterns
 - Make basic chat completion requests
 - Create and interact with AI agents
@@ -150,12 +150,12 @@ Upon completing this laboratory, you will:
 
 ## Additional Resources
 
-- [Azure AI Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/)
-- [Azure AI Foundry RBAC](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/rbac-azure-ai-foundry)
+- [Microsoft Foundry Documentation](https://learn.microsoft.com/azure/foundry/)
+- [Microsoft Foundry RBAC](https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry)
 - [Azure AI Projects SDK](https://learn.microsoft.com/python/api/azure-ai-projects/)
-- [Azure AI Agent Service](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-agents)
+- [Microsoft Foundry Agent Service](https://learn.microsoft.com/azure/foundry/agents/overview)
 - [Authentication with Azure SDK](https://learn.microsoft.com/python/api/azure-identity/)
 
 ## Next Steps
 
-After completing this laboratory, you will be prepared to advance to more specialized Azure AI Foundry labs, including advanced agent scenarios, tool integration, and multi-modal capabilities.
+After completing this laboratory, you will be prepared to advance to more specialized Microsoft Foundry labs, including advanced agent scenarios, tool integration, and multi-modal capabilities.
