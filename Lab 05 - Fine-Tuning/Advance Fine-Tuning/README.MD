@@ -33,7 +33,7 @@ Complete the pre-requisites labs
 
 Navigate to the `C:/Users/Admin/Desktop/LABS/Lab 05 - Fine-Tuning/Advance Fine-Tuning/` folder. You’ll find:
 
-- `gpt-4_o_dpo_ft.ipynb` - Jupyter notebook with detailed lab instructions
+- [`gpt-4_o_dpo_ft.ipynb`](./gpt-4_o_dpo_ft.ipynb) - Jupyter notebook with detailed lab instructions
 - `data/gpt4o_generated_qa_dpo_train_10_samples.jsonl` – your training dataset  
 - `data/gpt4o_generated_qa_dpo_validation_10_samples.jsonl` – your validation dataset  
 

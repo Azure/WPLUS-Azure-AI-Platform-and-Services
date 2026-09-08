@@ -177,7 +177,6 @@ graphrag query \
 ```bash
 graphrag prompt-tune \
  --root ./ragtest \
- --config ./ragtest/settings.yaml \
  --output ./ragtest/prompts-tuned \
  --domain "Literary Analyst"
 ```

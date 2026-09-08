@@ -60,7 +60,7 @@ Complete the prerequisites Lab exercises
 - [ ] Right click on each name to open in a new browser tab and to get details
 ![Go to project](images/modelapikey1.png)
 
-- [ ] As shown in the screenshot Copy Endpoint Target URI and paste into .env file as the value for AZURE_OPENAI_ENDPOINT
+- [ ] As shown in the screenshot, copy the Endpoint Target URI, keep only the scheme and host portion (e.g. https://_AI-FOUNDRY-NAME_.cognitiveservices.azure.com/), and paste that base endpoint into .env file as the value for AZURE_OPENAI_ENDPOINT. Do not include the rest of the path.
 - [ ] Copy the Model Name and Key and paste into .env file as the value for MODEL_DEPLOYMENT_NAME and AZURE_OPENAI_API_KEY respectively.
 ![Go to project](images/modelapikey2.png)
   - The Model Name is the first box string.
@@ -73,7 +73,7 @@ Complete the prerequisites Lab exercises
 
 - [ ] Similar steps as above. Follow for both text-embedding-3-large and text-embedding-ada-002 models
 - [ ] Click on embeddding model name to get details
-- [ ] As shown in the screenshot Copy Endpoint Target URI and paste into .env file as the value for AZURE_OPENAI_ENDPOINT
+- [ ] As shown in the screenshot, copy the Endpoint Target URI, keep only the scheme and host portion (e.g. https://_AI-FOUNDRY-NAME_.cognitiveservices.azure.com/), and paste that base endpoint into .env file as the value for AZURE_OPENAI_EMBEDDING_ENDPOINT (or AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT for the ada-002 model). Do not include the rest of the path.
 - [ ] Copy Key and paste into .env file as the value for AZURE_OPENAI_EMBEDDING_API_KEY
 ![Go to project](images/modelapikey2e.png)
 

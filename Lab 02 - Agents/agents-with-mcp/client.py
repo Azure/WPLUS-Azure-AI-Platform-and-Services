@@ -15,8 +15,8 @@ from azure.identity import DefaultAzureCredential
 os.system('cls' if os.name=='nt' else 'clear')
 
 # Load environment variables from .env file
-load_dotenv('.../../.env')  # Load from Agent directory
-project_endpoint = os.getenv("PROJECT_CONNECTION_STRING") or os.getenv("AZURE_AI_PROJECT_ENDPOINT") or os.getenv("PROJECT_ENDPOINT")
+load_dotenv('../../.env')  # Load from repo root (two levels up from agents-with-mcp)
+project_endpoint = os.getenv("AI_FOUNDRY_PROJECT_ENDPOINT") or os.getenv("PROJECT_CONNECTION_STRING") or os.getenv("AZURE_AI_PROJECT_ENDPOINT") or os.getenv("PROJECT_ENDPOINT")
 model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME")
 
 # Verify configuration is loaded

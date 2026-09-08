@@ -137,7 +137,7 @@ The Image Analysis API provides capabilities including:
 - **Smart cropping** - Intelligently crop images around areas of interest
 - **Image retrieval** - Search photos using natural language queries
 
-**Hands-on exercise:** Open the notebook at [`LabFiles/AI_vision_services_lab.ipynb`](./LabFiles/AI_vision_services_lab.ipynb) and complete **Sections 03-07** (Image Retrieval, Dense Captions, Captions, Tags, Smart Crop) to explore these capabilities via the API.
+**Hands-on exercise:** Open the notebook at [`LabFiles/AI_vision_services_lab.ipynb`](./LabFiles/AI_vision_services_lab.ipynb) and complete **Sections 03-06** (Tags, Dense Captions, Captions, Smart Crop) to explore these capabilities via the API.
 
 ---
 
