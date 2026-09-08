@@ -26,31 +26,30 @@ No Pre-requisites
 
 ### 1. Go to the Connected Resources section
 
- _Note: Skip this step if you are already in the Management center_
+ _Note: Skip this step if you are already on the **Connected resources** tab_
 
 - [ ] Login to Azure AI Foundry: +++https://ai.azure.com/+++
-- [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
+- [ ] In the top navigation, click **Manage**
+- [ ] In the left side, under the Project section, click **Project details**
+- [ ] Click the **Connected resources** tab
 
-![Foundry connected resources](images/foundryconnectedresources.png)
+![Foundry connected resources](images/foundry-search-connected-resources.jpg)
 
-- [ ] Click **+New connection**
+- [ ] Click **Add connection**
 - [ ] Click **Azure AI Search**
 
-![Foundry connected resources](images/newconnaisearch.png)
+![Foundry connected resources](images/foundry-search-choose-connection.jpg)
 
-- [ ] Review the name of the AI Search service
-- [ ] Click **Add connection** on the right
+- [ ] Select the lab-provided Azure AI Search resource
+- [ ] Keep **API Key** as the Auth Type
+- [ ] Click **Connect**
 
-![Foundry connected resources](images/aisearchaddconn.png)
+![Foundry connected resources](images/foundry-search-resource-picker.jpg)
 
-- [ ] You can see the green tick at the right with Connected label
-- [ ] Click **Close** button
-
-![List models deployed](images/aisearchconnected.png)
+- [ ] After the connection completes, you are returned to the **Connected resources** table
 
 ## ✅ Completed. 
 
-- [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
-- [ ] You can see list of connected resources
+- [ ] Confirm that the Azure AI Search connection is listed
 
-![List models deployed](images/aisearchconnectedinlist.png)
+![List models deployed](images/foundry-search-connected-list.jpg)
