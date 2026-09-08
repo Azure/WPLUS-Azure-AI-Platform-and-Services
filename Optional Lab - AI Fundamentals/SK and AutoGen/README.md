@@ -34,7 +34,7 @@ Explore advanced frameworks for building intelligent applications: **Semantic Ke
 
 ## Tasks
 
-Open the **SK and AutoGen.ipynb** notebook and run through the steps
+Open the **[SK and AutoGen.ipynb](./SK%20and%20AutoGen.ipynb)** notebook and run through the steps
 
 ### Exercise 1 - Initial Setup and Semantic Kernel
 

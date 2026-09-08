@@ -38,8 +38,8 @@ You will explore:
 
 ## Tasks
 
-Run through steps in **RAG.ipynb** file. 
-The explanation below is detailed on what is being done in each step in the **RAG.ipynb** file.
+Run through steps in **[RAG.ipynb](./RAG.ipynb)** file.
+The explanation below is detailed on what is being done in each step in the **[RAG.ipynb](./RAG.ipynb)** file.
 
 ### Exercise 1 - Configuration and Library Setup
 

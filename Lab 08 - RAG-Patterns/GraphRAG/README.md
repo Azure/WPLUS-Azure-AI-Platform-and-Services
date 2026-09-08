@@ -69,6 +69,11 @@ graphrag init --root ragtest
 find ./ragtest
 ```
 
+`graphrag init` prompts you for two model names before it creates the workspace:
+
+- [ ] At **Specify the default chat model to use**, enter +++gpt-5-mini+++
+- [ ] At **Specify the default embedding model to use**, enter +++text-embedding-ada-002+++
+
 Expected files:
 
 - `settings.yaml`
@@ -100,7 +105,7 @@ sed -i '/^GRAPHRAG_API_KEY=/d' ragtest/.env \
 1. [ ] Copy, update (with Azure OpenAI endpoint instance), and execute the following command in Cloud Shell.
 
 ```bash
-export AZURE_OPENAI_ENDPOINT=<instance>.openai.azure.com
+export AZURE_OPENAI_ENDPOINT=https://<instance>.openai.azure.com
 ```
 
 2. [ ] Then run the following in Cloudshell
@@ -143,7 +148,7 @@ ls ./ragtest/output
 graphrag query \
   --root ./ragtest \
   --method global \
-  --query "What are the top themes in this story?"
+  "What are the top themes in this story?"
 ```
 
 #### Local Query
@@ -152,7 +157,7 @@ graphrag query \
 graphrag query \
   --root ./ragtest \
   --method local \
-  --query "Who is Scrooge and what are his main relationships?"
+  "Who is Scrooge and what are his main relationships?"
 
 ```
 
@@ -163,7 +168,7 @@ graphrag query \
 # graphrag query \
 #  --root ./ragtest \
 #  --method drift \
-#  --query "Who is Scrooge and what are his main relationships?"
+#  "Who is Scrooge and what are his main relationships?"
 
 ```
 
@@ -172,7 +177,6 @@ graphrag query \
 ```bash
 graphrag prompt-tune \
  --root ./ragtest \
- --config ./ragtest/settings.yaml \
  --output ./ragtest/prompts-tuned \
  --domain "Literary Analyst"
 ```
@@ -198,6 +202,6 @@ more ragtest/prompts-tuned/summarize_descriptions.txt
 # graphrag query \
 #  --root ./ragtest \
 #  --method global \
-#  --query "What are the top themes in this story?"
+#  "What are the top themes in this story?"
 
 ```

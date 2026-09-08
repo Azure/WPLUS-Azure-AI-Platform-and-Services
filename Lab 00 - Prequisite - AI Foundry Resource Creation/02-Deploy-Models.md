@@ -26,15 +26,11 @@ You are deploying models that will be utilized later in the labs for several mod
 Make sure you are using the legacy Microsoft Foundry UI.
 
 - If this is the first Portal view in the **Foundry Portal**, then click **firstProject** inside the **All resources** section.
-    ![New Foundry UI](images/ai_foundry_new_ui_3.png)
+    ![New Foundry UI](images/foundry-new-home.jpg)
 
 - If the following Microsoft Foundry UI(User Interface) is shown:
-    ![New Foundry UI](images/ai_foundry_new_ui.png)
+    ![New Foundry UI](images/foundry-new-home.jpg)
 
-- Change the UI to the legacy UI by clicking the **New Foundry** switch:
-    ![New Foundry UI](images/ai_foundry_new_ui_2.png)
-
-- If the feedback popups is displayed, click **Continue without feedback**.
 
 ## 🛠️ Tasks
 
@@ -45,16 +41,16 @@ Make sure you are using the legacy Microsoft Foundry UI.
 - [ ] In the left side menu, Click **Model catalog**
 - [ ] At the center, scroll down and search +++gpt-5.1+++
 - [ ] Right Click on **gpt-5.1** and click **Open link in new tab**
-![Find gpt-4o models](images/findgpt4omodels.png)
+![Find gpt-4o models](images/foundry-search-gpt-5-1.jpg)
 
 - [ ] Go to the newly opened tab for gpt-5.1
 - [ ] Click **Use this model** button
-![Use this model](images/usethismodel.png)
+![Use this model](images/foundry-gpt-5-1-detail.jpg)
 
 - [ ] For this lab, keep all defaults
 - [ ] (Optional) Click **Customize** to review additional details
 - [ ] Click **Deploy** button 
-![Deploy gpt-4o](images/deploygpt4o.png)
+![Deploy gpt-4o](images/foundry-deploy-default-settings.jpg)
 
 - [ ] After deployment completes, close the browser tab.
 
@@ -75,4 +71,4 @@ Make sure you are using the legacy Microsoft Foundry UI.
 - [ ] In the left side menu, scroll down to the bottom, Click **Models + endpoints**
 - [ ] You can see list of models deployed
 
-![List models deployed](images/msfoundry_listofmodelsdeployed.png)
+![List models deployed](images/foundry-model-deployments.jpg)

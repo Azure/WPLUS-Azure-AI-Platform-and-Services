@@ -21,7 +21,7 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
 1. [ ] Install the required packages:
 
    ```bash
-   pip install azure-ai-evaluation[redteam]
+   pip install "azure-ai-evaluation[redteam]" "duckdb<1.4.0"
    ```
 
 2. [ ] Set up your environment variables:
@@ -29,19 +29,19 @@ You should expect to spend about 30-45 minutes running the notebook. Execution t
    ```env
    # Azure OpenAI
    AZURE_OPENAI_API_KEY="your-api-key-here"
-   AZURE_OPENAI_ENDPOINT="https://endpoint-name.openai.azure.com/openai/deployments/deployment-name/chat/completions"
+   AZURE_OPENAI_ENDPOINT="https://endpoint-name.openai.azure.com/"
    MODEL_DEPLOYMENT_NAME="gpt-5-mini"
    MODEL_API_VERSION="2024-12-01-preview"
 
    # Azure AI Project
    AZURE_SUBSCRIPTION_ID="<your-subscription-id>"
-   AZURE_RESOURCE_GROUP_NAME="<your-resource-group>"
+   AZURE_RESOURCE_GROUP="<your-resource-group>"
    AZURE_PROJECT_NAME="<your-project-name>"
    # Azure AI Project
    AI_FOUNDRY_PROJECT_ENDPOINT="https://your-aifoundry-endpoint-name.services.ai.azure.com/api/projects/yourproject-name"
    ```
 
-3. [ ] Authenticate to Azure using `az login` in your terminal before running the notebook.
+3. [ ] Authenticate to Azure by running `az login --use-device-code` in your terminal before running the notebook, then follow the on-screen prompt to enter the code in a browser.
 
 ## Key Concepts
 

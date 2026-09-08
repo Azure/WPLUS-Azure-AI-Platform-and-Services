@@ -31,7 +31,7 @@ Learn Prompt Engineering Techniques to optimize interactions with language model
 
 ## Tasks
 
-Launch the **Prompt Engineering.ipynb** notebook in the folder - `C:/Users/Admin/Desktop/LABS/Lab 06 - Prompt Engineering` and run through the steps of the lab
+Launch the **[Prompt Engineering.ipynb](./Prompt%20Engineering.ipynb)** notebook in the folder - `C:/Users/Admin/Desktop/LABS/Lab 06 - Prompt Engineering` and run through the steps of the lab
 
 
 ### Theoretical Concepts for reference
@@ -188,7 +188,7 @@ Discover techniques for creating prompts that adapt dynamically based on context
 
 1. **Setup**:
    - [ ] Ensure Azure OpenAI Service is configured in your `.env` file
-   - [ ] Open the **Prompt Engineering.ipynb** notebook in Azure AI Foundry or VS Code
+   - [ ] Open the **[Prompt Engineering.ipynb](./Prompt%20Engineering.ipynb)** notebook in Azure AI Foundry or VS Code
 
 2. **Learning Approach**:
    - [ ] Execute cells sequentially, observing examples of each technique

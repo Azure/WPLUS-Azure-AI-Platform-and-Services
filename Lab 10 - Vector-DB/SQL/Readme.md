@@ -55,6 +55,20 @@ Execute files in [SQL folder](https://github.com/Azure/WPLUS-Azure-AI-Platform-a
 ![Add Firewall Rule](images/4a.png)
 
 
+   If you cannot reach the SQL Server page in the Azure portal, you can add the same firewall rule from a PowerShell terminal on the lab VM. Replace `<sql-server-name>` with the short server name from Step 2 (the part before `.database.windows.net`) and `<resource-group>` with your lab resource group:
+
+   ```powershell
+   az login --use-device-code
+   $ip = (Invoke-RestMethod https://api.ipify.org)
+   az sql server firewall-rule create --resource-group <resource-group> --server <sql-server-name> --name labclient --start-ip-address $ip --end-ip-address $ip
+   ```
+
+   Confirm the rule was created:
+
+   ```powershell
+   az sql server firewall-rule list --resource-group <resource-group> --server <sql-server-name> -o table
+   ```
+
 3. [ ] In the **Connect to Server** dialog:
    - [ ] **Server type:** Database Engine  
    - [ ] **Server name:** Paste the value from Step 2.  
@@ -182,9 +196,9 @@ Execute files in [SQL folder](https://github.com/Azure/WPLUS-Azure-AI-Platform-a
 ## 16. Update the `.env` File
 1. [ ] Open `.env` in VS Code. (This file should have been renamed from .env.example - so remove the .example part if you have not already.)
 2. [ ] Populate the variables:
-   - [ ] `AZURE_OPENAI_EMBEDDING_ENDPOINT` with your Azure OpenAI endpoint
-   - [ ] `EMBEDDING_MODEL_DEPLOYMENT_NAME` for your embedding model.  This should be "text-embedding-ada-002" and was created in the PostgreSQL lab.  Review the steps in the PostgreSQL lab to deploy this model if you have not already.
-   - [ ] `AZURE_OPENAI_EMBEDDING_API_KEY` from Step 15
+   - [ ] `AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT` with your Azure OpenAI endpoint
+   - [ ] `EMBEDDING_ADA_MODEL_DEPLOYMENT_NAME` for your embedding model. This should be "text-embedding-ada-002" and was created in the PostgreSQL lab. Review the steps in the PostgreSQL lab to deploy this model if you have not already.
+   - [ ] `AZURE_OPENAI_EMBEDDING_ADA_API_KEY` from Step 15
    - [ ] `SQL_SERVER` - full URL of your Azure SQL Server
 
 ---
@@ -254,7 +268,7 @@ Execute files in [SQL folder](https://github.com/Azure/WPLUS-Azure-AI-Platform-a
    ```powershell
    python.exe .\4_SQLEmbeddings.py
    ```
-2. [ ] This script may be used to test embeddings or store additional ones for querying.
+2. [ ] This script creates the database credential and `dbo.get_embedding` stored procedure used by the similarity query. Resolve any error before continuing.
 
 ![VS Code Run SQL Embeddings](images/23.png)
 
@@ -271,16 +285,31 @@ Execute files in [SQL folder](https://github.com/Azure/WPLUS-Azure-AI-Platform-a
 ## 25. Run a Vector Similarity Query
 1. [ ] Example `5_query.sql`:
    ```sql
+   IF OBJECT_ID(N'dbo.get_embedding', N'P') IS NULL
+   BEGIN
+      THROW 50000, 'dbo.get_embedding is missing. Run 4_SQLEmbeddings.py before this query.', 1;
+   END;
+
    declare @x nvarchar(max) = 'texas city'
    declare @retval int, @embedding vector(1536)
    exec @retval = dbo.get_embedding @x, @embedding output;
+
+   IF @retval <> 0
+   BEGIN
+      THROW 50001, 'dbo.get_embedding failed.', 1;
+   END;
+
+   IF @embedding IS NULL
+   BEGIN
+      THROW 50002, 'dbo.get_embedding returned a null embedding.', 1;
+   END;
 
    select top(10) *,
        vector_distance('cosine', @embedding, embedding) as dist
    from MovieQuotes
    order by dist asc;
    ```
-2. [ ] This retrieves the top 10 most similar quotes to the given search phrase.
+2. [ ] A successful query retrieves the top 10 most similar quotes with a non-null `dist` value. If setup or embedding generation fails, the query stops with an error instead of returning unranked rows.
 
 ![SSMS Vector Query Results](images/25.png)
 

@@ -138,7 +138,11 @@ For this, use the OpenAI Deployment that was deployed as part of this lab.
 ---
 
 ## Part 4 – Deploy the Embedding Model in Azure OpenAI
-We will need to deploy an embedding model in our Azure OpenAI resource in order to perform vector-based searches on our PostgreSQL data.  
+We will need an embedding model in our Azure OpenAI resource in order to perform vector-based searches on our PostgreSQL data.  
+
+`text-embedding-ada-002` was already deployed during the prerequisite lab, and its endpoint and key were recorded in the `.env` file as `AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT` and `AZURE_OPENAI_EMBEDDING_ADA_API_KEY`. If you already have those values, use them in Part 5 and skip the remaining steps in this part.
+
+If the model is not yet deployed, deploy it now:
 
 1. [ ] **Go to Azure OpenAI in the Azure Portal**
    - [ ] Open your Azure OpenAI resource.
@@ -178,8 +182,8 @@ We will need to deploy an embedding model in our Azure OpenAI resource in order 
 With the model deployed and `VectorQuery.sql` loaded in pgAdmin, swap out the copied values from the last step for the azure_openai.endpoint and azure_openai.subscription_key values in the script.
 
 1. [ ] **Replace placeholders**:
-   - [ ] `<your-endpoint>` → Your Azure OpenAI endpoint from the Keys & Endpoint page.
-   - [ ] `<your-api-key>` → Your Azure OpenAI subscription key.
+   - [ ] `<your-endpoint>` → Your Azure OpenAI endpoint from the Keys & Endpoint page, or the `AZURE_OPENAI_EMBEDDING_ADA_ENDPOINT` value in your `.env` file.
+   - [ ] `<your-api-key>` → Your Azure OpenAI subscription key, or the `AZURE_OPENAI_EMBEDDING_ADA_API_KEY` value in your `.env` file.
 
    ```sql
    select azure_ai.set_setting('azure_openai.endpoint', 'https://<your-endpoint>.openai.azure.com/');
