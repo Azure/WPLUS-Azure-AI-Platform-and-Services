@@ -27,28 +27,28 @@ No pre-requisites
 ### 1. Go to the Connected Resources section
 
 - [ ] Login to Azure AI Foundry: +++https://ai.azure.com/+++
-- [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
-![Foundry connected resources](images/foundryconnectedresources.png)
+- [ ] In the top navigation, click **Manage**
+- [ ] In the left side, under the Project section, click **Project details**
+- [ ] Click the **Connected resources** tab
+![Foundry connected resources](images/foundry-bing-connected-resources.jpg)
 
-- [ ] Click **+New connection**
-- [ ] Search **bing**
+- [ ] Click **Add connection**
 - [ ] Click **Grounding with Bing Search**
 
-![Foundry connected resources](images/newconnbing1.png)
+![Foundry connected resources](images/foundry-bing-choose-connection.jpg)
 
-- [ ] Review the name of the bing resource
-- [ ] Click **Add connection** on the right
+- [ ] Select the lab-provided Grounding with Bing Search resource
+- [ ] Keep **API Key** as the Auth Type
+- [ ] Click **Connect**
 
-![Foundry connected resources](images/gwbingaddconn.png)
+![Foundry connected resources](images/foundry-bing-resource-picker.jpg)
 
-- [ ] You can see the green tick at the right with Connected label
-- [ ] Click **Close** button
+![Foundry connected resources](images/foundry-bing-connect-resource.jpg)
 
-![List models deployed](images/gwbingconnected.png)
+- [ ] After the connection completes, you are returned to the **Connected resources** table
 
 ## ✅ Completed. 
 
-- [ ] Left side, in the **Management center**, in the Resource section, Click **Connected resources**
-- [ ] You can see list of connected resources
+- [ ] Confirm that the Grounding with Bing Search connection is listed
 
-![List models deployed](images/gwbingconnectedinlist.png)
+![List models deployed](images/foundry-bing-connected-list.jpg)
