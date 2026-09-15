@@ -1,122 +1,97 @@
 # Evaluations with Microsoft Foundry
 
-## Introduction 
+## Introduction
 
-This lab provides hands-on experience with Microsoft Foundry's evaluation capabilities. You'll learn how to evaluate model performance using both local and cloud-based evaluators with health & fitness themed examples.
+This lab is completed by running the `1-evaluation.ipynb` Jupyter notebook. The notebook creates a small health and fitness dataset, evaluates it locally, and submits a separate cloud evaluation to Microsoft Foundry.
 
-## Objectives 
-In this lab we will:
-- Perform local evaluations using F1 Score and AI-assisted evaluators
-- Submit evaluation jobs to Microsoft Foundry for scalable processing
-- Analyze evaluation results and metrics in the Microsoft Foundry portal
+## Objectives
+
+By completing the notebook, you will:
+
+- Create evaluation data in JSONL format
+- Run an F1 Score evaluation locally
+- Optionally run an AI-assisted Relevance evaluation
+- Upload the dataset to a Microsoft Foundry project
+- Submit a cloud evaluation and locate its results
 
 ## Estimated Time 
 
-45 minutes 
+45 minutes
 
-## Scenario
+## Prerequisites
 
-You are an AI developer responsible for evaluating AI applications in production. You need to ensure quality through systematic evaluation of model outputs using health and fitness domain examples.
+Before opening the notebook, confirm that:
 
-## Pre-requisites
+- You completed the environment setup from the previous lab.
+- A Microsoft Foundry project has been provisioned.
+- Your account has the **Foundry User** role for the project. See [Microsoft Foundry RBAC documentation](https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry).
+- The Python environment contains the packages from the repository-root `requirements.txt` file, including `azure-ai-projects>=2.6.0,<3.0.0`.
+- The repository-root `.env` file contains `AI_FOUNDRY_PROJECT_ENDPOINT` for cloud evaluation.
+- To enable the optional local Relevance evaluator, `.env` also contains `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `MODEL_DEPLOYMENT_NAME`, and `MODEL_API_VERSION`.
+- You are signed in to Azure CLI. In the VS Code terminal, run:
 
-- Completed environment setup from previous notebook
-- Azure credentials configured
-- **azure-ai-projects** package version 2.6.0 or greater (`azure-ai-projects>=2.6.0,<3.0.0`)
-- **Foundry User role** assigned to your account for the Microsoft Foundry project
-  - See [Microsoft Foundry RBAC documentation](https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry) for more details on role assignments
-- `.env` file configured with AI_FOUNDRY_PROJECT_ENDPOINT and MODEL_DEPLOYMENT_NAME
-- Microsoft Foundry project already provisioned
+   ```powershell
+   az login --use-device-code
+   ```
 
-## Tasks
+   Open the displayed URL, enter the device code, sign in with your lab credentials, and select the default subscription when prompted.
 
-### Task 1 - Environment Setup and Basic Configuration
+## Run the Notebook
 
-Configure evaluation environment and test basic AI operations:
-- [ ] Load environment variables and initialize AIProjectClient with browser-based authentication
-- [ ] Perform basic LLM calls using Azure OpenAI client
-- [ ] List and inspect project connections (Azure OpenAI, Azure AI Services)
-- [ ] Verify model deployments and connectivity
+1. Open `1-evaluation.ipynb` in this folder using VS Code.
+2. Select the Python kernel that contains the packages from `requirements.txt`.
+3. Run the notebook cells in order from top to bottom.
+4. Review each code cell's output before continuing.
 
-Key components:
-- Azure CLI credential authentication
-- Project client initialization with health & fitness themed examples
-- Connection validation and troubleshooting
+Running cells out of order can leave required variables or generated files unavailable. Restart the kernel and run all cells again if the notebook state becomes inconsistent.
 
-### Task 2 - Local Evaluation Setup
+## Code Cell Guide
 
-Perform local model evaluations using built-in metrics:
-- [ ] Create synthetic health & fitness Q&A evaluation data
-- [ ] Configure F1Score evaluator for precision-recall analysis
-- [ ] Set up AI-assisted Relevance evaluator (when Azure OpenAI is available)
-- [ ] Run local evaluations with error handling and fallbacks
-- [ ] Generate comprehensive evaluation reports
+### Cell 5 - Load Configuration and Create Evaluation Data
 
-Evaluation features:
-- NLP-based metrics (F1 Score) for basic quality assessment
-- AI-assisted evaluators for relevance and coherence
-- Robust error handling for missing dependencies
-- Health and fitness domain-specific test data
+Loads the repository-root `.env` file and reports which Foundry and Azure OpenAI settings are available. It then creates three sample question, context, response, and ground-truth records and writes them to `health_fitness_eval_data.jsonl`.
 
-### Task 3 - Cloud-based Evaluation
+Cloud evaluation is skipped later if `AI_FOUNDRY_PROJECT_ENDPOINT` is missing. Local F1 evaluation does not require Azure OpenAI configuration.
 
-Submit evaluations to Microsoft Foundry for scalable processing:
-- [ ] Configure Azure AI Project client for cloud evaluations
-- [ ] Upload evaluation data and results to Microsoft Foundry
-- [ ] Monitor evaluation jobs in the Microsoft Foundry portal
-- [ ] Access advanced metrics and visualization capabilities
-- [ ] Compare local vs. cloud evaluation results
+Expected result: confirmation that three samples were written to a JSONL file.
 
-Cloud evaluation advantages:
-- Scalability for large datasets
-- Advanced visualization in Azure AI Foundry portal
-- Support for all built-in and custom evaluators
-- Integration with Microsoft Foundry project workflows
+### Cell 7 - Run the Local Evaluation
 
-### Laboratory Features
+Configures `F1ScoreEvaluator` and maps each generated response to its ground-truth answer. When the Azure OpenAI settings are available, it also adds `RelevanceEvaluator` to assess how relevant each response is to its query.
 
-**Evaluation Framework:**
-- Multiple evaluation types: NLP metrics and AI-assisted evaluators
-- Quality metrics: F1 Score, Relevance, Groundedness, Coherence, Fluency
-- Risk and safety evaluators for responsible AI practices
-- Local and cloud evaluation workflows
+The cell runs `evaluate`, prints the aggregate metrics, and saves detailed results to `local_evaluation_results.json`.
 
-**Error Handling and Resilience:**
-- Comprehensive error handling for authentication failures
-- Fallback mechanisms for missing services or credentials
-- Clear troubleshooting guidance and status reporting
-- Graceful degradation when cloud services are unavailable
+Expected result: a completed local evaluation with one or more metric values. Without complete Azure OpenAI configuration, only F1 Score is reported.
 
-## Execution Instructions
+### Cell 9 - Submit the Cloud Evaluation
 
-1. **Initial Setup**:
-   - [ ] Ensure you have completed the environment setup from previous notebooks
-   - [ ] Configure environment variables in the `.env` file at repository root
-   - [ ] Verify your Foundry User role assignment
+Uses `DefaultAzureCredential` and `AIProjectClient` to connect to the configured Microsoft Foundry project. It uploads the JSONL dataset, defines a built-in F1 Score criterion, creates an evaluation, and submits a JSONL evaluation run.
 
-2. **Evaluation Execution**:
-   - [ ] Open the `1-evaluation.ipynb` notebook in Microsoft Foundry or VS Code
-   - [ ] Execute data creation and local evaluation cells
-   - [ ] Test cloud evaluation submission (requires proper Microsoft Foundry setup)
-   - [ ] Review evaluation results and metrics
+The cell prints the evaluation ID, run ID, and initial status, then saves the submission details to `cloud_evaluation_results.json`. The clients and credential are closed when processing finishes.
 
-3. **Troubleshooting**:
-   - [ ] Verify your AI_FOUNDRY_PROJECT_ENDPOINT is correctly set
-   - [ ] Check Foundry User role permissions for evaluation operations
-   - [ ] Review authentication error messages for guidance
+Expected result: a submitted cloud evaluation that can be viewed in Microsoft Foundry under **Evaluation**. If `AI_FOUNDRY_PROJECT_ENDPOINT` is missing, this cell skips cloud submission.
+
+## Troubleshooting
+
+- **`.env` not found:** Complete the environment setup and place `.env` in the repository root.
+- **Relevance evaluator is not included:** Verify all four Azure OpenAI variables listed in Prerequisites.
+- **Authentication failed:** Run `az login --use-device-code`, confirm the active subscription, and rerun Cell 9.
+- **Permission denied:** Confirm that your account has the **Foundry User** role on the project.
+- **Project not found:** Verify that `AI_FOUNDRY_PROJECT_ENDPOINT` uses the project endpoint format shown in Microsoft Foundry.
+- **Storage error:** Confirm that the Foundry project has a connected storage account and that the project identity has access to it.
 
 ## Expected Results
 
-Upon completing this laboratory, you will:
-- Perform both local and cloud-based evaluations of AI models
-- Analyze evaluation metrics and interpret quality assessments
-- Implement production-ready evaluation workflows
+After running the complete notebook, you should have:
+
+- A generated health and fitness JSONL dataset
+- Local F1 Score results in `local_evaluation_results.json`
+- Local Relevance results when Azure OpenAI is configured
+- Cloud evaluation submission details in `cloud_evaluation_results.json`
+- A cloud evaluation run visible in the Microsoft Foundry portal
 
 ## Additional Resources
 
 - [Azure AI Evaluation SDK](https://learn.microsoft.com/python/api/azure-ai-evaluation/azure.ai.evaluation)
 - [Evaluating Generative AI Applications](https://learn.microsoft.com/azure/foundry/observability/how-to/evaluate-generative-ai-app)
 
-## Next Steps
-
-After completing this laboratory, you will be prepared to implement production-ready evaluation systems for AI applications, including custom evaluators and enterprise-scale evaluation workflows.
