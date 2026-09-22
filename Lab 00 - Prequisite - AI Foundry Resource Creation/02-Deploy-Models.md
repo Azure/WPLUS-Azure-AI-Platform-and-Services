@@ -23,7 +23,6 @@ You are deploying models that will be utilized later in the labs for several mod
 
 ## Pre-requisites
 
-Make sure you are using the legacy Microsoft Foundry UI.
 
 - If this is the first Portal view in the **Foundry Portal**, then click **firstProject** inside the **All resources** section.
     ![New Foundry UI](images/foundry-new-home.jpg)

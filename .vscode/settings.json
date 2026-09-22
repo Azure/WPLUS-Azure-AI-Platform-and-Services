@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^Set-Location 'C:\\\\Users\\\\haduong\\\\\\.agents\\\\skills\\\\microsoft-foundry'; & \\.\\\\scripts\\\\check-and-setup-dependencies\\.ps1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
